@@ -1,24 +1,26 @@
 {
  "day": "2026-11-05",
- "built": "2026-11-05 11:47 ET",
- "oi": "2026-11-04 (today's not out yet)",
- "spot": 681.26,
+ "built": "2026-11-05 11:50 ET",
+ "oi": "2026-11-05 (snapshot)",
+ "spot": 683.17,
  "spot_src": "9:30 open",
- "em": 11.15,
+ "em": 11.19,
  "flip": [],
  "strikes": [
   {
    "k": 710.0,
    "tags": [
-    "OI",
     "VEX"
    ],
    "dens": 20,
-   "star": true
+   "star": false
   },
   {
    "k": 705.0,
    "tags": [
+    "CHX",
+    "GEX",
+    "OI",
     "VEX",
     "VOL"
    ],
@@ -55,7 +57,8 @@
     "GEX",
     "OI",
     "VEX",
-    "VOL"
+    "VOL",
+    "WALL"
    ],
    "dens": 8,
    "star": true
@@ -95,17 +98,17 @@
   {
    "k": 695.0,
    "tags": [
-    "CHX",
     "GEX",
-    "VEX",
+    "OI",
     "VOL"
    ],
-   "dens": 8,
+   "dens": 5,
    "star": true
   },
   {
-   "k": 694.0,
+   "k": 694,
    "tags": [
+    "EM",
     "VOL"
    ],
    "dens": 5,
@@ -123,13 +126,13 @@
    "star": true
   },
   {
-   "k": 692,
+   "k": 692.0,
    "tags": [
-    "EM",
+    "GEX",
     "VOL"
    ],
    "dens": 5,
-   "star": false
+   "star": true
   },
   {
    "k": 691.0,
@@ -147,9 +150,9 @@
    "tags": [
     "CHX",
     "GEX",
-    "OI",
     "VEX",
-    "VOL"
+    "VOL",
+    "WALL"
    ],
    "dens": 5,
    "star": true
@@ -158,23 +161,28 @@
    "k": 689.0,
    "tags": [
     "CHX",
+    "GEX",
+    "VEX",
     "VOL"
    ],
-   "dens": 20,
+   "dens": 12,
    "star": true
   },
   {
    "k": 688.0,
    "tags": [
     "CHX",
+    "GEX",
+    "VEX",
     "VOL"
    ],
-   "dens": 20,
+   "dens": 12,
    "star": true
   },
   {
    "k": 687.0,
    "tags": [
+    "CHX",
     "GEX",
     "VOL"
    ],
@@ -184,10 +192,10 @@
   {
    "k": 686.0,
    "tags": [
-    "GEX",
-    "VEX"
+    "CHX",
+    "GEX"
    ],
-   "dens": 20,
+   "dens": 8,
    "star": true
   },
   {
@@ -196,8 +204,7 @@
     "CHX",
     "GEX",
     "VEX",
-    "VOL",
-    "WALL"
+    "VOL"
    ],
    "dens": 5,
    "star": true
@@ -205,11 +212,10 @@
   {
    "k": 684.0,
    "tags": [
-    "CHX",
     "GEX"
    ],
    "dens": 20,
-   "star": true
+   "star": false
   },
   {
    "k": 683.0,
@@ -222,11 +228,10 @@
   {
    "k": 682.0,
    "tags": [
-    "CHX",
     "GEX"
    ],
    "dens": 12,
-   "star": true
+   "star": false
   },
   {
    "k": 680.0,
@@ -234,10 +239,19 @@
     "CHX",
     "GEX",
     "VEX",
-    "VOL"
+    "VOL",
+    "WALL"
    ],
    "dens": 5,
    "star": true
+  },
+  {
+   "k": 679.0,
+   "tags": [
+    "CHX"
+   ],
+   "dens": 20,
+   "star": false
   },
   {
    "k": 678.0,
@@ -265,27 +279,25 @@
     "CHX",
     "GEX",
     "OI",
-    "VEX",
-    "WALL"
+    "VEX"
    ],
    "dens": 5,
    "star": true
   },
   {
-   "k": 672.0,
+   "k": 672,
    "tags": [
     "CHX",
-    "GEX",
+    "EM",
     "VEX"
    ],
-   "dens": 12,
+   "dens": 5,
    "star": true
   },
   {
    "k": 670.0,
    "tags": [
     "CHX",
-    "EM",
     "GEX",
     "VEX"
    ],
@@ -296,24 +308,13 @@
    "k": 668.0,
    "tags": [
     "CHX",
-    "GEX",
-    "VEX"
-   ],
-   "dens": 5,
-   "star": true
-  },
-  {
-   "k": 665.0,
-   "tags": [
-    "CHX",
-    "GEX",
     "VEX"
    ],
    "dens": 8,
    "star": true
   },
   {
-   "k": 664.0,
+   "k": 665.0,
    "tags": [
     "CHX",
     "VEX"
@@ -322,10 +323,18 @@
    "star": true
   },
   {
+   "k": 664.0,
+   "tags": [
+    "CHX",
+    "VEX"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
    "k": 660.0,
    "tags": [
     "CHX",
-    "GEX",
     "VEX"
    ],
    "dens": 20,
@@ -334,11 +343,10 @@
   {
    "k": 655.0,
    "tags": [
-    "CHX",
     "VEX"
    ],
    "dens": 20,
-   "star": true
+   "star": false
   }
  ]
 }
