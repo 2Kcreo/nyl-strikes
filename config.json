@@ -1,0 +1,26 @@
+{
+  "zone_pts": 20,
+  "hold_thru_pts": 30,
+  "hold_bounce_pts": 40,
+  "touch_cooldown_min": 15,
+  "forward_min": 30,
+  "dte_max": 7,
+  "window_pct": 0.02,
+  "top_n": 5,
+  "stack_pts": 10,
+  "baseline_shift_pts": 100,
+  "baseline_draws": 500,
+  "tune_last_day": "2026-10-13",
+  "families": {
+    "gex_abs": true,
+    "gex_walls": true,
+    "gamma_flip": true,
+    "vex": true,
+    "chex": true,
+    "oi_walls": true,
+    "em_bands": true,
+    "fresh_oi": true,
+    "volume": true,
+    "stack": true
+  }
+}

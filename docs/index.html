@@ -1,0 +1,78 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VEX Strikes</title>
+<style>
+:root{--bg:#f0f3fa;--card:#fff;--ink:#131722;--mute:#787b86;--line:#e0e3eb;--accent:#2962ff;--star:#e6a700;--g:#089981}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0b0d11;--card:#14171c;--ink:#e6e8eb;--mute:#8a8f99;--line:#23272f;--accent:#5b8def;--star:#f2c94c;--g:#2fd38a}}
+:root[data-theme="dark"]{--bg:#0b0d11;--card:#14171c;--ink:#e6e8eb;--mute:#8a8f99;--line:#23272f;--accent:#5b8def;--star:#f2c94c;--g:#2fd38a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 -apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:560px;margin:0 auto;padding:16px}
+h1{font-size:20px;margin:4px 0 2px;letter-spacing:.06em}h1 i{font-style:normal;color:var(--accent)}
+.sub{color:var(--mute);font-size:13px;margin:0 0 14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:12px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+select,button{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-height:40px}
+button{cursor:pointer}button.on{background:var(--ink);color:var(--card);border-color:var(--ink)}
+.copy{width:100%;background:var(--accent);color:#fff;border:0;font-weight:700;font-size:16px;min-height:48px;margin-top:10px}
+.meta{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;font-size:13px;color:var(--mute)}.meta b{color:var(--ink);font-weight:500}
+ul{list-style:none;margin:0;padding:0}
+li{display:flex;justify-content:space-between;gap:10px;padding:7px 2px;border-top:1px solid var(--line);font-variant-numeric:tabular-nums}
+li:first-child{border-top:0}
+li .k{font:600 16px ui-monospace,Consolas,Menlo,monospace}li .t{color:var(--mute);font-size:12px;text-align:right}
+.star{color:var(--star)}
+.empty{color:var(--mute);text-align:center;padding:18px 0}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:var(--card);padding:10px 16px;border-radius:8px;font-weight:600;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.show{opacity:1}
+@media (prefers-reduced-motion:reduce){.toast{transition:none}}
+</style>
+</head><body><main>
+  <h1>V<i>E</i>X STRIKES</h1>
+  <p class="sub">Today's key QQQ strikes. Tap Copy, paste into "Key QQQ strikes" in TradingView.</p>
+  <div class="card">
+    <div class="row">
+      <select id="day" aria-label="Day"></select>
+      <select id="dens" aria-label="Strikes per layer"><option value="5">5 per layer</option><option value="8" selected>8 per layer</option><option value="12">12 per layer</option><option value="20">20 per layer</option></select>
+      <button id="starBtn" aria-pressed="false">★ only</button>
+    </div>
+    <button class="copy" id="copy">Copy strikes</button>
+  </div>
+  <div class="card"><div class="meta" id="meta"></div></div>
+  <div class="card"><ul id="list"><li class="empty">Loading…</li></ul></div>
+</main>
+<div class="toast" id="toast" role="status"></div>
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)}, days={}, starOnly=false;
+  try{var s=localStorage.getItem("vexs_dens");if(s)$("dens").value=s;starOnly=localStorage.getItem("vexs_star")==="1";}catch(e){}
+  $("starBtn").classList.toggle("on",starOnly);$("starBtn").setAttribute("aria-pressed",starOnly);
+  function fmt(k){return Number(k)%1?Number(k).toFixed(1):String(Number(k))}
+  function current(){var d=days[$("day").value];if(!d)return [];var n=+$("dens").value;
+    return (d.strikes||[]).filter(function(s){return s.dens<=n&&(!starOnly||s.star)}).sort(function(a,b){return b.k-a.k})}
+  function render(){
+    var d=days[$("day").value];
+    if(!d){$("list").innerHTML='<li class="empty">No strikes saved yet. They appear here every weekday after your PC builds them.</li>';$("meta").innerHTML="";return}
+    var ks=current();
+    $("list").innerHTML=ks.length?ks.map(function(s){return '<li><span class="k">'+(s.star?'<span class="star">★ </span>':'')+fmt(s.k)+'</span><span class="t">'+s.tags.join(" ")+'</span></li>'}).join(""):'<li class="empty">No strikes match.</li>';
+    var m=[["QQQ",d.spot],["Implied move","±"+d.em],["Gamma flip",(d.flip||[]).join(", ")||"—"],["Open interest",d.oi],["Built",d.built],["Strikes",ks.length]];
+    $("meta").innerHTML=m.map(function(x){return "<span>"+x[0]+"</span><b>"+String(x[1]).replace(/</g,"&lt;")+"</b>"}).join("");
+  }
+  function toast(t){var e=$("toast");e.textContent=t;e.classList.add("show");setTimeout(function(){e.classList.remove("show")},1800)}
+  $("copy").onclick=function(){var txt=current().map(function(s){return fmt(s.k)}).join("\n");if(!txt)return;
+    var done=function(){toast("Copied "+txt.split("\n").length+" strikes")};
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt).then(done,fallback);else fallback();
+    function fallback(){var ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");done()}catch(e){prompt("Copy:",txt)}ta.remove()}};
+  $("dens").onchange=function(){try{localStorage.setItem("vexs_dens",this.value)}catch(e){}render()};
+  $("starBtn").onclick=function(){starOnly=!starOnly;this.classList.toggle("on",starOnly);this.setAttribute("aria-pressed",starOnly);try{localStorage.setItem("vexs_star",starOnly?"1":"0")}catch(e){}render()};
+  $("day").onchange=render;
+  function load(){
+    fetch("data/index.json?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.json()}).then(function(list){
+      return Promise.all(list.slice(0,30).map(function(d){return fetch("data/"+d+".json",{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return null})}));
+    }).then(function(arr){
+      var keep=$("day").value;days={};arr.forEach(function(v){if(v)days[v.day]=v});
+      var ks=Object.keys(days).sort().reverse();
+      $("day").innerHTML=ks.map(function(k){return '<option value="'+k+'">'+new Date(k+"T12:00:00").toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"})+'</option>'}).join("");
+      if(keep&&days[keep])$("day").value=keep;render();
+    }).catch(function(){$("list").innerHTML='<li class="empty">No strikes saved yet. The first run happens on the next weekday morning.</li>'});
+  }
+  load();setInterval(load,300000);
+})();
+</script></body></html>

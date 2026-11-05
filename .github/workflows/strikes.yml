@@ -1,0 +1,38 @@
+name: Build VEX strikes
+on:
+  schedule:
+    # times are UTC. 11:45 = 6:45 ET (pre-open list, after open interest posts), 14:40 = 9:40 ET (locked at the open).
+    # 13:40 covers 9:40 ET in summer (EDT). GitHub may start runs 5-20 min late.
+    - cron: "45 11 * * 1-5"
+    - cron: "40 14 * * 1-5"
+    - cron: "40 13 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      day:
+        description: "Date to build (YYYY-MM-DD), blank = today"
+        required: false
+permissions:
+  contents: write
+concurrency:
+  group: strikes
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Build strikes
+        env:
+          THETADATA_API_KEY: ${{ secrets.THETADATA_API_KEY }}
+        run: python strikes.py ${{ github.event.inputs.day }}
+      - name: Save to the website
+        run: |
+          git config user.name "vex-bot"
+          git config user.email "vex-bot@users.noreply.github.com"
+          git add docs/data
+          git diff --cached --quiet || (git commit -m "strikes $(date -u +%F)" && git push)

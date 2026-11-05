@@ -1,0 +1,6 @@
+thetadata
+pandas
+numpy
+scipy
+tzdata
+python-dotenv
