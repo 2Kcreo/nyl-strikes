@@ -53,4 +53,7 @@ class Theta:
         if hasattr(df, "to_pandas"): df = df.to_pandas()
         return df
     def oi(self, day):  return self._df("option_history_open_interest", symbol="QQQ", expiration="*", date=day, max_dte=8)
+    def oi_snapshot(self):
+        """Today's open interest (posted ~6:30 ET) from the snapshot endpoint; the history endpoint only has it after the day ends."""
+        return self._df("option_snapshot_open_interest", symbol="QQQ", expiration="*", max_dte=8)
     def eod(self, day): return self._df("option_history_eod", symbol="QQQ", expiration="*", start_date=day, end_date=day, max_dte=9)

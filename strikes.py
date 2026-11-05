@@ -34,6 +34,11 @@ def main():
         P = prev_wd(P)
     if eod is None: sys.exit("No prior-day option prices.")
     oi = get("oi", day); oi_src = str(day)
+    if oi is None and day == now.date():
+        try:
+            oi = theta.oi_snapshot(); oi = oi if oi is not None and len(oi) else None
+            if oi is not None: print("open interest from today's snapshot:", len(oi), "rows", list(oi.columns)); oi_src = f"{day} (snapshot)"
+        except Exception as e: print(f"ThetaData oi snapshot: {type(e).__name__}: {e}"); oi = None
     if oi is None: oi = get("oi", P); oi_src = f"{P} (today's not out yet)"
     if oi is None: sys.exit("No open interest.")
     poi = get("oi", P) if oi_src == str(day) else oi
