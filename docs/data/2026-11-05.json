@@ -1,0 +1,344 @@
+{
+ "day": "2026-11-05",
+ "built": "2026-11-05 11:47 ET",
+ "oi": "2026-11-04 (today's not out yet)",
+ "spot": 681.26,
+ "spot_src": "9:30 open",
+ "em": 11.15,
+ "flip": [],
+ "strikes": [
+  {
+   "k": 710.0,
+   "tags": [
+    "OI",
+    "VEX"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
+   "k": 705.0,
+   "tags": [
+    "VEX",
+    "VOL"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
+   "k": 703.0,
+   "tags": [
+    "VOL"
+   ],
+   "dens": 20,
+   "star": false
+  },
+  {
+   "k": 702.0,
+   "tags": [
+    "VOL"
+   ],
+   "dens": 20,
+   "star": false
+  },
+  {
+   "k": 701.0,
+   "tags": [
+    "VOL"
+   ],
+   "dens": 20,
+   "star": false
+  },
+  {
+   "k": 700.0,
+   "tags": [
+    "GEX",
+    "OI",
+    "VEX",
+    "VOL"
+   ],
+   "dens": 8,
+   "star": true
+  },
+  {
+   "k": 699.0,
+   "tags": [
+    "VOL"
+   ],
+   "dens": 12,
+   "star": false
+  },
+  {
+   "k": 698.0,
+   "tags": [
+    "VOL"
+   ],
+   "dens": 12,
+   "star": false
+  },
+  {
+   "k": 697.0,
+   "tags": [
+    "VOL"
+   ],
+   "dens": 8,
+   "star": false
+  },
+  {
+   "k": 696.0,
+   "tags": [
+    "VOL"
+   ],
+   "dens": 8,
+   "star": false
+  },
+  {
+   "k": 695.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "VEX",
+    "VOL"
+   ],
+   "dens": 8,
+   "star": true
+  },
+  {
+   "k": 694.0,
+   "tags": [
+    "VOL"
+   ],
+   "dens": 5,
+   "star": false
+  },
+  {
+   "k": 693.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "VEX",
+    "VOL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 692,
+   "tags": [
+    "EM",
+    "VOL"
+   ],
+   "dens": 5,
+   "star": false
+  },
+  {
+   "k": 691.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "VEX",
+    "VOL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 690.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "OI",
+    "VEX",
+    "VOL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 689.0,
+   "tags": [
+    "CHX",
+    "VOL"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
+   "k": 688.0,
+   "tags": [
+    "CHX",
+    "VOL"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
+   "k": 687.0,
+   "tags": [
+    "GEX",
+    "VOL"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
+   "k": 686.0,
+   "tags": [
+    "GEX",
+    "VEX"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
+   "k": 685.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "VEX",
+    "VOL",
+    "WALL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 684.0,
+   "tags": [
+    "CHX",
+    "GEX"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
+   "k": 683.0,
+   "tags": [
+    "GEX"
+   ],
+   "dens": 20,
+   "star": false
+  },
+  {
+   "k": 682.0,
+   "tags": [
+    "CHX",
+    "GEX"
+   ],
+   "dens": 12,
+   "star": true
+  },
+  {
+   "k": 680.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "VEX",
+    "VOL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 678.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "VEX"
+   ],
+   "dens": 12,
+   "star": true
+  },
+  {
+   "k": 676.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "VEX"
+   ],
+   "dens": 8,
+   "star": true
+  },
+  {
+   "k": 675.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "OI",
+    "VEX",
+    "WALL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 672.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "VEX"
+   ],
+   "dens": 12,
+   "star": true
+  },
+  {
+   "k": 670.0,
+   "tags": [
+    "CHX",
+    "EM",
+    "GEX",
+    "VEX"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 668.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "VEX"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 665.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "VEX"
+   ],
+   "dens": 8,
+   "star": true
+  },
+  {
+   "k": 664.0,
+   "tags": [
+    "CHX",
+    "VEX"
+   ],
+   "dens": 12,
+   "star": true
+  },
+  {
+   "k": 660.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "VEX"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
+   "k": 655.0,
+   "tags": [
+    "CHX",
+    "VEX"
+   ],
+   "dens": 20,
+   "star": true
+  }
+ ]
+}
