@@ -89,7 +89,7 @@ def main():
             st["oi_rows"] = 0 if o2 is None else len(o2)
             if st["eod_rows"] and st["oi_rows"]:
                 s2 = parity_spot(e2); st["spot"] = round(s2, 2)
-                r = engine.compute(day, P2, o2, e2, o2, s2, s2, dict(cfg, top_n=8, window_pct=.03))
+                r = engine.compute(day, P2, o2, e2, o2, s2, s2, dict(cfg, top_n=8, window_pct=.03, dte_max=mdte))
                 for fam, xs in r["fam"].items():
                     if fam in ("gamma_flip",): continue
                     for x in xs:
