@@ -6,6 +6,9 @@ on:
     - cron: "45 11 * * 1-5"
     - cron: "40 14 * * 1-5"
     - cron: "40 13 * * 1-5"
+  push:
+    branches: [main]
+    paths: ["strikes.py", "engine.py", "feeds.py", ".github/workflows/strikes.yml"]
   workflow_dispatch:
     inputs:
       day:
@@ -29,7 +32,7 @@ jobs:
       - name: Build strikes
         env:
           THETADATA_API_KEY: ${{ secrets.THETADATA_API_KEY }}
-        run: python strikes.py ${{ github.event.inputs.day }}
+        run: python strikes.py ${{ github.event.inputs.day || '' }}
       - name: Save to the website
         run: |
           git config user.name "vex-bot"
