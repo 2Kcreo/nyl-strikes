@@ -88,6 +88,7 @@ for e in EV:
     r = confirm(e)
     if r: rows.append(dict(day=e["day"], kind=e["kind"], star=e["star"], agree=e["agree"], res=r[0], mae=r[1]))
 D = pd.DataFrame(rows)
+D.to_csv(OUT / "trades.csv", index=False)
 groups = {"QQQ all": (D.kind == "Q"), "QQQ ★ (2+ layers)": (D.kind == "Q") & D.star, "QQQ + NDX agree": (D.kind == "Q") & D.agree,
           "QQQ ★ without NDX": (D.kind == "Q") & D.star & ~D.agree, "QQQ ★ with NDX": (D.kind == "Q") & D.star & D.agree,
           "NDX/NDXP levels": (D.kind == "N"), "Random lines": (D.kind == "R")}
