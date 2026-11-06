@@ -1,14 +1,32 @@
 {
  "day": "2026-11-06",
- "built": "2026-11-06 03:27 ET",
- "oi": "2026-11-05 (today's not out yet)",
- "spot": 646.8,
- "spot_src": "prior close",
- "em": 23.59,
+ "built": "2026-11-06 13:29 ET",
+ "oi": "2026-11-06 (snapshot)",
+ "spot": 658.35,
+ "spot_src": "9:30 open",
+ "em": 24.02,
  "flip": [],
  "strikes": [
   {
-   "k": 675.0,
+   "k": 685.0,
+   "tags": [
+    "GEX",
+    "VEX"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
+   "k": 682,
+   "tags": [
+    "EM",
+    "VEX"
+   ],
+   "dens": 5,
+   "star": false
+  },
+  {
+   "k": 680.0,
    "tags": [
     "CHX",
     "GEX",
@@ -19,38 +37,75 @@
    "star": true
   },
   {
+   "k": 678.0,
+   "tags": [
+    "CHX",
+    "VEX"
+   ],
+   "dens": 12,
+   "star": true
+  },
+  {
+   "k": 676.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "VEX"
+   ],
+   "dens": 8,
+   "star": true
+  },
+  {
+   "k": 675.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "VEX",
+    "VOL"
+   ],
+   "dens": 8,
+   "star": true
+  },
+  {
    "k": 674.0,
    "tags": [
+    "CHX",
     "VEX"
+   ],
+   "dens": 12,
+   "star": true
+  },
+  {
+   "k": 673.0,
+   "tags": [
+    "CHX",
+    "VEX"
+   ],
+   "dens": 12,
+   "star": true
+  },
+  {
+   "k": 672.0,
+   "tags": [
+    "VEX"
+   ],
+   "dens": 12,
+   "star": false
+  },
+  {
+   "k": 671.0,
+   "tags": [
+    "CHX"
    ],
    "dens": 20,
    "star": false
   },
   {
-   "k": 672.0,
+   "k": 670.0,
    "tags": [
     "CHX",
     "GEX",
-    "VEX"
-   ],
-   "dens": 20,
-   "star": true
-  },
-  {
-   "k": 671.0,
-   "tags": [
-    "GEX",
-    "VEX"
-   ],
-   "dens": 20,
-   "star": true
-  },
-  {
-   "k": 670,
-   "tags": [
-    "CHX",
-    "EM",
-    "GEX",
+    "OI",
     "VEX",
     "VOL"
    ],
@@ -60,10 +115,11 @@
   {
    "k": 669.0,
    "tags": [
+    "CHX",
     "VEX"
    ],
-   "dens": 20,
-   "star": false
+   "dens": 5,
+   "star": true
   },
   {
    "k": 668.0,
@@ -73,24 +129,15 @@
     "NDX",
     "VEX"
    ],
-   "dens": 20,
+   "dens": 5,
    "star": true
   },
   {
    "k": 667.0,
    "tags": [
-    "CHX",
-    "VEX"
+    "CHX"
    ],
    "dens": 20,
-   "star": true
-  },
-  {
-   "k": 666.0,
-   "tags": [
-    "VEX"
-   ],
-   "dens": 12,
    "star": false
   },
   {
@@ -102,7 +149,7 @@
     "VEX",
     "VOL"
    ],
-   "dens": 8,
+   "dens": 5,
    "star": true
   },
   {
@@ -112,12 +159,13 @@
     "GEX",
     "VEX"
    ],
-   "dens": 8,
+   "dens": 5,
    "star": true
   },
   {
    "k": 663.0,
    "tags": [
+    "GEX",
     "NDX",
     "VOL"
    ],
@@ -127,18 +175,10 @@
   {
    "k": 662.0,
    "tags": [
+    "NDX",
     "VOL"
    ],
    "dens": 20,
-   "star": false
-  },
-  {
-   "k": 661.0,
-   "tags": [
-    "VEX",
-    "VOL"
-   ],
-   "dens": 12,
    "star": true
   },
   {
@@ -147,16 +187,25 @@
     "CHX",
     "GEX",
     "NDX",
-    "VEX",
-    "VOL"
+    "VOL",
+    "WALL"
    ],
-   "dens": 8,
+   "dens": 5,
    "star": true
   },
   {
    "k": 658.0,
    "tags": [
-    "CHX",
+    "GEX",
+    "NDX",
+    "VOL"
+   ],
+   "dens": 12,
+   "star": true
+  },
+  {
+   "k": 657.0,
+   "tags": [
     "NDX",
     "VOL"
    ],
@@ -164,20 +213,9 @@
    "star": true
   },
   {
-   "k": 657.0,
-   "tags": [
-    "CHX",
-    "GEX",
-    "VEX",
-    "VOL"
-   ],
-   "dens": 12,
-   "star": true
-  },
-  {
    "k": 656.0,
    "tags": [
-    "CHX",
+    "GEX",
     "NDX",
     "VOL"
    ],
@@ -187,12 +225,8 @@
   {
    "k": 655.0,
    "tags": [
-    "CHX",
     "GEX",
-    "OI",
-    "VEX",
-    "VOL",
-    "WALL"
+    "VOL"
    ],
    "dens": 5,
    "star": true
@@ -200,15 +234,15 @@
   {
    "k": 654.0,
    "tags": [
+    "GEX",
     "VOL"
    ],
    "dens": 12,
-   "star": false
+   "star": true
   },
   {
    "k": 653.0,
    "tags": [
-    "GEX",
     "NDX",
     "VOL"
    ],
@@ -221,7 +255,7 @@
     "GEX",
     "VOL"
    ],
-   "dens": 5,
+   "dens": 8,
    "star": true
   },
   {
@@ -230,9 +264,10 @@
     "CHX",
     "GEX",
     "NDX",
+    "VEX",
     "VOL"
    ],
-   "dens": 8,
+   "dens": 12,
    "star": true
   },
   {
@@ -240,6 +275,7 @@
    "tags": [
     "CHX",
     "GEX",
+    "OI",
     "VEX",
     "VOL",
     "WALL"
@@ -252,11 +288,10 @@
    "tags": [
     "CHX",
     "GEX",
-    "OI",
     "VEX",
     "VOL"
    ],
-   "dens": 5,
+   "dens": 8,
    "star": true
   },
   {
@@ -267,7 +302,7 @@
     "VEX",
     "VOL"
    ],
-   "dens": 5,
+   "dens": 8,
    "star": true
   },
   {
@@ -278,33 +313,11 @@
     "VEX",
     "VOL"
    ],
-   "dens": 5,
-   "star": true
-  },
-  {
-   "k": 630.0,
-   "tags": [
-    "CHX",
-    "GEX",
-    "OI",
-    "VEX",
-    "VOL"
-   ],
-   "dens": 8,
-   "star": true
-  },
-  {
-   "k": 625.0,
-   "tags": [
-    "CHX",
-    "GEX",
-    "VEX"
-   ],
    "dens": 20,
    "star": true
   },
   {
-   "k": 623,
+   "k": 634,
    "tags": [
     "EM"
    ],
@@ -312,11 +325,11 @@
    "star": false
   },
   {
-   "k": 620.0,
+   "k": 630.0,
    "tags": [
     "CHX",
-    "GEX",
-    "VEX"
+    "VEX",
+    "VOL"
    ],
    "dens": 20,
    "star": true
@@ -326,7 +339,6 @@
   "NDX": {
    "eod_rows": 630,
    "oi_hist_error": "_MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"Cannot fetch current-day data without specifying an exp",
-   "oi_from": "2026-11-05",
    "oi_rows": 630,
    "spot": 26636.35,
    "ok": true
@@ -334,8 +346,7 @@
   "NDXP": {
    "eod_rows": 5240,
    "oi_hist_error": "_MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"Cannot fetch current-day data without specifying an exp",
-   "oi_from": "2026-11-05",
-   "oi_rows": 4784,
+   "oi_rows": 4266,
    "spot": 26665.6,
    "ok": true
   }
@@ -362,8 +373,7 @@
      "VEX"
     ],
     "src": [
-     "NDX",
-     "NDXP"
+     "NDX"
     ],
     "qqq": 665.34
    },
@@ -389,11 +399,31 @@
     "qqq": 662.92
    },
    {
+    "k": 27270,
+    "tags": [
+     "CHX",
+     "VEX"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 662.19
+   },
+   {
+    "k": 27250,
+    "tags": [
+     "VEX"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 661.7
+   },
+   {
     "k": 27200,
     "tags": [
      "CHX",
      "GEX",
-     "OI",
      "VEX",
      "VOL"
     ],
@@ -406,7 +436,8 @@
    {
     "k": 27100,
     "tags": [
-     "CHX"
+     "CHX",
+     "VEX"
     ],
     "src": [
      "NDX"
@@ -414,14 +445,26 @@
     "qqq": 658.06
    },
    {
-    "k": 27000,
+    "k": 27050,
     "tags": [
      "CHX",
      "GEX",
      "OI",
      "VEX",
-     "VOL",
      "WALL"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 656.84
+   },
+   {
+    "k": 27000,
+    "tags": [
+     "CHX",
+     "GEX",
+     "VEX",
+     "VOL"
     ],
     "src": [
      "NDX",
@@ -433,8 +476,7 @@
     "k": 26900,
     "tags": [
      "CHX",
-     "GEX",
-     "VEX"
+     "GEX"
     ],
     "src": [
      "NDXP"
@@ -444,7 +486,6 @@
    {
     "k": 26800,
     "tags": [
-     "GEX",
      "VOL"
     ],
     "src": [
@@ -458,7 +499,7 @@
     "tags": [
      "CHX",
      "GEX",
-     "VEX",
+     "OI",
      "VOL",
      "WALL"
     ],
@@ -565,8 +606,7 @@
      "VEX"
     ],
     "src": [
-     "NDX",
-     "NDXP"
+     "NDX"
     ],
     "qqq": 628.92
    },
