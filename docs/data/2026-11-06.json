@@ -1,7 +1,7 @@
 {
  "day": "2026-11-06",
- "built": "2026-11-06 03:22 ET",
- "oi": "2026-11-06 (snapshot)",
+ "built": "2026-11-06 03:24 ET",
+ "oi": "2026-11-05 (today's not out yet)",
  "spot": 646.8,
  "spot_src": "prior close",
  "em": 23.59,
@@ -70,6 +70,7 @@
    "tags": [
     "CHX",
     "GEX",
+    "NDX",
     "VEX"
    ],
    "dens": 20,
@@ -79,7 +80,6 @@
    "k": 667.0,
    "tags": [
     "CHX",
-    "NDX",
     "VEX"
    ],
    "dens": 20,
@@ -176,6 +176,7 @@
    "k": 656.0,
    "tags": [
     "CHX",
+    "NDX",
     "VOL"
    ],
    "dens": 12,
@@ -186,7 +187,6 @@
    "tags": [
     "CHX",
     "GEX",
-    "NDX",
     "OI",
     "VEX",
     "VOL",
@@ -207,6 +207,7 @@
    "k": 653.0,
    "tags": [
     "GEX",
+    "NDX",
     "VOL"
    ],
    "dens": 12,
@@ -216,7 +217,6 @@
    "k": 652.0,
    "tags": [
     "GEX",
-    "NDX",
     "VOL"
    ],
    "dens": 5,
@@ -227,6 +227,7 @@
    "tags": [
     "CHX",
     "GEX",
+    "NDX",
     "VOL"
    ],
    "dens": 8,
@@ -237,7 +238,6 @@
    "tags": [
     "CHX",
     "GEX",
-    "NDX",
     "VEX",
     "VOL",
     "WALL"
@@ -250,7 +250,6 @@
    "tags": [
     "CHX",
     "GEX",
-    "NDX",
     "OI",
     "VEX",
     "VOL"
@@ -263,7 +262,6 @@
    "tags": [
     "CHX",
     "GEX",
-    "NDX",
     "VEX",
     "VOL"
    ],
@@ -324,24 +322,25 @@
  ],
  "ndx_status": {
   "NDX": {
-   "eod_error": "NoDataFoundError: No data found for: option_history_eod(2026-11-02,2026-11-02,NDX,*,*,both,9,None)",
-   "eod_rows": 0,
+   "eod_rows": 630,
    "oi_hist_error": "_MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"Cannot fetch current-day data without specifying an exp",
-   "oi_snap_error": "NoDataFoundError: No data found for: option_snapshot_open_interest(NDX,*,*,both,8,None,None,False)",
-   "oi_prev_error": "NoDataFoundError: No data found for: option_history_open_interest(NDX,*,2026-10-30,*,both,8,None,None,None)",
-   "oi_rows": 0
+   "oi_from": "2026-11-05",
+   "oi_rows": 630,
+   "spot": 26636.35,
+   "error": "RuntimeError: no option rows matched implied volatility"
   },
   "NDXP": {
    "eod_rows": 5240,
    "oi_hist_error": "_MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"Cannot fetch current-day data without specifying an exp",
-   "oi_rows": 3822,
+   "oi_from": "2026-11-05",
+   "oi_rows": 4784,
    "spot": 26665.6,
    "ok": true
   }
  },
  "ndx": {
-  "spot": 26665.6,
-  "ratio": 41.227,
+  "spot": 26636.35,
+  "ratio": 41.1817,
   "strikes": [
    {
     "k": 27507,
@@ -351,7 +350,7 @@
     "src": [
      "NDXP"
     ],
-    "qqq": 667.21
+    "qqq": 667.94
    },
    {
     "k": 27400,
@@ -361,7 +360,7 @@
     "src": [
      "NDXP"
     ],
-    "qqq": 664.61
+    "qqq": 665.34
    },
    {
     "k": 27200,
@@ -374,7 +373,7 @@
     "src": [
      "NDXP"
     ],
-    "qqq": 659.76
+    "qqq": 660.49
    },
    {
     "k": 27000,
@@ -387,7 +386,7 @@
     "src": [
      "NDXP"
     ],
-    "qqq": 654.91
+    "qqq": 655.63
    },
    {
     "k": 26900,
@@ -399,7 +398,7 @@
     "src": [
      "NDXP"
     ],
-    "qqq": 652.49
+    "qqq": 653.2
    },
    {
     "k": 26800,
@@ -410,7 +409,7 @@
     "src": [
      "NDXP"
     ],
-    "qqq": 650.06
+    "qqq": 650.77
    },
    {
     "k": 26700,
@@ -420,7 +419,7 @@
     "src": [
      "NDXP"
     ],
-    "qqq": 647.63
+    "qqq": 648.35
    },
    {
     "k": 26600,
@@ -431,7 +430,7 @@
     "src": [
      "NDXP"
     ],
-    "qqq": 645.21
+    "qqq": 645.92
    },
    {
     "k": 26500,
@@ -444,7 +443,7 @@
     "src": [
      "NDXP"
     ],
-    "qqq": 642.78
+    "qqq": 643.49
    },
    {
     "k": 26400,
@@ -457,7 +456,7 @@
     "src": [
      "NDXP"
     ],
-    "qqq": 640.36
+    "qqq": 641.06
    },
    {
     "k": 26300,
@@ -467,7 +466,7 @@
     "src": [
      "NDXP"
     ],
-    "qqq": 637.93
+    "qqq": 638.63
    },
    {
     "k": 26200,
@@ -479,7 +478,7 @@
     "src": [
      "NDXP"
     ],
-    "qqq": 635.51
+    "qqq": 636.2
    },
    {
     "k": 26000,
@@ -493,7 +492,7 @@
     "src": [
      "NDXP"
     ],
-    "qqq": 630.66
+    "qqq": 631.35
    },
    {
     "k": 25900,
@@ -503,7 +502,7 @@
     "src": [
      "NDXP"
     ],
-    "qqq": 628.23
+    "qqq": 628.92
    },
    {
     "k": 25824,
@@ -513,7 +512,7 @@
     "src": [
      "NDXP"
     ],
-    "qqq": 626.39
+    "qqq": 627.07
    }
   ]
  }
