@@ -63,6 +63,54 @@ def main():
            "em": round(em, 2), "flip": flip,
            "strikes": [{"k": e["k"], "tags": sorted(e["tags"]), "dens": e["dens"], "star": len(e["tags"] - {"EM"}) >= 2}
                        for e in sorted(rows.values(), key=lambda e: -e["k"])]}
+    # ---- NDX / NDXP layer (index options = the exact index NQ follows). Probe what the plan returns.
+    out["ndx_status"] = {}
+    ndx_rows = {}
+    for sym in ("NDX", "NDXP"):
+        st = {}
+        try:
+            e2 = None; P2 = P
+            for _ in range(4):
+                try: e2 = theta._df("option_history_eod", symbol=sym, expiration="*", start_date=P2, end_date=P2, max_dte=9)
+                except Exception as ex: st["eod_error"] = f"{type(ex).__name__}: {str(ex)[:160]}"; e2 = None
+                if e2 is not None and len(e2): break
+                P2 = prev_wd(P2)
+            st["eod_rows"] = 0 if e2 is None else len(e2)
+            o2 = None
+            try: o2 = theta._df("option_history_open_interest", symbol=sym, expiration="*", date=day, max_dte=8)
+            except Exception as ex: st["oi_hist_error"] = f"{type(ex).__name__}: {str(ex)[:160]}"
+            if (o2 is None or not len(o2)) and day == now.date():
+                try: o2 = theta._df("option_snapshot_open_interest", symbol=sym, expiration="*", max_dte=8)
+                except Exception as ex: st["oi_snap_error"] = f"{type(ex).__name__}: {str(ex)[:160]}"
+            if o2 is None or not len(o2):
+                try: o2 = theta._df("option_history_open_interest", symbol=sym, expiration="*", date=P2, max_dte=8); st["oi_from"] = str(P2)
+                except Exception as ex: st["oi_prev_error"] = f"{type(ex).__name__}: {str(ex)[:160]}"
+            st["oi_rows"] = 0 if o2 is None else len(o2)
+            if st["eod_rows"] and st["oi_rows"]:
+                s2 = parity_spot(e2); st["spot"] = round(s2, 2)
+                r = engine.compute(day, P2, o2, e2, o2, s2, s2, dict(cfg, top_n=8, window_pct=.03))
+                for fam, xs in r["fam"].items():
+                    if fam in ("gamma_flip",): continue
+                    for x in xs:
+                        k = round(float(x["k"]))
+                        e = ndx_rows.setdefault(k, {"k": k, "tags": set(), "src": set()})
+                        e["tags"].add(TAG.get(fam, fam)); e["src"].add(sym)
+                st["ok"] = True
+        except Exception as ex:
+            st["error"] = f"{type(ex).__name__}: {str(ex)[:200]}"
+        out["ndx_status"][sym] = st
+        print(sym, st)
+    if ndx_rows:
+        ndx_spot = next((v["spot"] for v in out["ndx_status"].values() if v.get("spot")), None)
+        ratio = ndx_spot / prevC if ndx_spot else None          # NDX points per QQQ dollar
+        out["ndx"] = {"spot": ndx_spot, "ratio": round(ratio, 4) if ratio else None,
+                      "strikes": [{"k": e["k"], "tags": sorted(e["tags"]), "src": sorted(e["src"]), "qqq": round(e["k"] / ratio, 2) if ratio else None}
+                                  for e in sorted(ndx_rows.values(), key=lambda e: -e["k"])]}
+        # confluence: QQQ strikes with an NDX/NDXP level within $0.50 QQQ get an NDX tag and become stacked
+        if ratio:
+            for sobj in out["strikes"]:
+                if any(abs(n["qqq"] - sobj["k"]) <= 0.5 for n in out["ndx"]["strikes"]):
+                    sobj["tags"] = sorted(set(sobj["tags"]) | {"NDX"}); sobj["star"] = len(set(sobj["tags"]) - {"EM"}) >= 2
     (DATA / f"{day}.json").write_text(json.dumps(out, indent=1))
     days = sorted({p.stem for p in DATA.glob("20*.json")}, reverse=True)[:60]
     (DATA / "index.json").write_text(json.dumps(days))

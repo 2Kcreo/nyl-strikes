@@ -37,6 +37,7 @@ li .k{font:600 16px ui-monospace,Consolas,Menlo,monospace}li .t{color:var(--mute
   </div>
   <div class="card"><div class="meta" id="meta"></div></div>
   <div class="card"><ul id="list"><li class="empty">Loading…</li></ul></div>
+  <div class="card" id="ndxCard" hidden><div class="row" style="justify-content:space-between"><b>NDX / NDXP levels</b><button id="copyNdx">Copy NDX</button></div><p class="sub" id="ndxSub" style="margin:6px 0 8px"></p><ul id="ndxList"></ul></div>
 </main>
 <div class="toast" id="toast" role="status"></div>
 <script>
@@ -53,6 +54,9 @@ li .k{font:600 16px ui-monospace,Consolas,Menlo,monospace}li .t{color:var(--mute
     var ks=current();
     $("list").innerHTML=ks.length?ks.map(function(s){return '<li><span class="k">'+(s.star?'<span class="star">★ </span>':'')+fmt(s.k)+'</span><span class="t">'+s.tags.join(" ")+'</span></li>'}).join(""):'<li class="empty">No strikes match.</li>';
     var m=[["QQQ",d.spot],["Implied move","±"+d.em],["Gamma flip",(d.flip||[]).join(", ")||"—"],["Open interest",d.oi],["Built",d.built],["Strikes",ks.length]];
+    var nx=d.ndx;$("ndxCard").hidden=!nx;
+    if(nx){$("ndxSub").textContent="NDX "+nx.spot+" · NQ ≈ NDX + basis · QQQ equivalent shown on the right";
+      $("ndxList").innerHTML=nx.strikes.map(function(s){return '<li><span class="k">'+s.k+'</span><span class="t">'+s.src.join("+")+" · "+s.tags.join(" ")+(s.qqq?" · QQQ "+s.qqq:"")+'</span></li>'}).join("")}
     $("meta").innerHTML=m.map(function(x){return "<span>"+x[0]+"</span><b>"+String(x[1]).replace(/</g,"&lt;")+"</b>"}).join("");
   }
   function toast(t){var e=$("toast");e.textContent=t;e.classList.add("show");setTimeout(function(){e.classList.remove("show")},1800)}
@@ -60,6 +64,8 @@ li .k{font:600 16px ui-monospace,Consolas,Menlo,monospace}li .t{color:var(--mute
     var done=function(){toast("Copied "+txt.split("\n").length+" strikes")};
     if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt).then(done,fallback);else fallback();
     function fallback(){var ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");done()}catch(e){prompt("Copy:",txt)}ta.remove()}};
+  $("copyNdx").onclick=function(){var d=days[$("day").value];if(!d||!d.ndx)return;var t=d.ndx.strikes.map(function(s){return s.k}).join("\n");
+    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){toast("Copied "+d.ndx.strikes.length+" NDX levels")},function(){prompt("Copy:",t)})};
   $("dens").onchange=function(){try{localStorage.setItem("vexs_dens",this.value)}catch(e){}render()};
   $("starBtn").onclick=function(){starOnly=!starOnly;this.classList.toggle("on",starOnly);this.setAttribute("aria-pressed",starOnly);try{localStorage.setItem("vexs_star",starOnly?"1":"0")}catch(e){}render()};
   $("day").onchange=render;
