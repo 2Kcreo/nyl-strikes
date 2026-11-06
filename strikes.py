@@ -34,7 +34,7 @@ def main():
         P = prev_wd(P)
     if eod is None: sys.exit("No prior-day option prices.")
     oi = get("oi", day); oi_src = str(day)
-    if oi is None and day == now.date():
+    if oi is None and day == now.date() and now.time() >= dt.time(6, 30):   # today's OI posts ~6:30 ET
         try:
             oi = theta.oi_snapshot(); oi = oi if oi is not None and len(oi) else None
             if oi is not None: print("open interest from today's snapshot:", len(oi), "rows", list(oi.columns)); oi_src = f"{day} (snapshot)"
@@ -71,19 +71,20 @@ def main():
         try:
             e2 = None; P2 = P
             for _ in range(4):
-                try: e2 = theta._df("option_history_eod", symbol=sym, expiration="*", start_date=P2, end_date=P2, max_dte=9)
+                mdte = 35 if sym == "NDX" else 9          # NDX root = monthly (3rd Friday) expiries, often >9 days out
+                try: e2 = theta._df("option_history_eod", symbol=sym, expiration="*", start_date=P2, end_date=P2, max_dte=mdte)
                 except Exception as ex: st["eod_error"] = f"{type(ex).__name__}: {str(ex)[:160]}"; e2 = None
                 if e2 is not None and len(e2): break
                 P2 = prev_wd(P2)
             st["eod_rows"] = 0 if e2 is None else len(e2)
             o2 = None
-            try: o2 = theta._df("option_history_open_interest", symbol=sym, expiration="*", date=day, max_dte=8)
+            try: o2 = theta._df("option_history_open_interest", symbol=sym, expiration="*", date=day, max_dte=mdte)
             except Exception as ex: st["oi_hist_error"] = f"{type(ex).__name__}: {str(ex)[:160]}"
-            if (o2 is None or not len(o2)) and day == now.date():
-                try: o2 = theta._df("option_snapshot_open_interest", symbol=sym, expiration="*", max_dte=8)
+            if (o2 is None or not len(o2)) and day == now.date() and now.time() >= dt.time(6, 30):
+                try: o2 = theta._df("option_snapshot_open_interest", symbol=sym, expiration="*", max_dte=mdte)
                 except Exception as ex: st["oi_snap_error"] = f"{type(ex).__name__}: {str(ex)[:160]}"
             if o2 is None or not len(o2):
-                try: o2 = theta._df("option_history_open_interest", symbol=sym, expiration="*", date=P2, max_dte=8); st["oi_from"] = str(P2)
+                try: o2 = theta._df("option_history_open_interest", symbol=sym, expiration="*", date=P2, max_dte=mdte); st["oi_from"] = str(P2)
                 except Exception as ex: st["oi_prev_error"] = f"{type(ex).__name__}: {str(ex)[:160]}"
             st["oi_rows"] = 0 if o2 is None else len(o2)
             if st["eod_rows"] and st["oi_rows"]:
