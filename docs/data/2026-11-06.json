@@ -1,6 +1,6 @@
 {
  "day": "2026-11-06",
- "built": "2026-11-06 03:24 ET",
+ "built": "2026-11-06 03:27 ET",
  "oi": "2026-11-05 (today's not out yet)",
  "spot": 646.8,
  "spot_src": "prior close",
@@ -118,10 +118,11 @@
   {
    "k": 663.0,
    "tags": [
+    "NDX",
     "VOL"
    ],
    "dens": 20,
-   "star": false
+   "star": true
   },
   {
    "k": 662.0,
@@ -156,6 +157,7 @@
    "k": 658.0,
    "tags": [
     "CHX",
+    "NDX",
     "VOL"
    ],
    "dens": 20,
@@ -327,7 +329,7 @@
    "oi_from": "2026-11-05",
    "oi_rows": 630,
    "spot": 26636.35,
-   "error": "RuntimeError: no option rows matched implied volatility"
+   "ok": true
   },
   "NDXP": {
    "eod_rows": 5240,
@@ -355,35 +357,74 @@
    {
     "k": 27400,
     "tags": [
+     "CHX",
+     "GEX",
      "VEX"
     ],
     "src": [
+     "NDX",
      "NDXP"
     ],
     "qqq": 665.34
    },
    {
+    "k": 27303,
+    "tags": [
+     "EM"
+    ],
+    "src": [
+     "NDX"
+    ],
+    "qqq": 662.99
+   },
+   {
+    "k": 27300,
+    "tags": [
+     "CHX",
+     "VEX"
+    ],
+    "src": [
+     "NDX"
+    ],
+    "qqq": 662.92
+   },
+   {
     "k": 27200,
     "tags": [
      "CHX",
+     "GEX",
      "OI",
      "VEX",
      "VOL"
     ],
     "src": [
+     "NDX",
      "NDXP"
     ],
     "qqq": 660.49
+   },
+   {
+    "k": 27100,
+    "tags": [
+     "CHX"
+    ],
+    "src": [
+     "NDX"
+    ],
+    "qqq": 658.06
    },
    {
     "k": 27000,
     "tags": [
      "CHX",
      "GEX",
+     "OI",
      "VEX",
-     "VOL"
+     "VOL",
+     "WALL"
     ],
     "src": [
+     "NDX",
      "NDXP"
     ],
     "qqq": 655.63
@@ -407,6 +448,7 @@
      "VOL"
     ],
     "src": [
+     "NDX",
      "NDXP"
     ],
     "qqq": 650.77
@@ -414,9 +456,14 @@
    {
     "k": 26700,
     "tags": [
-     "VOL"
+     "CHX",
+     "GEX",
+     "VEX",
+     "VOL",
+     "WALL"
     ],
     "src": [
+     "NDX",
      "NDXP"
     ],
     "qqq": 648.35
@@ -428,6 +475,7 @@
      "VOL"
     ],
     "src": [
+     "NDX",
      "NDXP"
     ],
     "qqq": 645.92
@@ -441,6 +489,7 @@
      "VOL"
     ],
     "src": [
+     "NDX",
      "NDXP"
     ],
     "qqq": 643.49
@@ -454,6 +503,7 @@
      "VOL"
     ],
     "src": [
+     "NDX",
      "NDXP"
     ],
     "qqq": 641.06
@@ -476,6 +526,7 @@
      "VEX"
     ],
     "src": [
+     "NDX",
      "NDXP"
     ],
     "qqq": 636.2
@@ -487,19 +538,34 @@
      "GEX",
      "OI",
      "VEX",
+     "VOL",
      "WALL"
     ],
     "src": [
+     "NDX",
      "NDXP"
     ],
     "qqq": 631.35
    },
    {
-    "k": 25900,
+    "k": 25970,
     "tags": [
-     "CHX"
+     "EM"
     ],
     "src": [
+     "NDX"
+    ],
+    "qqq": 630.62
+   },
+   {
+    "k": 25900,
+    "tags": [
+     "CHX",
+     "GEX",
+     "VEX"
+    ],
+    "src": [
+     "NDX",
      "NDXP"
     ],
     "qqq": 628.92
