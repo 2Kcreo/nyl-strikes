@@ -8,7 +8,7 @@ on:
     - cron: "40 13 * * 1-5"
   push:
     branches: [main]
-    paths: ["strikes.py", "engine.py", "feeds.py", ".github/workflows/strikes.yml"]
+    paths: ["strikes.py", "engine.py", "feeds.py", ".github/workflows/strikes.yml", "trigger.txt"]
   workflow_dispatch:
     inputs:
       day:
