@@ -1,11 +1,9 @@
 name: Build VEX strikes
 on:
   schedule:
-    # times are UTC. 11:45 = 6:45 ET (pre-open list, after open interest posts), 14:40 = 9:40 ET (locked at the open).
-    # 13:40 covers 9:40 ET in summer (EDT). GitHub may start runs 5-20 min late.
-    - cron: "45 11 * * 1-5"
-    - cron: "40 14 * * 1-5"
-    - cron: "40 13 * * 1-5"
+    # GitHub often starts scheduled runs late, so try every 15 min from ~6:30 to ~11:45 ET.
+    # Any run after 9:30 ET builds the same locked list (it uses the 9:30 open), so the first one that fires wins.
+    - cron: "*/15 11-16 * * 1-5"
   push:
     branches: [main]
     paths: ["strikes.py", "engine.py", "feeds.py", ".github/workflows/strikes.yml", "trigger.txt"]
