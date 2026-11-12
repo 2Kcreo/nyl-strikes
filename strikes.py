@@ -45,8 +45,11 @@ def main():
     if poi is None: poi = oi
     prevC = parity_spot(eod); spot = prevC; spot_src = "prior close"
     try:
-        b = [x for x in feeds.Yahoo().bars("QQQ", "1m", "1d") if x[0].date() == day and x[0].time() >= dt.time(9, 30)]
-        if b: spot, spot_src = b[0][1], "9:30 open"
+        bars_today = [x for x in feeds.Yahoo().bars("QQQ", "1m", "1d") if x[0].date() == day]
+        b = [x for x in bars_today if x[0].time() >= dt.time(9, 30)]
+        pre = [x for x in bars_today if dt.time(4, 0) <= x[0].time() < dt.time(9, 30)]
+        if b: spot, spot_src = b[0][1], "9:30 open (locked)"
+        elif pre: spot, spot_src = pre[-1][4], f"pre-market {pre[-1][0].strftime('%H:%M')} (updates at the open)"
     except Exception as e: print(f"Yahoo: {e}")
     cfg = json.load(open(ROOT / "config.json"))
     rows, em, flip = {}, None, []
