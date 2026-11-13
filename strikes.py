@@ -1,4 +1,4 @@
-"""Builds today's VEX key QQQ strikes in the cloud (GitHub Actions) and saves them for the website in docs/data/."""
+"""Builds today's NYL key QQQ strikes in the cloud (GitHub Actions) and saves them for the website in docs/data/."""
 import os, sys, json, datetime as dt
 from pathlib import Path
 from zoneinfo import ZoneInfo

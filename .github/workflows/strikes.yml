@@ -1,4 +1,4 @@
-name: Build VEX strikes
+name: Build NYL strikes
 on:
   schedule:
     # GitHub often starts scheduled runs late, so try every 15 min from ~6:30 to ~11:45 ET.
