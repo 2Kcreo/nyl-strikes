@@ -26,8 +26,8 @@ jobs:
         run: python backtest.py
       - name: Save results
         run: |
-          git config user.name "vex-bot"
-          git config user.email "vex-bot@users.noreply.github.com"
+          git config user.name "nyl-bot"
+          git config user.email "nyl-bot@users.noreply.github.com"
           git pull --rebase -q || true
           git add results
           git diff --cached --quiet || (git commit -m "backtest results" && git push)
