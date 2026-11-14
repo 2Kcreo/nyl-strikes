@@ -5,9 +5,9 @@
  "spot": 723.69,
  "spot_src": "pre-market 09:25 (backtest, nothing after 09:25 used)",
  "nq": {
-  "price": 29579.75,
-  "ratio": 40.8735,
-  "at": "23:55 bar"
+  "price": 29908.75,
+  "ratio": 41.3281,
+  "at": "09:20 bar"
  },
  "em": 11.16,
  "flip": [
