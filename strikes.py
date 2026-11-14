@@ -43,7 +43,7 @@ def main():
     if oi is None: sys.exit("No open interest.")
     poi = get("oi", P) if oi_src == str(day) else oi
     if poi is None: poi = oi
-    prevC = parity_spot(eod); spot = prevC; spot_src = "prior close"
+    prevC = parity_spot(eod); spot = prevC; spot_src = "prior close"; nq = None
     try:
         bars_today = [x for x in feeds.Yahoo().bars("QQQ", "1m", "1d") if x[0].date() == day]
         b = [x for x in bars_today if x[0].time() >= dt.time(9, 30)]
@@ -51,6 +51,14 @@ def main():
         if b: spot, spot_src = b[0][1], "9:30 open (locked)"
         elif pre: spot, spot_src = pre[-1][4], f"pre-market {pre[-1][0].strftime('%H:%M')} (updates at the open)"
     except Exception as e: print(f"Yahoo: {e}")
+    try:   # NQ / QQQ ratio at the same minute, so the site can show strikes in NQ points
+        ref = (b[0] if b else pre[-1]) if (b or pre) else None
+        if ref:
+            nqb = {x[0]: x for x in feeds.Yahoo().bars("NQ=F", "1m", "1d")}
+            m = nqb.get(ref[0]) or min(nqb.values(), key=lambda x: abs((x[0] - ref[0]).total_seconds()))
+            px = m[1] if b else m[4]
+            nq = {"price": round(px, 2), "ratio": round(px / spot, 4), "at": m[0].strftime("%H:%M")}
+    except Exception as e: print(f"NQ: {e}")
     cfg = json.load(open(ROOT / "config.json"))
     rows, em, flip = {}, None, []
     for dens, (n, w) in {"5": (5, .02), "8": (8, .03), "12": (12, .03), "20": (20, .045)}.items():
@@ -62,7 +70,7 @@ def main():
                 e = rows.setdefault(k, {"k": k, "tags": set(), "dens": int(dens)})
                 e["tags"].add(TAG.get(fam, fam)); e["dens"] = min(e["dens"], int(dens))
         if dens == "8": em = r["em"]; flip = [round(x["k"], 1) for x in r["fam"].get("gamma_flip", [])]
-    out = {"day": str(day), "built": now.strftime("%Y-%m-%d %H:%M ET"), "oi": oi_src, "spot": round(spot, 2), "spot_src": spot_src,
+    out = {"day": str(day), "built": now.strftime("%Y-%m-%d %H:%M ET"), "oi": oi_src, "spot": round(spot, 2), "spot_src": spot_src, "nq": nq,
            "em": round(em, 2), "flip": flip,
            "strikes": [{"k": e["k"], "tags": sorted(e["tags"]), "dens": e["dens"], "star": len(e["tags"] - {"EM"}) >= 2}
                        for e in sorted(rows.values(), key=lambda e: -e["k"])]}

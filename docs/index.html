@@ -1,84 +1,337 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NYL Strikes</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>NYL Strikes</title>
+<meta name="theme-color" content="#0a0713">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f0f3fa;--card:#fff;--ink:#131722;--mute:#787b86;--line:#e0e3eb;--accent:#2962ff;--star:#e6a700;--g:#089981}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0b0d11;--card:#14171c;--ink:#e6e8eb;--mute:#8a8f99;--line:#23272f;--accent:#5b8def;--star:#f2c94c;--g:#2fd38a}}
-:root[data-theme="dark"]{--bg:#0b0d11;--card:#14171c;--ink:#e6e8eb;--mute:#8a8f99;--line:#23272f;--accent:#5b8def;--star:#f2c94c;--g:#2fd38a}
+@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+:root{--bg:#f7f5ff;--surf:#ffffff;--surf2:#eeeaff;--ink:#1a1433;--dim:#5d567a;--line:#e0daf5;--acc:#5a3cf2;--acc2:#c43c9d;--accInk:#ffffff;--gold:#94690c;--glow:rgba(90,60,242,.13);--band:rgba(90,60,242,.05)}
+:root[data-theme="dark"]{--bg:#0a0713;--surf:#120e1f;--surf2:#1a1530;--ink:#f2eeff;--dim:#a7a0c4;--line:#2a2342;--acc:#a083ff;--acc2:#ff7ad9;--accInk:#0a0713;--gold:#e8c46b;--glow:rgba(160,131,255,.3);--band:rgba(160,131,255,.07)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0713;--surf:#120e1f;--surf2:#1a1530;--ink:#f2eeff;--dim:#a7a0c4;--line:#2a2342;--acc:#a083ff;--acc2:#ff7ad9;--accInk:#0a0713;--gold:#e8c46b;--glow:rgba(160,131,255,.3);--band:rgba(160,131,255,.07)}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 -apple-system,"Segoe UI",Roboto,sans-serif}
-main{max-width:560px;margin:0 auto;padding:16px}
-h1{font-size:20px;margin:4px 0 2px;letter-spacing:.06em}h1 i{font-style:normal;color:var(--accent)}
-.sub{color:var(--mute);font-size:13px;margin:0 0 14px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:12px}
-.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-select,button{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-height:40px}
-button{cursor:pointer}button.on{background:var(--ink);color:var(--card);border-color:var(--ink)}
-.copy{width:100%;background:var(--accent);color:#fff;border:0;font-weight:700;font-size:16px;min-height:48px;margin-top:10px}
-.meta{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;font-size:13px;color:var(--mute)}.meta b{color:var(--ink);font-weight:500}
-ul{list-style:none;margin:0;padding:0}
-li{display:flex;justify-content:space-between;gap:10px;padding:7px 2px;border-top:1px solid var(--line);font-variant-numeric:tabular-nums}
-li:first-child{border-top:0}
-li .k{font:600 16px ui-monospace,Consolas,Menlo,monospace}li .t{color:var(--mute);font-size:12px;text-align:right}
-.star{color:var(--star)}
-.empty{color:var(--mute);text-align:center;padding:18px 0}
-.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:var(--card);padding:10px 16px;border-radius:8px;font-weight:600;opacity:0;transition:opacity .2s;pointer-events:none}
-.toast.show{opacity:1}
-@media (prefers-reduced-motion:reduce){.toast{transition:none}}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font:14px/1.5 Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh;overflow-x:hidden}
+.disp{font-family:'Space Grotesk',Inter,sans-serif}
+.mono{font-family:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace}
+button,select{font:inherit;cursor:pointer;color:inherit}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.grain{position:fixed;inset:0;pointer-events:none;opacity:.07;mix-blend-mode:overlay;z-index:30}
+.blob{position:fixed;width:440px;height:440px;border-radius:50%;top:300px;left:-80px;background:radial-gradient(circle,var(--glow),transparent 68%);filter:blur(10px);animation:float 12s ease-in-out infinite;pointer-events:none;z-index:0}
+.app{display:flex;min-height:100vh;position:relative;z-index:1}
+/* sidebar (desktop) */
+.side{display:none;width:232px;flex-shrink:0;border-right:1px solid var(--line);background:var(--surf);flex-direction:column;padding:22px 14px;gap:4px;position:sticky;top:0;height:100vh}
+.logo{display:flex;align-items:center;gap:10px}
+.logo .ic{width:32px;height:32px;border-radius:9px;background:var(--acc);display:grid;place-items:center;box-shadow:0 6px 20px -6px var(--acc)}
+.logo b{font-family:'Space Grotesk',Inter,sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em}
+.navi{display:flex;align-items:center;gap:12px;min-height:44px;padding:0 12px;border-radius:12px;background:var(--surf2);color:var(--acc);font-weight:700}
+.clock{padding:12px;border-radius:14px;background:var(--surf2);border:1px solid var(--line)}
+.clock small{font-size:11px;letter-spacing:.14em;color:var(--dim);display:block}
+.clock div{font-size:24px;font-weight:600;font-variant-numeric:tabular-nums}
+.themeBtn{margin-top:8px;min-height:44px;border-radius:12px;border:1px solid var(--line);background:transparent;display:flex;align-items:center;justify-content:center;gap:8px}
+/* main */
+.main{flex:1;min-width:0;padding:0 16px calc(24px + env(safe-area-inset-bottom))}
+.top{display:flex;align-items:center;justify-content:space-between;padding:14px 0 12px;border-bottom:1px solid var(--line)}
+.iconBtn{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surf);display:grid;place-items:center}
+.head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;margin-top:18px}
+.eyebrow{font-size:11px;letter-spacing:.18em;color:var(--dim);font-weight:600}
+h1{margin:4px 0 0;font-size:34px;letter-spacing:-.03em;line-height:1.05}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:var(--surf2);border:1px solid var(--line);font-size:12.5px;font-weight:600;color:var(--acc)}
+.pill.pre{color:var(--gold)}
+.dot{position:relative;width:8px;height:8px}.dot i{position:absolute;inset:0;border-radius:50%;background:currentColor}.dot i+i{animation:ping 1.6s ease-out infinite}
+.cols{display:flex;flex-wrap:wrap;gap:16px 22px;margin-top:16px}
+.colMain{flex:999 1 520px;min-width:0;display:flex;flex-direction:column;gap:12px}
+.colSide{display:none;flex:1 1 320px;min-width:0;flex-direction:column;gap:12px}
+.ctrls{display:flex;flex-wrap:wrap;gap:8px}
+.ctrls label{flex:1 1 150px;position:relative}
+.ctrls label:nth-child(2){flex-basis:130px}
+.ctrls select{width:100%;min-height:46px;padding:0 36px 0 14px;border-radius:12px;border:1px solid var(--line);background:var(--surf);appearance:none;-webkit-appearance:none}
+.ctrls label::after{content:"";position:absolute;right:15px;top:50%;width:7px;height:7px;border-right:2px solid var(--dim);border-bottom:2px solid var(--dim);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.starBtn{flex:0 0 auto;min-height:46px;padding:0 16px;border-radius:12px;border:1px solid var(--line);background:var(--surf);display:flex;align-items:center;gap:8px;font-weight:600}
+.starBtn[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:var(--accInk)}
+.ringWrap{position:relative;border-radius:18px;padding:1.5px;overflow:hidden;background:var(--line)}
+.ring{position:absolute;inset:-60%;background:conic-gradient(from var(--ang),transparent 0deg,transparent 250deg,var(--acc) 320deg,var(--acc2) 345deg,transparent 360deg);animation:spin 6s linear infinite}
+.copyBox{position:relative;border-radius:17px;background:var(--surf);padding:12px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.seg{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:3px;border-radius:12px;background:var(--surf2);border:1px solid var(--line);flex:1 1 180px}
+.seg .knob{position:absolute;top:3px;bottom:3px;left:3px;width:calc(33.33% - 2px);border-radius:9px;background:var(--surf);box-shadow:0 2px 10px -4px var(--acc);transition:left .45s cubic-bezier(.5,1.5,.4,1)}
+.seg button{position:relative;min-height:40px;border:0;background:transparent;color:var(--dim);font-weight:700;font-size:13px}
+.seg button[aria-pressed="true"]{color:var(--acc)}
+.copyBtn{flex:2 1 200px;min-height:48px;border:0;border-radius:12px;background:var(--acc);color:var(--accInk);font-weight:700;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 10px 28px -10px var(--acc);transition:transform .15s}
+.copyBtn:active{transform:scale(.98)}
+.hint{flex-basis:100%;font-size:12px;color:var(--dim)}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.stat{border-radius:14px;background:var(--surf);border:1px solid var(--line);padding:10px 12px;min-width:0}
+.stat small{font-size:11px;letter-spacing:.12em;color:var(--dim);font-weight:600;display:block}
+.stat b{display:block;font-family:'Space Grotesk',Inter,sans-serif;font-size:20px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stat span{font-size:11.5px;color:var(--dim);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tabs{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-bottom:1px solid var(--line);margin-top:4px}
+.tabs button{min-height:46px;border:0;background:transparent;color:var(--dim);font-weight:600}
+.tabs button[aria-selected="true"]{color:var(--acc)}
+.tabs .bar{position:absolute;bottom:-1px;height:2px;width:50%;left:0;background:var(--acc);box-shadow:0 0 12px var(--acc);transition:left .4s cubic-bezier(.5,1.4,.4,1)}
+.panel{border-radius:18px;background:var(--surf);border:1px solid var(--line);padding:8px 6px}
+.ph{display:flex;justify-content:space-between;align-items:center;padding:6px 10px 8px;gap:8px}
+.ph .eyebrow+div,.ph small{font-size:11.5px;color:var(--dim)}
+.mark{display:flex;align-items:center;gap:10px;margin:4px 0;padding:2px 10px;border-radius:10px;font-weight:700;font-size:12.5px}
+.mark .ln{flex:1;border-top:1.5px dashed currentColor;opacity:.9}
+.mark.em{color:var(--gold)}.mark.flip{color:var(--acc)}
+.mark.now{background:var(--acc);color:var(--accInk);padding:7px 10px}.mark.now .ln{border-top-style:solid}
+.row{display:grid;grid-template-columns:72px 44px minmax(0,1fr) 48px;gap:10px;align-items:center;min-height:36px;padding:0 10px;border-radius:10px;opacity:.72}
+.row.in{background:var(--band);opacity:1}
+.row .k{font-weight:700;font-size:14px;display:flex;align-items:center;gap:5px;white-space:nowrap}
+.row .k svg{color:var(--gold);flex:none}
+.meter{height:6px;border-radius:6px;background:var(--surf2);overflow:hidden}
+.meter i{display:block;height:100%;border-radius:6px;background:var(--acc);transform-origin:left;animation:grow .9s cubic-bezier(.2,.8,.2,1) both}
+.meter i.w{background:var(--acc2);box-shadow:0 0 10px var(--acc2)}
+.tags{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:3px}
+.tag{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9.5px;font-weight:700;letter-spacing:.02em;padding:1px 5px;border-radius:5px;background:var(--surf2);color:var(--dim)}
+.tag.WALL{background:var(--acc2);color:var(--accInk)}.tag.OI{background:var(--acc);color:var(--accInk)}.tag.EM{background:transparent;color:var(--gold)}
+.dist{font-size:11.5px;color:var(--dim);text-align:right}
+.nrow{display:grid;grid-template-columns:62px minmax(0,1fr) 54px;gap:10px;align-items:center;min-height:35px;padding:0 10px;border-radius:10px}
+.nrow.in{background:var(--band)}
+.nrow .k{font-weight:700}
+.nrow .src{font-size:10.5px;font-weight:700;color:var(--dim);margin-right:3px}.nrow .src.both{color:var(--acc)}
+.nrow .tags{justify-content:flex-start;align-items:center}
+.smallBtn{min-height:36px;padding:0 12px;border-radius:10px;border:1px solid var(--line);background:var(--surf2);font-weight:600;font-size:12.5px;flex:none}
+.legend{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 14px;margin-top:10px}
+.legend div{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--dim)}.legend .tag{min-width:38px;text-align:center}
+.empty{color:var(--dim);text-align:center;padding:22px 10px}
+.scroll{max-height:560px;overflow-y:auto;scrollbar-width:none}.scroll::-webkit-scrollbar{display:none}
+.rise{animation:rise .7s cubic-bezier(.2,.8,.2,1) both}
+.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translate(-50%,10px);background:var(--acc);color:var(--accInk);padding:11px 18px;border-radius:12px;font-weight:700;opacity:0;transition:.25s;pointer-events:none;z-index:40;box-shadow:0 12px 30px -10px var(--acc)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes spin{to{--ang:360deg}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes ping{0%{transform:scale(1);opacity:.7}100%{transform:scale(3.2);opacity:0}}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(18px,-14px) scale(1.08)}}
+@media (min-width:960px){
+  .side{display:flex}.top{display:none}.main{padding:8px 32px 32px}
+  .blob{top:60px;left:520px}
+  .stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .colSide{display:flex}.tabs{display:none}#ndxMain{display:none!important}#ladder{display:block!important}
+  .row{grid-template-columns:78px 160px minmax(0,1fr) 52px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
-</head><body><main>
-  <h1>N<i>Y</i>L STRIKES</h1>
-  <p class="sub">Today's key QQQ strikes. Tap Copy, paste into "Key QQQ strikes" in TradingView.</p>
-  <div class="card">
-    <div class="row">
-      <select id="day" aria-label="Day"></select>
-      <select id="dens" aria-label="Strikes per layer"><option value="5">5 per layer</option><option value="8" selected>8 per layer</option><option value="12">12 per layer</option><option value="20">20 per layer</option></select>
-      <button id="starBtn" aria-pressed="false">★ only</button>
+</head>
+<body>
+<svg class="grain" aria-hidden="true" width="100%" height="100%"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+<div class="blob" aria-hidden="true"></div>
+<div class="app">
+  <nav class="side" aria-label="Main">
+    <div class="logo" style="padding:0 8px 22px"><span class="ic"><svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 14l4.5-5 3 3L17 5" stroke="var(--accInk)" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>NYL</b></div>
+    <div class="navi"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>Strikes</div>
+    <div style="flex:1"></div>
+    <div class="clock"><small>NEW YORK</small><div class="disp" id="clock">—</div></div>
+    <button type="button" class="themeBtn" data-theme-toggle><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="themeIcon" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="themeText">Light mode</span></button>
+  </nav>
+
+  <main class="main">
+    <header class="top">
+      <div class="logo"><span class="ic"><svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 14l4.5-5 3 3L17 5" stroke="var(--accInk)" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>NYL</b></div>
+      <button type="button" class="iconBtn" data-theme-toggle aria-label="Switch light or dark mode"><svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path class="themeIcon" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </header>
+
+    <div class="head">
+      <div><div class="eyebrow">KEY QQQ STRIKES · FROM OPTIONS DATA</div><h1 class="disp">Strikes</h1></div>
+      <span class="pill" id="pill"><span class="dot"><i></i><i></i></span><span id="pillText">Loading…</span></span>
     </div>
-    <button class="copy" id="copy">Copy strikes</button>
-  </div>
-  <div class="card"><div class="meta" id="meta"></div></div>
-  <div class="card"><ul id="list"><li class="empty">Loading…</li></ul></div>
-  <div class="card" id="ndxCard" hidden><div class="row" style="justify-content:space-between"><b>NDX / NDXP levels</b><button id="copyNdx">Copy NDX</button></div><p class="sub" id="ndxSub" style="margin:6px 0 8px"></p><ul id="ndxList"></ul></div>
-</main>
-<div class="toast" id="toast" role="status"></div>
+
+    <div class="cols">
+      <section class="colMain">
+        <div class="ctrls">
+          <label><span class="sr">Day</span><select id="day"></select></label>
+          <label><span class="sr">Strikes per layer</span><select id="dens"><option value="5">5 per layer</option><option value="8">8 per layer</option><option value="12">12 per layer</option><option value="20">20 per layer</option></select></label>
+          <button type="button" class="starBtn" id="starBtn" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg>Starred only</button>
+        </div>
+
+        <div class="ringWrap rise">
+          <div class="ring" aria-hidden="true"></div>
+          <div class="copyBox">
+            <div class="seg" role="group" aria-label="Copy as">
+              <div class="knob" id="knob" aria-hidden="true"></div>
+              <button type="button" data-fmt="QQQ" aria-pressed="true">QQQ</button>
+              <button type="button" data-fmt="NQ" aria-pressed="false">NQ</button>
+              <button type="button" data-fmt="NDX" aria-pressed="false">NDX</button>
+            </div>
+            <button type="button" class="copyBtn" id="copy"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path id="copyIcon" d="M9 9h10v11H9zM5 15V4h10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span id="copyText">Copy QQQ strikes</span></button>
+            <div class="hint" id="hint">Paste into “Key QQQ strikes” in TradingView. QQQ prices, as listed.</div>
+          </div>
+        </div>
+
+        <div class="stats" id="stats"></div>
+
+        <div class="tabs" role="tablist" aria-label="Strike list">
+          <button type="button" role="tab" id="tabQ" aria-selected="true">QQQ ladder</button>
+          <button type="button" role="tab" id="tabN" aria-selected="false">NDX / NDXP</button>
+          <div class="bar" id="tabBar" aria-hidden="true"></div>
+        </div>
+
+        <div class="panel rise" id="ladder" style="animation-delay:.15s">
+          <div class="ph"><span class="eyebrow" id="ladTitle">QQQ LADDER</span><small>bar = how many signals agree</small></div>
+          <div id="ladRows"><div class="empty">Loading…</div></div>
+        </div>
+        <div class="panel rise" id="ndxMain" style="display:none">
+          <div class="ph"><div><div class="eyebrow">NDX / NDXP LEVELS</div><div class="ndxSub"></div></div><button type="button" class="smallBtn" data-copy-ndx>Copy NDX</button></div>
+          <div class="ndxRows"></div>
+        </div>
+      </section>
+
+      <aside class="colSide">
+        <div class="panel rise" style="padding:16px;animation-delay:.1s">
+          <div class="eyebrow">WHAT THE TAGS MEAN</div>
+          <div class="legend" id="legend"></div>
+        </div>
+        <div class="panel rise" style="animation-delay:.2s">
+          <div class="ph" style="padding:8px 10px"><div><div class="eyebrow">NDX / NDXP LEVELS</div><div class="ndxSub"></div></div><button type="button" class="smallBtn" data-copy-ndx>Copy NDX</button></div>
+          <div class="scroll ndxRows"></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
 <script>
 (function(){
-  var $=function(i){return document.getElementById(i)}, days={}, starOnly=false;
-  try{var s=localStorage.getItem("vexs_dens");if(s)$("dens").value=s;starOnly=localStorage.getItem("vexs_star")==="1";}catch(e){}
-  $("starBtn").classList.toggle("on",starOnly);$("starBtn").setAttribute("aria-pressed",starOnly);
-  function fmt(k){return Number(k)%1?Number(k).toFixed(1):String(Number(k))}
-  function current(){var d=days[$("day").value];if(!d)return [];var n=+$("dens").value;
+  var $=function(i){return document.getElementById(i)}, $$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+  var days={}, starOnly=false, fmtSel="QQQ", tab="q";
+  function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+  function put(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+  var esc=function(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+
+  /* theme */
+  var SUN="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4", MOON="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z";
+  function curTheme(){var t=document.documentElement.getAttribute("data-theme");if(t)return t;return matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}
+  function paintTheme(){var dark=curTheme()==="dark";$$(".themeIcon").forEach(function(p){p.setAttribute("d",dark?SUN:MOON)});$$(".themeText").forEach(function(s){s.textContent=dark?"Light mode":"Dark mode"});
+    var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=dark?"#0a0713":"#f7f5ff"}
+  var saved=get("nyl_theme");document.documentElement.setAttribute("data-theme",saved||"dark");paintTheme();
+  $$("[data-theme-toggle]").forEach(function(b){b.onclick=function(){var t=curTheme()==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",t);put("nyl_theme",t);paintTheme()}});
+
+  /* clock */
+  function tick(){$("clock").textContent=new Date().toLocaleTimeString("en-US",{timeZone:"America/New_York",hour:"numeric",minute:"2-digit",second:"2-digit"})}
+  tick();setInterval(tick,1000);
+
+  /* prefs */
+  $("dens").value=get("vexs_dens")||"12";starOnly=get("vexs_star")==="1";fmtSel=get("nyl_fmt")||"QQQ";
+  if(["QQQ","NQ","NDX"].indexOf(fmtSel)<0)fmtSel="QQQ";
+
+  function fmt(k){k=Number(k);return k%1?k.toFixed(k*100%10?2:1):String(k)}
+  function nqRatio(d){if(d.nq&&d.nq.ratio)return{r:d.nq.ratio,exact:true};if(d.ndx&&d.ndx.ratio)return{r:d.ndx.ratio,exact:false};return null}
+  function toNq(k,r){return (Math.round(k*r*4)/4)}
+  function fmtNq(v){return v.toLocaleString("en-US",{minimumFractionDigits:v%1?2:0,maximumFractionDigits:2})}
+  function current(){var d=days[$("day").value];if(!d)return[];var n=+$("dens").value;
     return (d.strikes||[]).filter(function(s){return s.dens<=n&&(!starOnly||s.star)}).sort(function(a,b){return b.k-a.k})}
-  function render(){
-    var d=days[$("day").value];
-    if(!d){$("list").innerHTML='<li class="empty">No strikes saved yet. They appear here every weekday after your PC builds them.</li>';$("meta").innerHTML="";return}
-    var ks=current();
-    $("list").innerHTML=ks.length?ks.map(function(s){return '<li><span class="k">'+(s.star?'<span class="star">★ </span>':'')+fmt(s.k)+'</span><span class="t">'+s.tags.join(" ")+'</span></li>'}).join(""):'<li class="empty">No strikes match.</li>';
-    var m=[["QQQ",d.spot],["Implied move","±"+d.em],["Gamma flip",(d.flip||[]).join(", ")||"—"],["Open interest",d.oi],["Built",d.built],["Strikes",ks.length]];
-    var nx=d.ndx;$("ndxCard").hidden=!nx;
-    if(nx){$("ndxSub").textContent="NDX "+nx.spot+" · NQ ≈ NDX + basis · QQQ equivalent shown on the right";
-      $("ndxList").innerHTML=nx.strikes.map(function(s){return '<li><span class="k">'+s.k+'</span><span class="t">'+s.src.join("+")+" · "+s.tags.join(" ")+(s.qqq?" · QQQ "+s.qqq:"")+'</span></li>'}).join("")}
-    $("meta").innerHTML=m.map(function(x){return "<span>"+x[0]+"</span><b>"+String(x[1]).replace(/</g,"&lt;")+"</b>"}).join("");
+  function nonEm(t){return t.filter(function(x){return x!=="EM"}).length}
+  function tagHtml(ts){return ts.map(function(t){return '<span class="tag '+esc(t)+'">'+esc(t)+'</span>'}).join("")}
+  var STAR='<svg width="11" height="11" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg>';
+  var STAR0='<svg width="11" height="11" viewBox="0 0 24 24" aria-hidden="true" style="opacity:0"><path d="M12 3z"/></svg>';
+  function dayLabel(k,o){return new Date(k+"T12:00:00").toLocaleDateString("en-US",o||{weekday:"short",month:"short",day:"numeric"})}
+
+  function status(d){
+    var s=d.spot_src||"", today=d.day===new Date().toLocaleDateString("en-CA",{timeZone:"America/New_York"});
+    if(/locked/.test(s))return{t:"Final · locked at the 9:30 open",pre:false};
+    if(/pre-market/.test(s)){var m=s.match(/\d{1,2}:\d{2}/);return{t:"Pre-market "+(m?m[0]+" ":"")+"· updates at the open",pre:true}}
+    return{t:today?"Prior close · updates pre-market":"Built from the prior close",pre:true};
   }
-  function toast(t){var e=$("toast");e.textContent=t;e.classList.add("show");setTimeout(function(){e.classList.remove("show")},1800)}
-  $("copy").onclick=function(){var txt=current().map(function(s){return fmt(s.k)}).join("\n");if(!txt)return;
-    var done=function(){toast("Copied "+txt.split("\n").length+" strikes")};
-    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt).then(done,fallback);else fallback();
-    function fallback(){var ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");done()}catch(e){prompt("Copy:",txt)}ta.remove()}};
-  $("copyNdx").onclick=function(){var d=days[$("day").value];if(!d||!d.ndx)return;var t=d.ndx.strikes.map(function(s){return s.k}).join("\n");
-    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){toast("Copied "+d.ndx.strikes.length+" NDX levels")},function(){prompt("Copy:",t)})};
-  $("dens").onchange=function(){try{localStorage.setItem("vexs_dens",this.value)}catch(e){}render()};
-  $("starBtn").onclick=function(){starOnly=!starOnly;this.classList.toggle("on",starOnly);this.setAttribute("aria-pressed",starOnly);try{localStorage.setItem("vexs_star",starOnly?"1":"0")}catch(e){}render()};
+
+  function renderSeg(){
+    var i=["QQQ","NQ","NDX"].indexOf(fmtSel);$("knob").style.left=i===0?"3px":i===1?"33.33%":"calc(66.66% - 1px)";
+    $$(".seg button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.fmt===fmtSel)});
+    $("copyText").textContent="Copy "+fmtSel+" strikes";
+    var d=days[$("day").value], nr=d&&nqRatio(d);
+    $("hint").textContent=fmtSel==="QQQ"?"Paste into “Key QQQ strikes” in TradingView. QQQ prices, as listed."
+      :fmtSel==="NQ"?(nr?(nr.exact?"QQQ strikes converted with today’s NQ / QQQ ratio ("+nr.r.toFixed(3)+"), rounded to 0.25.":"Converted with the NDX / QQQ ratio ("+nr.r.toFixed(3)+"). NQ usually trades a little above NDX."):"No NQ ratio saved for this day.")
+      :"NDX and NDXP option levels, in NDX points.";
+  }
+
+  function render(){
+    renderSeg();
+    var d=days[$("day").value];
+    if(!d){$("ladRows").innerHTML='<div class="empty">No strikes saved yet. They appear here every weekday morning.</div>';$("stats").innerHTML="";$("pillText").textContent="Waiting for the first build";return}
+    var st=status(d);$("pillText").textContent=st.t;$("pill").classList.toggle("pre",st.pre);
+    var ks=current(), spot=+d.spot, em=+d.em, hi=spot+em, lo=spot-em, flip=(d.flip||[])[0];
+    var nr=nqRatio(d), showNq=fmtSel==="NQ"&&nr;
+    var starred=(d.strikes||[]).filter(function(s){return s.dens<=+$("dens").value&&s.star}).length;
+    /* stats */
+    var built=(d.built||"").match(/(\d{4}-\d{2}-\d{2}) (\d{1,2}):(\d{2})/), bT="—", bS="";
+    if(built){var h=+built[2],ap=h>=12?"PM":"AM";bT=((h%12)||12)+":"+built[3]+" "+ap;bS="ET · "+dayLabel(built[1])}
+    var oiD=(d.oi||"").match(/\d{4}-\d{2}-\d{2}/), oiV=oiD?dayLabel(oiD[0],{month:"short",day:"numeric"}):(d.oi||"—"), oiS=/snapshot/.test(d.oi||"")?"today’s snapshot":"end-of-day file";
+    var spotSub=/locked/.test(d.spot_src)?"at the 9:30 open":/pre-market/.test(d.spot_src)?"pre-market price":"prior close";
+    var flipSub=flip!=null?("price is "+Math.abs(spot-flip).toFixed(2)+(spot<flip?" below":" above")):"none in range";
+    var stats=[
+      ["QQQ",spot.toFixed(2),showNq?"NQ ≈ "+fmtNq(toNq(spot,nr.r)):spotSub,"var(--ink)"],
+      ["IMPLIED MOVE","±"+em.toFixed(2),lo.toFixed(2)+" – "+hi.toFixed(2),"var(--gold)"],
+      ["GAMMA FLIP",flip!=null?flip.toFixed(2):"—",flipSub,"var(--acc)"],
+      ["OPEN INTEREST",oiV,oiS,"var(--ink)"],
+      ["STRIKES",String(ks.length),starOnly?"starred only":starred+" starred","var(--ink)"],
+      ["BUILT",bT,bS,"var(--ink)"]];
+    $("stats").innerHTML=stats.map(function(s,j){return '<div class="stat rise" style="animation-delay:'+(j*60+100)+'ms"><small>'+s[0]+'</small><b style="color:'+s[3]+'">'+esc(s[1])+'</b><span>'+esc(s[2])+'</span></div>'}).join("");
+    /* ladder */
+    $("ladTitle").textContent=(showNq?"NQ LADDER":"QQQ LADDER")+" · "+ks.length+" STRIKES";
+    var marks=[{v:hi,l:"Expected move high",c:"em"},{v:spot,l:"QQQ now",c:"now"},{v:lo,l:"Expected move low",c:"em"}];
+    if(flip!=null)marks.push({v:flip,l:"Gamma flip",c:"flip"});
+    marks.sort(function(a,b){return b.v-a.v});
+    function mv(m){return showNq?fmtNq(toNq(m.v,nr.r)):m.v.toFixed(2)}
+    function markHtml(m){return '<div class="mark '+m.c+'"><span>'+m.l+'</span><span class="ln" aria-hidden="true"></span><span class="mono">'+mv(m)+'</span></div>'}
+    var out=[],mi=0;
+    ks.forEach(function(s,i){
+      while(mi<marks.length&&marks[mi].v>s.k)out.push(markHtml(marks[mi++]));
+      var n=nonEm(s.tags), wall=s.tags.indexOf("WALL")>=0, inEm=s.k<=hi&&s.k>=lo, dd=showNq?(toNq(s.k,nr.r)-toNq(spot,nr.r)):(s.k-spot);
+      out.push('<div class="row'+(inEm?' in':'')+'"><span class="k mono">'+(s.star?STAR:STAR0)+(showNq?fmtNq(toNq(s.k,nr.r)):fmt(s.k))+'</span>'+
+        '<span class="meter" aria-hidden="true"><i class="'+(wall?'w':'')+'" style="width:'+Math.min(100,Math.round(n/6*100))+'%;animation-delay:'+(i*35+200)+'ms"></i></span>'+
+        '<span class="tags">'+tagHtml(s.tags)+'</span><span class="dist mono">'+(dd>=0?"+":"−")+Math.abs(dd).toFixed(showNq?0:1)+'</span></div>');
+    });
+    while(mi<marks.length)out.push(markHtml(marks[mi++]));
+    $("ladRows").innerHTML=ks.length?out.join(""):'<div class="empty">No strikes match these filters.</div>';
+    /* ndx */
+    var nx=d.ndx;
+    $$(".ndxSub").forEach(function(e){e.textContent=nx?("NDX "+Number(nx.spot).toLocaleString("en-US")+" · QQQ equivalent on the right"):"No NDX levels saved for this day."});
+    $$(".ndxRows").forEach(function(e){e.innerHTML=nx&&nx.strikes.length?nx.strikes.map(function(s){var both=s.src.length>1, inEm=s.qqq!=null&&s.qqq<=hi&&s.qqq>=lo;
+      return '<div class="nrow'+(inEm?' in':'')+'"><span class="k mono">'+esc(s.k)+'</span><span class="tags"><span class="src'+(both?' both':'')+'">'+esc(s.src.join("+"))+'</span>'+tagHtml(s.tags)+'</span><span class="dist mono">'+(s.qqq!=null?Number(s.qqq).toFixed(2):"")+'</span></div>'}).join(""):'<div class="empty">—</div>'});
+  }
+
+  function setTab(t){tab=t;$("tabQ").setAttribute("aria-selected",t==="q");$("tabN").setAttribute("aria-selected",t==="n");$("tabBar").style.left=t==="q"?"0%":"50%";
+    $("ladder").style.display=t==="q"?"":"none";$("ndxMain").style.display=t==="n"?"":"none"}
+  $("tabQ").onclick=function(){setTab("q")};$("tabN").onclick=function(){setTab("n")};
+
+  var tT;function toast(t){var e=$("toast");e.textContent=t;e.classList.add("show");clearTimeout(tT);tT=setTimeout(function(){e.classList.remove("show")},1800)}
+  function copyText(txt,msg){if(!txt)return;var ok=function(){toast(msg);flash()};
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt).then(ok,fb);else fb();
+    function fb(){var ta=document.createElement("textarea");ta.value=txt;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");ok()}catch(e){prompt("Copy:",txt)}ta.remove()}}
+  var fT;function flash(){$("copyIcon").setAttribute("d","M5 12.5l4.5 4.5L19 7");clearTimeout(fT);fT=setTimeout(function(){$("copyIcon").setAttribute("d","M9 9h10v11H9zM5 15V4h10")},1800)}
+  function ndxText(d){return d&&d.ndx?d.ndx.strikes.map(function(s){return s.k}).join("\n"):""}
+  $("copy").onclick=function(){var d=days[$("day").value];if(!d)return;
+    if(fmtSel==="NDX"){var t=ndxText(d);copyText(t,"Copied "+(t?t.split("\n").length:0)+" NDX levels");return}
+    var ks=current();if(fmtSel==="NQ"){var nr=nqRatio(d);if(!nr){toast("No NQ ratio for this day");return}
+      copyText(ks.map(function(s){return String(toNq(s.k,nr.r))}).join("\n"),"Copied "+ks.length+" NQ levels");return}
+    copyText(ks.map(function(s){return fmt(s.k)}).join("\n"),"Copied "+ks.length+" QQQ strikes")};
+  $$("[data-copy-ndx]").forEach(function(b){b.onclick=function(){var t=ndxText(days[$("day").value]);copyText(t,"Copied "+(t?t.split("\n").length:0)+" NDX levels")}});
+  $$(".seg button").forEach(function(b){b.onclick=function(){fmtSel=b.dataset.fmt;put("nyl_fmt",fmtSel);if(fmtSel==="NDX")setTab("n");else setTab("q");render()}});
+  $("dens").onchange=function(){put("vexs_dens",this.value);render()};
+  function paintStar(){$("starBtn").setAttribute("aria-pressed",starOnly)}paintStar();
+  $("starBtn").onclick=function(){starOnly=!starOnly;paintStar();put("vexs_star",starOnly?"1":"0");render()};
   $("day").onchange=render;
+
+  var LEG=[["GEX","Gamma exposure"],["VEX","Vanna exposure"],["CHX","Charm exposure"],["VOL","Heavy volume"],["OI","Open interest wall"],["WALL","Gamma wall"],["EM","Expected move edge"],["NDX","Lines up with an NDX level"]];
+  $("legend").innerHTML=LEG.map(function(l){return '<div><span class="tag '+l[0]+'">'+l[0]+'</span>'+l[1]+'</div>'}).join("")+'<div style="grid-column:1/-1;margin-top:4px">'+STAR.replace('width="11" height="11"','width="12" height="12" style="color:var(--gold)"')+' Starred = 2 or more signals agree</div>';
+
   function load(){
     fetch("data/index.json?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.json()}).then(function(list){
-      return Promise.all(list.slice(0,30).map(function(d){return fetch("data/"+d+".json",{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return null})}));
+      return Promise.all(list.slice(0,30).map(function(d){return fetch("data/"+d+".json?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return null})}));
     }).then(function(arr){
       var keep=$("day").value;days={};arr.forEach(function(v){if(v)days[v.day]=v});
       var ks=Object.keys(days).sort().reverse();
-      $("day").innerHTML=ks.map(function(k){return '<option value="'+k+'">'+new Date(k+"T12:00:00").toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"})+'</option>'}).join("");
+      $("day").innerHTML=ks.map(function(k){return '<option value="'+k+'">'+dayLabel(k)+'</option>'}).join("");
       if(keep&&days[keep])$("day").value=keep;render();
-    }).catch(function(){$("list").innerHTML='<li class="empty">No strikes saved yet. The first run happens on the next weekday morning.</li>'});
+    }).catch(function(){$("ladRows").innerHTML='<div class="empty">Couldn’t load strikes. Check your connection and refresh.</div>'});
   }
-  load();setInterval(load,300000);
+  setTab(fmtSel==="NDX"?"n":"q");load();setInterval(load,300000);
 })();
-</script></body></html>
+</script>
+</body>
+</html>
