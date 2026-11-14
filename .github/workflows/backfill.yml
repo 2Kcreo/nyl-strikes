@@ -1,0 +1,40 @@
+name: Backfill past days (as of 9:25, no look-ahead)
+on:
+  push:
+    branches: [main]
+    paths: ["backfill.txt"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: strikes
+  cancel-in-progress: false
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Build each day as of 9:25 ET
+        env:
+          THETADATA_API_KEY: ${{ secrets.THETADATA_API_KEY }}
+        run: |
+          read START END ASOF < backfill.txt
+          d=$START
+          while [ "$d" \< "$END" ] || [ "$d" = "$END" ]; do
+            dow=$(date -d "$d" +%u)
+            if [ "$dow" -le 5 ]; then echo "=== $d"; python strikes.py "$d" --asof=$ASOF || echo "FAILED $d"; fi
+            d=$(date -I -d "$d + 1 day")
+          done
+      - name: Save
+        run: |
+          git config user.name "nyl-bot"
+          git config user.email "nyl-bot@users.noreply.github.com"
+          git add docs/data
+          git commit -m "backfill $(cat backfill.txt)" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done

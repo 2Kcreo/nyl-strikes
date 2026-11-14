@@ -25,7 +25,9 @@ def parity_spot(eod):
 
 def main():
     if not os.environ.get("THETADATA_API_KEY"): sys.exit("THETADATA_API_KEY secret is not set in the repo settings.")
-    now = dt.datetime.now(ET); day = dt.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else now.date()
+    now = dt.datetime.now(ET); args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    day = dt.date.fromisoformat(args[0]) if args else now.date()
+    asof = next((a.split("=", 1)[1] for a in sys.argv[1:] if a.startswith("--asof=")), None)   # backtest: build as it looked at HH:MM ET that morning
     if day.weekday() >= 5: print("Weekend, nothing to do."); return
     P = prev_wd(day); eod = None
     for _ in range(6):
@@ -44,21 +46,36 @@ def main():
     poi = get("oi", P) if oi_src == str(day) else oi
     if poi is None: poi = oi
     prevC = parity_spot(eod); spot = prevC; spot_src = "prior close"; nq = None
-    try:
-        bars_today = [x for x in feeds.Yahoo().bars("QQQ", "1m", "1d") if x[0].date() == day]
-        b = [x for x in bars_today if x[0].time() >= dt.time(9, 30)]
-        pre = [x for x in bars_today if dt.time(4, 0) <= x[0].time() < dt.time(9, 30)]
-        if b: spot, spot_src = b[0][1], "9:30 open (locked)"
-        elif pre: spot, spot_src = pre[-1][4], f"pre-market {pre[-1][0].strftime('%H:%M')} (updates at the open)"
-    except Exception as e: print(f"Yahoo: {e}")
-    try:   # NQ / QQQ ratio at the same minute, so the site can show strikes in NQ points
-        ref = (b[0] if b else pre[-1]) if (b or pre) else None
-        if ref:
-            nqb = {x[0]: x for x in feeds.Yahoo().bars("NQ=F", "1m", "1d")}
-            m = nqb.get(ref[0]) or min(nqb.values(), key=lambda x: abs((x[0] - ref[0]).total_seconds()))
-            px = m[1] if b else m[4]
-            nq = {"price": round(px, 2), "ratio": round(px / spot, 4), "at": m[0].strftime("%H:%M")}
-    except Exception as e: print(f"NQ: {e}")
+    if asof:   # backtest: only data that existed before HH:MM ET (pre-market 5m bars that CLOSED by then)
+        t = dt.time.fromisoformat(asof); Y = feeds.Yahoo()
+        def last_before(sym):
+            bs = [x for x in Y.bars(sym, "5m", "60d") if x[0].date() == day and dt.time(4, 0) <= x[0].time()
+                  and (dt.datetime.combine(day, x[0].time()) + dt.timedelta(minutes=5)).time() <= t]
+            return bs[-1] if bs else None
+        q = last_before("QQQ")
+        if q: spot, spot_src = q[4], f"pre-market {asof} (backtest, nothing after {asof} used)"
+        else: spot_src = f"prior close (backtest, no pre-market bars before {asof})"
+        try:
+            n = last_before("NQ=F")
+            if q and n: nq = {"price": round(n[4], 2), "ratio": round(n[4] / spot, 4), "at": asof}
+        except Exception as e: print(f"NQ: {e}")
+        now = dt.datetime.combine(day, t, tzinfo=ET)
+    if not asof:
+      try:
+          bars_today = [x for x in feeds.Yahoo().bars("QQQ", "1m", "1d") if x[0].date() == day]
+          b = [x for x in bars_today if x[0].time() >= dt.time(9, 30)]
+          pre = [x for x in bars_today if dt.time(4, 0) <= x[0].time() < dt.time(9, 30)]
+          if b: spot, spot_src = b[0][1], "9:30 open (locked)"
+          elif pre: spot, spot_src = pre[-1][4], f"pre-market {pre[-1][0].strftime('%H:%M')} (updates at the open)"
+      except Exception as e: print(f"Yahoo: {e}")
+      try:   # NQ / QQQ ratio at the same minute, so the site can show strikes in NQ points
+          ref = (b[0] if b else pre[-1]) if (b or pre) else None
+          if ref:
+              nqb = {x[0]: x for x in feeds.Yahoo().bars("NQ=F", "1m", "1d")}
+              m = nqb.get(ref[0]) or min(nqb.values(), key=lambda x: abs((x[0] - ref[0]).total_seconds()))
+              px = m[1] if b else m[4]
+              nq = {"price": round(px, 2), "ratio": round(px / spot, 4), "at": m[0].strftime("%H:%M")}
+      except Exception as e: print(f"NQ: {e}")
     cfg = json.load(open(ROOT / "config.json"))
     rows, em, flip = {}, None, []
     for dens, (n, w) in {"5": (5, .02), "8": (8, .03), "12": (12, .03), "20": (20, .045)}.items():
@@ -91,7 +108,7 @@ def main():
             o2 = None
             try: o2 = theta._df("option_history_open_interest", symbol=sym, expiration="*", date=day, max_dte=mdte)
             except Exception as ex: st["oi_hist_error"] = f"{type(ex).__name__}: {str(ex)[:160]}"
-            if (o2 is None or not len(o2)) and day == now.date() and now.time() >= dt.time(6, 30):
+            if (o2 is None or not len(o2)) and not asof and day == now.date() and now.time() >= dt.time(6, 30):
                 try: o2 = theta._df("option_snapshot_open_interest", symbol=sym, expiration="*", max_dte=mdte)
                 except Exception as ex: st["oi_snap_error"] = f"{type(ex).__name__}: {str(ex)[:160]}"
             if o2 is None or not len(o2):

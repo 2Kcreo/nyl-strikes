@@ -234,6 +234,7 @@ h1{margin:4px 0 0;font-size:34px;letter-spacing:-.03em;line-height:1.05}
 
   function status(d){
     var s=d.spot_src||"", today=d.day===new Date().toLocaleDateString("en-CA",{timeZone:"America/New_York"});
+    if(/backtest/.test(s)){var a=s.match(/\d{1,2}:\d{2}/);return{t:"Backtest · as of "+(a?a[0].replace(/^0/,""):"9:25")+" ET, nothing after used",pre:true}}
     if(/locked/.test(s))return{t:"Final · locked at the 9:30 open",pre:false};
     if(/pre-market/.test(s)){var m=s.match(/\d{1,2}:\d{2}/);return{t:"Pre-market "+(m?m[0]+" ":"")+"· updates at the open",pre:true}}
     return{t:today?"Prior close · updates pre-market":"Built from the prior close",pre:true};
@@ -261,7 +262,7 @@ h1{margin:4px 0 0;font-size:34px;letter-spacing:-.03em;line-height:1.05}
     var built=(d.built||"").match(/(\d{4}-\d{2}-\d{2}) (\d{1,2}):(\d{2})/), bT="—", bS="";
     if(built){var h=+built[2],ap=h>=12?"PM":"AM";bT=((h%12)||12)+":"+built[3]+" "+ap;bS="ET · "+dayLabel(built[1])}
     var oiD=(d.oi||"").match(/\d{4}-\d{2}-\d{2}/), oiV=oiD?dayLabel(oiD[0],{month:"short",day:"numeric"}):(d.oi||"—"), oiS=/snapshot/.test(d.oi||"")?"today’s snapshot":"end-of-day file";
-    var spotSub=/locked/.test(d.spot_src)?"at the 9:30 open":/pre-market/.test(d.spot_src)?"pre-market price":"prior close";
+    var spotSub=/backtest/.test(d.spot_src)?"pre-market, as of "+((d.spot_src.match(/\d{1,2}:\d{2}/)||["9:25"])[0]):/locked/.test(d.spot_src)?"at the 9:30 open":/pre-market/.test(d.spot_src)?"pre-market price":"prior close";
     var flipSub=flip!=null?("price is "+Math.abs(spot-flip).toFixed(2)+(spot<flip?" below":" above")):"none in range";
     var stats=[
       ["QQQ",spot.toFixed(2),showNq?"NQ ≈ "+fmtNq(toNq(spot,nr.r)):spotSub,"var(--ink)"],
@@ -322,7 +323,7 @@ h1{margin:4px 0 0;font-size:34px;letter-spacing:-.03em;line-height:1.05}
 
   function load(){
     fetch("data/index.json?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.json()}).then(function(list){
-      return Promise.all(list.slice(0,30).map(function(d){return fetch("data/"+d+".json?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return null})}));
+      return Promise.all(list.slice(0,60).map(function(d){return fetch("data/"+d+".json?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return null})}));
     }).then(function(arr){
       var keep=$("day").value;days={};arr.forEach(function(v){if(v)days[v.day]=v});
       var ks=Object.keys(days).sort().reverse();
