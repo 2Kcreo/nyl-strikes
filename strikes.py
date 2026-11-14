@@ -57,7 +57,8 @@ def main():
         else: spot_src = f"prior close (backtest, no pre-market bars before {asof})"
         try:
             n = last_before("NQ=F")
-            if q and n: nq = {"price": round(n[4], 2), "ratio": round(n[4] / spot, 4), "at": asof}
+            print("asof bars: QQQ", q[0] if q else None, q[4] if q else None, "| NQ", n[0] if n else None, n[4] if n else None)
+            if q and n: nq = {"price": round(n[4], 2), "ratio": round(n[4] / spot, 4), "at": n[0].strftime("%H:%M") + " bar"}
         except Exception as e: print(f"NQ: {e}")
         now = dt.datetime.combine(day, t, tzinfo=ET)
     if not asof:
