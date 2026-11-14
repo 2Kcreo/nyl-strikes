@@ -50,7 +50,7 @@ def main():
         t = dt.time.fromisoformat(asof); Y = feeds.Yahoo()
         def last_before(sym):
             bs = [x for x in Y.bars(sym, "5m", "60d") if x[0].date() == day and dt.time(4, 0) <= x[0].time()
-                  and (dt.datetime.combine(day, x[0].time()) + dt.timedelta(minutes=5)).time() <= t]
+                  and x[0] + dt.timedelta(minutes=5) <= dt.datetime.combine(day, t)]
             return bs[-1] if bs else None
         q = last_before("QQQ")
         if q: spot, spot_src = q[4], f"pre-market {asof} (backtest, nothing after {asof} used)"
