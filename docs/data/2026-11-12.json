@@ -1,9 +1,14 @@
 {
  "day": "2026-11-12",
- "built": "2026-11-12 19:34 ET",
- "oi": "2026-11-12 (snapshot)",
- "spot": 680.21,
- "spot_src": "9:30 open (locked)",
+ "built": "2026-11-12 09:25 ET",
+ "oi": "2026-11-12",
+ "spot": 680.22,
+ "spot_src": "pre-market 09:25 (backtest, nothing after 09:25 used)",
+ "nq": {
+  "price": 28061.5,
+  "ratio": 41.2536,
+  "at": "09:20 bar"
+ },
  "em": 10.98,
  "flip": [
   691.8
@@ -13,6 +18,7 @@
    "k": 710.0,
    "tags": [
     "NDX",
+    "NEW",
     "VEX"
    ],
    "dens": 20,
@@ -22,6 +28,7 @@
    "k": 707.0,
    "tags": [
     "NDX",
+    "NEW",
     "VEX"
    ],
    "dens": 20,
@@ -31,6 +38,7 @@
    "k": 705.0,
    "tags": [
     "NDX",
+    "NEW",
     "VEX"
    ],
    "dens": 20,
@@ -67,6 +75,7 @@
     "CHX",
     "GEX",
     "NDX",
+    "NEW",
     "OI",
     "VEX",
     "VOL"
@@ -88,9 +97,10 @@
    "k": 698.0,
    "tags": [
     "NDX",
+    "NEW",
     "VOL"
    ],
-   "dens": 20,
+   "dens": 12,
    "star": true
   },
   {
@@ -107,6 +117,7 @@
    "tags": [
     "CHX",
     "NDX",
+    "NEW",
     "VEX",
     "VOL"
    ],
@@ -119,6 +130,7 @@
     "CHX",
     "GEX",
     "NDX",
+    "NEW",
     "VEX",
     "VOL"
    ],
@@ -147,6 +159,7 @@
    "k": 692.0,
    "tags": [
     "NDX",
+    "NEW",
     "VOL"
    ],
    "dens": 5,
@@ -157,6 +170,7 @@
    "tags": [
     "EM",
     "NDX",
+    "NEW",
     "VOL"
    ],
    "dens": 5,
@@ -168,6 +182,7 @@
     "CHX",
     "GEX",
     "NDX",
+    "NEW",
     "OI",
     "VEX",
     "VOL"
@@ -190,6 +205,7 @@
     "CHX",
     "GEX",
     "NDX",
+    "NEW",
     "VEX",
     "VOL"
    ],
@@ -221,6 +237,7 @@
    "tags": [
     "CHX",
     "GEX",
+    "NEW",
     "VEX",
     "VOL",
     "WALL"
@@ -243,6 +260,7 @@
    "tags": [
     "GEX",
     "NDX",
+    "NEW",
     "VOL"
    ],
    "dens": 20,
@@ -271,6 +289,7 @@
    "tags": [
     "GEX",
     "NDX",
+    "NEW",
     "OI",
     "VOL"
    ],
@@ -314,6 +333,7 @@
     "CHX",
     "GEX",
     "NDX",
+    "NEW",
     "VEX"
    ],
    "dens": 5,
@@ -341,6 +361,7 @@
    "tags": [
     "CHX",
     "GEX",
+    "NEW",
     "VEX"
    ],
    "dens": 5,
@@ -359,6 +380,7 @@
    "tags": [
     "CHX",
     "GEX",
+    "NEW",
     "VEX"
    ],
    "dens": 8,
@@ -369,6 +391,7 @@
    "tags": [
     "CHX",
     "GEX",
+    "NEW",
     "OI",
     "VEX"
    ],
@@ -379,6 +402,7 @@
    "k": 655.0,
    "tags": [
     "CHX",
+    "NEW",
     "VEX"
    ],
    "dens": 20,
@@ -389,6 +413,7 @@
    "tags": [
     "CHX",
     "GEX",
+    "NEW",
     "OI",
     "VEX"
    ],
@@ -399,14 +424,12 @@
  "ndx_status": {
   "NDX": {
    "eod_rows": 694,
-   "oi_hist_error": "_MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"Cannot fetch current-day data without specifying an exp",
    "oi_rows": 694,
    "spot": 28387.0,
    "ok": true
   },
   "NDXP": {
    "eod_rows": 6256,
-   "oi_hist_error": "_MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"Cannot fetch current-day data without specifying an exp",
    "oi_rows": 5172,
    "spot": 28373.47,
    "ok": true

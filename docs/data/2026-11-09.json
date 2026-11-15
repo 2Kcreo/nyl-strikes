@@ -1,10 +1,15 @@
 {
  "day": "2026-11-09",
- "built": "2026-11-09 18:35 ET",
- "oi": "2026-11-09 (snapshot)",
- "spot": 662.68,
- "spot_src": "9:30 open",
- "em": 10.91,
+ "built": "2026-11-09 09:25 ET",
+ "oi": "2026-11-09",
+ "spot": 662.0,
+ "spot_src": "pre-market 09:25 (backtest, nothing after 09:25 used)",
+ "nq": {
+  "price": 27312.75,
+  "ratio": 41.2579,
+  "at": "09:20 bar"
+ },
+ "em": 10.9,
  "flip": [
   660.9
  ],
@@ -13,6 +18,7 @@
    "k": 690.0,
    "tags": [
     "GEX",
+    "NEW",
     "VEX"
    ],
    "dens": 20,
@@ -39,32 +45,35 @@
   {
    "k": 683.0,
    "tags": [
+    "NEW",
     "VEX"
    ],
    "dens": 20,
-   "star": false
+   "star": true
   },
   {
    "k": 682.0,
    "tags": [
     "VEX"
    ],
-   "dens": 12,
+   "dens": 20,
    "star": false
   },
   {
    "k": 680.0,
    "tags": [
     "GEX",
+    "NEW",
     "VEX"
    ],
-   "dens": 12,
+   "dens": 8,
    "star": true
   },
   {
    "k": 678.0,
    "tags": [
     "CHX",
+    "NEW",
     "VEX"
    ],
    "dens": 8,
@@ -75,26 +84,20 @@
    "tags": [
     "GEX",
     "NDX",
+    "NEW",
     "VEX"
    ],
-   "dens": 8,
+   "dens": 5,
    "star": true
   },
   {
-   "k": 674,
+   "k": 673,
    "tags": [
-    "EM"
+    "EM",
+    "NDX",
+    "NEW"
    ],
    "dens": 5,
-   "star": false
-  },
-  {
-   "k": 673.0,
-   "tags": [
-    "NDX",
-    "VEX"
-   ],
-   "dens": 20,
    "star": true
   },
   {
@@ -108,11 +111,20 @@
    "star": true
   },
   {
+   "k": 671.0,
+   "tags": [
+    "NEW"
+   ],
+   "dens": 20,
+   "star": false
+  },
+  {
    "k": 670.0,
    "tags": [
     "CHX",
     "GEX",
     "NDX",
+    "NEW",
     "OI",
     "VEX",
     "VOL"
@@ -127,7 +139,7 @@
     "NDX",
     "VEX"
    ],
-   "dens": 8,
+   "dens": 12,
    "star": true
   },
   {
@@ -142,7 +154,6 @@
    "k": 666.0,
    "tags": [
     "CHX",
-    "GEX",
     "NDX",
     "VOL"
    ],
@@ -154,6 +165,7 @@
    "tags": [
     "CHX",
     "GEX",
+    "NEW",
     "VEX",
     "VOL"
    ],
@@ -175,6 +187,8 @@
    "tags": [
     "CHX",
     "GEX",
+    "NEW",
+    "VEX",
     "VOL"
    ],
    "dens": 5,
@@ -183,12 +197,12 @@
   {
    "k": 662.0,
    "tags": [
-    "CHX",
     "GEX",
     "NDX",
+    "NEW",
     "VOL"
    ],
-   "dens": 8,
+   "dens": 5,
    "star": true
   },
   {
@@ -207,6 +221,7 @@
     "CHX",
     "GEX",
     "NDX",
+    "NEW",
     "VEX",
     "VOL",
     "WALL"
@@ -220,6 +235,7 @@
     "CHX",
     "GEX",
     "NDX",
+    "NEW",
     "VOL"
    ],
    "dens": 5,
@@ -231,6 +247,7 @@
     "CHX",
     "GEX",
     "NDX",
+    "NEW",
     "VOL"
    ],
    "dens": 5,
@@ -241,6 +258,7 @@
    "tags": [
     "GEX",
     "NDX",
+    "NEW",
     "VOL"
    ],
    "dens": 5,
@@ -252,6 +270,8 @@
     "CHX",
     "GEX",
     "NDX",
+    "NEW",
+    "VEX",
     "VOL"
    ],
    "dens": 8,
@@ -263,6 +283,7 @@
     "CHX",
     "GEX",
     "NDX",
+    "NEW",
     "VEX",
     "VOL"
    ],
@@ -288,21 +309,22 @@
    "star": true
   },
   {
-   "k": 652,
+   "k": 652.0,
    "tags": [
-    "EM",
-    "VOL"
-   ],
-   "dens": 5,
-   "star": false
-  },
-  {
-   "k": 651.0,
-   "tags": [
-    "NDX",
+    "CHX",
     "VOL"
    ],
    "dens": 20,
+   "star": true
+  },
+  {
+   "k": 651,
+   "tags": [
+    "EM",
+    "NDX",
+    "VOL"
+   ],
+   "dens": 5,
    "star": true
   },
   {
@@ -324,6 +346,7 @@
     "CHX",
     "GEX",
     "NDX",
+    "NEW",
     "VEX",
     "VOL"
    ],
@@ -331,18 +354,11 @@
    "star": true
   },
   {
-   "k": 644.0,
-   "tags": [
-    "NDX",
-    "VEX"
-   ],
-   "dens": 20,
-   "star": true
-  },
-  {
    "k": 640.0,
    "tags": [
     "CHX",
+    "GEX",
+    "NEW",
     "VEX",
     "VOL"
    ],
@@ -353,6 +369,7 @@
    "k": 635.0,
    "tags": [
     "CHX",
+    "NEW",
     "VEX"
    ],
    "dens": 20,
@@ -362,14 +379,12 @@
  "ndx_status": {
   "NDX": {
    "eod_rows": 694,
-   "oi_hist_error": "_MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"Cannot fetch current-day data without specifying an exp",
    "oi_rows": 694,
    "spot": 27027.85,
    "ok": true
   },
   "NDXP": {
    "eod_rows": 5642,
-   "oi_hist_error": "_MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"Cannot fetch current-day data without specifying an exp",
    "oi_rows": 6180,
    "spot": 26985.15,
    "ok": true
