@@ -36,6 +36,7 @@ def main():
         P = prev_wd(P)
     if eod is None: sys.exit("No prior-day option prices.")
     oi = get("oi", day); oi_src = str(day)
+    if oi is None and asof: print(f"{day}: no open interest posted, market holiday, skipping."); return
     if oi is None and day == now.date() and now.time() >= dt.time(6, 30):   # today's OI posts ~6:30 ET
         try:
             oi = theta.oi_snapshot(); oi = oi if oi is not None and len(oi) else None
@@ -142,7 +143,7 @@ def main():
                 if any(abs(n["qqq"] - sobj["k"]) <= 0.5 for n in out["ndx"]["strikes"]):
                     sobj["tags"] = sorted(set(sobj["tags"]) | {"NDX"}); sobj["star"] = len(set(sobj["tags"]) - {"EM"}) >= 2
     (DATA / f"{day}.json").write_text(json.dumps(out, indent=1))
-    days = sorted({p.stem for p in DATA.glob("20*.json")}, reverse=True)[:60]
+    days = sorted({p.stem for p in DATA.glob("20*.json")}, reverse=True)[:120]
     (DATA / "index.json").write_text(json.dumps(days))
     print(f"{day}: {sum(1 for s in out['strikes'] if s['dens'] <= 8)} strikes (8/layer), OI {oi_src}, QQQ {spot:.2f} ({spot_src})")
 

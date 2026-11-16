@@ -147,7 +147,7 @@ li .k svg{color:var(--gold)}
   $("day").onchange=render;
   function load(){
     fetch("data/index.json?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.json()}).then(function(list){
-      return Promise.all(list.slice(0,60).map(function(d){return fetch("data/"+d+".json?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return null})}));
+      return Promise.all(list.slice(0,120).map(function(d){return fetch("data/"+d+".json?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return null})}));
     }).then(function(arr){
       var keep=$("day").value;days={};arr.forEach(function(v){if(v)days[v.day]=v});
       var ks=Object.keys(days).sort().reverse();
