@@ -1,0 +1,17 @@
+{
+  "name": "NYL Strikes",
+  "short_name": "NYL",
+  "description": "Key QQQ strikes for NQ, built every weekday morning.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a0713",
+  "theme_color": "#0a0713",
+  "icons": [
+    {"src": "icons/nyl-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icons/nyl-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icons/nyl-192-maskable.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable"},
+    {"src": "icons/nyl-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
