@@ -1,0 +1,770 @@
+{
+ "day": "2026-09-28",
+ "built": "2026-09-28 09:25 ET",
+ "oi": "2026-09-28",
+ "spot": 739.98,
+ "spot_src": "pre-market 09:25 (backtest, nothing after 09:25 used)",
+ "nq": {
+  "price": 30698.25,
+  "ratio": 41.4852,
+  "at": "09:20 bar"
+ },
+ "em": 5.55,
+ "flip": [
+  742.8
+ ],
+ "strikes": [
+  {
+   "k": 760.0,
+   "tags": [
+    "CHX",
+    "NDX",
+    "NEW",
+    "VEX"
+   ],
+   "dens": 8,
+   "star": true
+  },
+  {
+   "k": 755.0,
+   "tags": [
+    "CHX",
+    "NEW",
+    "VEX"
+   ],
+   "dens": 8,
+   "star": true
+  },
+  {
+   "k": 754.0,
+   "tags": [
+    "NEW",
+    "VEX"
+   ],
+   "dens": 8,
+   "star": true
+  },
+  {
+   "k": 753.0,
+   "tags": [
+    "NDX",
+    "NEW"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
+   "k": 752.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "NDX",
+    "NEW",
+    "VEX"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 751.0,
+   "tags": [
+    "NEW",
+    "VEX",
+    "VOL"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
+   "k": 750.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "NEW",
+    "VEX",
+    "VOL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 749.0,
+   "tags": [
+    "NDX",
+    "VOL"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
+   "k": 748.0,
+   "tags": [
+    "NDX",
+    "VOL"
+   ],
+   "dens": 12,
+   "star": true
+  },
+  {
+   "k": 747.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "NDX",
+    "NEW",
+    "VEX",
+    "VOL"
+   ],
+   "dens": 8,
+   "star": true
+  },
+  {
+   "k": 746,
+   "tags": [
+    "EM",
+    "NDX",
+    "VOL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 745.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "NDX",
+    "NEW",
+    "OI",
+    "VEX",
+    "VOL",
+    "WALL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 744.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "NDX",
+    "NEW",
+    "VOL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 743.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "NDX",
+    "NEW",
+    "VOL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 742.0,
+   "tags": [
+    "GEX",
+    "NEW",
+    "VOL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 741.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "NDX",
+    "VOL"
+   ],
+   "dens": 8,
+   "star": true
+  },
+  {
+   "k": 740.0,
+   "tags": [
+    "GEX",
+    "NDX",
+    "NEW",
+    "VOL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 739.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "VOL"
+   ],
+   "dens": 12,
+   "star": true
+  },
+  {
+   "k": 738.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "NDX",
+    "NEW",
+    "VEX",
+    "VOL",
+    "WALL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 737.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "NEW",
+    "VEX",
+    "VOL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 736.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "NDX",
+    "NEW",
+    "VEX",
+    "VOL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 735.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "NDX",
+    "NEW",
+    "VEX",
+    "VOL"
+   ],
+   "dens": 8,
+   "star": true
+  },
+  {
+   "k": 734,
+   "tags": [
+    "CHX",
+    "EM",
+    "GEX",
+    "NEW",
+    "VEX",
+    "VOL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 733.0,
+   "tags": [
+    "NDX",
+    "NEW",
+    "VEX"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
+   "k": 730.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "NEW",
+    "OI",
+    "VEX",
+    "VOL"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 726.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "NDX",
+    "VEX"
+   ],
+   "dens": 5,
+   "star": true
+  },
+  {
+   "k": 725.0,
+   "tags": [
+    "GEX",
+    "VOL"
+   ],
+   "dens": 8,
+   "star": true
+  },
+  {
+   "k": 721.0,
+   "tags": [
+    "CHX",
+    "VEX"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
+   "k": 720.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "VEX"
+   ],
+   "dens": 8,
+   "star": true
+  },
+  {
+   "k": 715.0,
+   "tags": [
+    "CHX",
+    "GEX",
+    "VEX"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
+   "k": 710.0,
+   "tags": [
+    "VEX"
+   ],
+   "dens": 20,
+   "star": false
+  }
+ ],
+ "ndx_status": {
+  "NDX": {
+   "eod_rows": 604,
+   "oi_rows": 604,
+   "spot": 30677.7,
+   "ok": true
+  },
+  "NDXP": {
+   "eod_rows": 4670,
+   "oi_rows": 5060,
+   "spot": 30606.85,
+   "ok": true
+  }
+ },
+ "ndx": {
+  "spot": 30677.7,
+  "ratio": 41.2072,
+  "strikes": [
+   {
+    "k": 31500,
+    "tags": [
+     "CHX",
+     "GEX",
+     "OI",
+     "VEX"
+    ],
+    "src": [
+     "NDX",
+     "NDXP"
+    ],
+    "qqq": 764.43
+   },
+   {
+    "k": 31300,
+    "tags": [
+     "CHX",
+     "VEX"
+    ],
+    "src": [
+     "NDX"
+    ],
+    "qqq": 759.58
+   },
+   {
+    "k": 31275,
+    "tags": [
+     "CHX",
+     "VEX"
+    ],
+    "src": [
+     "NDX"
+    ],
+    "qqq": 758.97
+   },
+   {
+    "k": 31250,
+    "tags": [
+     "CHX",
+     "VEX",
+     "VOL"
+    ],
+    "src": [
+     "NDX"
+    ],
+    "qqq": 758.36
+   },
+   {
+    "k": 31032,
+    "tags": [
+     "EM"
+    ],
+    "src": [
+     "NDX"
+    ],
+    "qqq": 753.07
+   },
+   {
+    "k": 31025,
+    "tags": [
+     "VOL"
+    ],
+    "src": [
+     "NDX"
+    ],
+    "qqq": 752.9
+   },
+   {
+    "k": 31000,
+    "tags": [
+     "CHX",
+     "GEX",
+     "VEX",
+     "VOL"
+    ],
+    "src": [
+     "NDX",
+     "NDXP"
+    ],
+    "qqq": 752.3
+   },
+   {
+    "k": 30975,
+    "tags": [
+     "VOL"
+    ],
+    "src": [
+     "NDX"
+    ],
+    "qqq": 751.69
+   },
+   {
+    "k": 30850,
+    "tags": [
+     "CHX"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 748.66
+   },
+   {
+    "k": 30822,
+    "tags": [
+     "EM"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 747.98
+   },
+   {
+    "k": 30800,
+    "tags": [
+     "CHX",
+     "GEX",
+     "VEX",
+     "VOL"
+    ],
+    "src": [
+     "NDX",
+     "NDXP"
+    ],
+    "qqq": 747.44
+   },
+   {
+    "k": 30750,
+    "tags": [
+     "VOL"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 746.23
+   },
+   {
+    "k": 30700,
+    "tags": [
+     "CHX",
+     "GEX",
+     "OI",
+     "VEX",
+     "VOL",
+     "WALL"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 745.02
+   },
+   {
+    "k": 30660,
+    "tags": [
+     "CHX",
+     "GEX"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 744.05
+   },
+   {
+    "k": 30650,
+    "tags": [
+     "CHX",
+     "GEX",
+     "VOL"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 743.8
+   },
+   {
+    "k": 30625,
+    "tags": [
+     "VOL"
+    ],
+    "src": [
+     "NDX"
+    ],
+    "qqq": 743.2
+   },
+   {
+    "k": 30620,
+    "tags": [
+     "VOL"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 743.07
+   },
+   {
+    "k": 30600,
+    "tags": [
+     "GEX",
+     "VOL"
+    ],
+    "src": [
+     "NDX",
+     "NDXP"
+    ],
+    "qqq": 742.59
+   },
+   {
+    "k": 30550,
+    "tags": [
+     "CHX",
+     "GEX",
+     "VOL"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 741.38
+   },
+   {
+    "k": 30500,
+    "tags": [
+     "CHX",
+     "GEX",
+     "OI",
+     "VOL",
+     "WALL"
+    ],
+    "src": [
+     "NDX",
+     "NDXP"
+    ],
+    "qqq": 740.16
+   },
+   {
+    "k": 30490,
+    "tags": [
+     "CHX"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 739.92
+   },
+   {
+    "k": 30480,
+    "tags": [
+     "GEX"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 739.68
+   },
+   {
+    "k": 30425,
+    "tags": [
+     "CHX",
+     "GEX",
+     "VEX",
+     "WALL"
+    ],
+    "src": [
+     "NDX"
+    ],
+    "qqq": 738.34
+   },
+   {
+    "k": 30400,
+    "tags": [
+     "GEX"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 737.74
+   },
+   {
+    "k": 30392,
+    "tags": [
+     "EM"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 737.54
+   },
+   {
+    "k": 30324,
+    "tags": [
+     "EM"
+    ],
+    "src": [
+     "NDX"
+    ],
+    "qqq": 735.89
+   },
+   {
+    "k": 30300,
+    "tags": [
+     "GEX",
+     "OI",
+     "WALL"
+    ],
+    "src": [
+     "NDX"
+    ],
+    "qqq": 735.31
+   },
+   {
+    "k": 30200,
+    "tags": [
+     "VEX"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 732.88
+   },
+   {
+    "k": 30150,
+    "tags": [
+     "VEX"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 731.67
+   },
+   {
+    "k": 30050,
+    "tags": [
+     "VOL"
+    ],
+    "src": [
+     "NDX"
+    ],
+    "qqq": 729.24
+   },
+   {
+    "k": 30000,
+    "tags": [
+     "CHX",
+     "GEX",
+     "VEX"
+    ],
+    "src": [
+     "NDX"
+    ],
+    "qqq": 728.03
+   },
+   {
+    "k": 29975,
+    "tags": [
+     "CHX",
+     "GEX",
+     "VEX"
+    ],
+    "src": [
+     "NDX"
+    ],
+    "qqq": 727.42
+   },
+   {
+    "k": 29950,
+    "tags": [
+     "VEX"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 726.82
+   },
+   {
+    "k": 29900,
+    "tags": [
+     "VEX"
+    ],
+    "src": [
+     "NDXP"
+    ],
+    "qqq": 725.6
+   },
+   {
+    "k": 29775,
+    "tags": [
+     "VOL"
+    ],
+    "src": [
+     "NDX"
+    ],
+    "qqq": 722.57
+   }
+  ]
+ }
+}
