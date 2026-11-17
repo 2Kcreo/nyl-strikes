@@ -1,13 +1,13 @@
 {
  "day": "2026-11-17",
- "built": "2026-11-17 09:10 ET",
+ "built": "2026-11-17 09:26 ET",
  "oi": "2026-11-17 (snapshot)",
- "spot": 663.65,
- "spot_src": "pre-market 09:10 (updates at the open)",
+ "spot": 663.57,
+ "spot_src": "pre-market 09:26 (updates at the open)",
  "nq": {
-  "price": 27373.5,
-  "ratio": 41.2469,
-  "at": "09:00"
+  "price": 27369.75,
+  "ratio": 41.2462,
+  "at": "09:16"
  },
  "em": 16.66,
  "flip": [],
