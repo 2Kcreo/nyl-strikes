@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "docs" / "data"
 OUT = ROOT / "research" / "ivwalls"; OUT.mkdir(parents=True, exist_ok=True)
 theta = feeds.Theta(lambda: os.environ.get("THETADATA_API_KEY", ""))
-TOP = 12            # levels per day
+TOP = 20            # levels per day (half above price, half below)
 WINDOW = 0.03       # +/- 3% around spot
 DTE_MAX = 35        # include monthlies
 FIT_WIN = 0.06      # strikes used to fit the smooth IV curve (+/- 6%)
@@ -99,7 +99,10 @@ def build(day):
     by = by.fillna(0)
     by["score"] = by.gex * by.rich.clip(lower=0)
     pc_all = by.oi_put.sum() / max(by.oi_call.sum(), 1)   # the day's overall put/call, so "put-heavy" is relative
-    by = by[by.score > 0].sort_values("score", ascending=False).head(TOP)
+    (OUT / "cand").mkdir(exist_ok=True)
+    by.assign(spot=S, pc_all=pc_all, nq=(meta.get("nq") or {}).get("ratio")).to_csv(OUT / "cand" / f"{day}.csv")   # every strike, for testing variants
+    by = by[by.score > 0]
+    by = pd.concat([by[by.index >= S].nlargest(TOP // 2, "score"), by[by.index < S].nlargest(TOP // 2, "score")])
     mx = float(by.score.max()) if len(by) else 1.0
     nq = (meta.get("nq") or {}).get("ratio")
 
