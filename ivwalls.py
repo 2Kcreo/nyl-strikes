@@ -74,7 +74,8 @@ def build(day):
     for (ex, is_call), g in q.groupby(["exp", "call"]):   # puts and calls get their own curve (puts always sit higher)
         if len(g) < 6: continue
         x = np.log(g.strike.to_numpy(float) / prevC); y = g.iv.to_numpy(float)
-        fit = np.polyval(np.polyfit(x, y, 2), x)
+        cf = np.polyfit(x, y, 2); fit = np.polyval(cf, x)
+        fp, fpp = 2 * cf[0] * x + cf[1], np.full(len(x), 2 * cf[0])   # smile slope / bend vs log-moneyness
         # curvature: how far this strike's IV pokes above the straight line between its two neighbours
         g2 = g.sort_values("strike"); xs = np.log(g2.strike.to_numpy(float) / prevC); ys = g2.iv.to_numpy(float)
         cv = np.full(len(ys), np.nan)
@@ -83,7 +84,7 @@ def build(day):
             cv[1:-1] = ys[1:-1] / lin - 1
         cvm = dict(zip(g2.strike.to_numpy(float), cv))
         ks = g.strike.to_numpy(float)
-        rows.append(pd.DataFrame({"exp": ex, "strike": ks, "iv": y, "rich": y / fit - 1, "curv": [cvm.get(k, np.nan) for k in ks]}))
+        rows.append(pd.DataFrame({"exp": ex, "strike": ks, "iv": y, "rich": y / fit - 1, "curv": [cvm.get(k, np.nan) for k in ks], "fp": fp, "fpp": fpp}))
     if not rows: print(f"{day}: no IV curve, skipped"); return None
     ivs = pd.concat(rows)
     atm = ivs[ivs.exp == ivs.exp.min()]; atm_iv = float(atm.iloc[(atm.strike - prevC).abs().argmin()].iv)
@@ -99,9 +100,18 @@ def build(day):
     gam, _, _ = engine.greeks(S, o.strike.to_numpy(float), T, o.iv.to_numpy(float))
     o["gex"] = gam * o.open_interest.to_numpy(float) * 100 * S * S * 0.01
     o["rich_w"] = o.rich * o.gex
+    # smile-adjusted ("covariant") gamma: the IV curve moves with price (sticky moneyness), so
+    # total gamma = gamma + 2*vanna*dIV/dS + volga*(dIV/dS)^2 + vega*d2IV/dS2
+    Kc, sig = o.strike.to_numpy(float), o.iv.to_numpy(float)
+    sq = sig * np.sqrt(T); d1 = (np.log(S / Kc) + (engine.R + sig * sig / 2) * T) / sq; d2 = d1 - sq; ph = engine._phi(d1)
+    vega = S * ph * np.sqrt(T); vanna = -ph * d2 / sig; volga = vega * d1 * d2 / sig
+    sS = -o.fp.to_numpy(float) / S; sSS = (o.fpp.to_numpy(float) + o.fp.to_numpy(float)) / (S * S)
+    gtot = gam + 2 * vanna * sS + volga * sS ** 2 + vega * sSS
+    o["gex_cov"] = gtot * o.open_interest.to_numpy(float) * 100 * S * S * 0.01
+    o["gex_cov_near"] = np.where(o.dte <= 2, o.gex_cov, 0.0)
     o["curv_w"] = o.curv.fillna(0) * o.gex
 
-    by = o.groupby("strike").agg(gex=("gex", "sum"), rich_w=("rich_w", "sum"), curv_w=("curv_w", "sum"), iv=("iv", "mean"))
+    by = o.groupby("strike").agg(gex=("gex", "sum"), rich_w=("rich_w", "sum"), curv_w=("curv_w", "sum"), gex_cov=("gex_cov", "sum"), gex_cov_near=("gex_cov_near", "sum"), iv=("iv", "mean"))
     by["rich"] = by.rich_w / by.gex.replace(0, np.nan)
     by["curv"] = by.curv_w / by.gex.replace(0, np.nan)
     by["oi_call"] = o[o.call].groupby("strike").open_interest.sum()

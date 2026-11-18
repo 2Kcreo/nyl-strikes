@@ -28,8 +28,15 @@ def variants(c, S):
     c["G_gex_x_rich_x_curv"] = c.gex * r * cv
     c["H_gex_x_rich_plus_curv"] = c.gex * (r + cv)
     c["I_curv_bigGEX"] = np.where(c.gex >= c.gex.median(), cv, 0)
+    cg = c.gex_cov.abs(); cn = c.gex_cov_near.abs()
+    c["J_covGEX"] = cg
+    c["K_covGEX_x_rich"] = cg * r
+    c["L_covGEX_x_curv"] = cg * cv
+    c["M_covGEX_x_rich_plus_curv"] = cg * (r + cv)
+    c["N_covGEX_0to2dte"] = cn
+    c["O_covGEX_0to2dte_x_rich_plus_curv"] = cn * (r + cv)
     c.attrs["strong"] = {}
-    out = {v: pick(c, v, S) for v in ["A_gex_x_rich", "B_rich_bigGEX", "C_gex_only", "D_gex_x_1plusrich", "E_sqrtgex_x_rich", "F_gex_x_curv", "G_gex_x_rich_x_curv", "H_gex_x_rich_plus_curv", "I_curv_bigGEX"]}
+    out = {v: pick(c, v, S) for v in ["A_gex_x_rich", "B_rich_bigGEX", "C_gex_only", "D_gex_x_1plusrich", "E_sqrtgex_x_rich", "F_gex_x_curv", "G_gex_x_rich_x_curv", "H_gex_x_rich_plus_curv", "I_curv_bigGEX", "J_covGEX", "K_covGEX_x_rich", "L_covGEX_x_curv", "M_covGEX_x_rich_plus_curv", "N_covGEX_0to2dte", "O_covGEX_0to2dte_x_rich_plus_curv"]}
     for v in list(out):   # strong walls only (40+ of that day's top score)
         col = c[v]; mx = col.max()
         out[v + "+strong"] = [k for k in out[v] if mx > 0 and col.loc[k] / mx >= 0.4]
@@ -97,7 +104,7 @@ def edge(ma):   # bootstrap by day: hold% difference vs random
         if len(a) and len(b): out.append((a.mean() - b.mean()) * 100)
     o = np.array(out); return {"hold_pct_minus_random": round(float(np.median(o)), 1), "range_90": [round(float(np.percentile(o, 5)), 1), round(float(np.percentile(o, 95)), 1)], "chance_no_edge": round(float((o <= 0).mean()), 3)}
 res = {"days": len(ud), "groups": {}, "edge": {}}
-kinds = ["A_gex_x_rich", "B_rich_bigGEX", "C_gex_only", "D_gex_x_1plusrich", "E_sqrtgex_x_rich", "F_gex_x_curv", "G_gex_x_rich_x_curv", "H_gex_x_rich_plus_curv", "I_curv_bigGEX", "NYL_12", "Random"]
+kinds = ["A_gex_x_rich", "B_rich_bigGEX", "C_gex_only", "D_gex_x_1plusrich", "E_sqrtgex_x_rich", "F_gex_x_curv", "G_gex_x_rich_x_curv", "H_gex_x_rich_plus_curv", "I_curv_bigGEX", "J_covGEX", "K_covGEX_x_rich", "L_covGEX_x_curv", "M_covGEX_x_rich_plus_curv", "N_covGEX_0to2dte", "O_covGEX_0to2dte_x_rich_plus_curv", "NYL_12", "Random"]
 for k in kinds + [x + "+strong" for x in kinds if x not in ("NYL_12", "Random")]:
     res["groups"][k] = stats(D[D.kind == k])
     if k != "Random" and len(D[D.kind == k]): res["edge"][k] = edge(lambda s, k=k: s.kind == k)
