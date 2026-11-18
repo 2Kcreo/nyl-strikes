@@ -7,7 +7,7 @@ No look-ahead: IV comes from the PRIOR day's closing option prices, open interes
 morning (prior close), and spot is the same pre-open QQQ price NYL saved for that day (docs/data/<day>.json).
 
   score = gamma exposure at the strike  x  how rich its IV is vs the smooth curve (only rich strikes count)
-  side  = put-heavy (P/C >= 1.5) -> support, call-heavy (P/C <= 0.67) -> resistance, otherwise mixed
+  side  = strike P/C vs the day's overall P/C: >= 1.3x -> support, <= 0.77x -> resistance, otherwise mixed
 
 Usage: python ivwalls.py 2026-09-01 2026-11-18   -> research/ivwalls/<day>.json + all.csv + levels.txt
 """
@@ -71,8 +71,8 @@ def build(day):
 
     # 2) smooth curve per expiry (quadratic in log-moneyness) -> richness = iv / fitted - 1
     rows = []
-    for ex, g in q.groupby("exp"):
-        if len(g) < 8: continue
+    for (ex, is_call), g in q.groupby(["exp", "call"]):   # puts and calls get their own curve (puts always sit higher)
+        if len(g) < 6: continue
         x = np.log(g.strike.to_numpy(float) / prevC); y = g.iv.to_numpy(float)
         fit = np.polyval(np.polyfit(x, y, 2), x)
         rows.append(pd.DataFrame({"exp": ex, "strike": g.strike.to_numpy(float), "iv": y, "rich": y / fit - 1}))
@@ -98,6 +98,7 @@ def build(day):
     by["oi_put"] = o[~o.call].groupby("strike").open_interest.sum()
     by = by.fillna(0)
     by["score"] = by.gex * by.rich.clip(lower=0)
+    pc_all = by.oi_put.sum() / max(by.oi_call.sum(), 1)   # the day's overall put/call, so "put-heavy" is relative
     by = by[by.score > 0].sort_values("score", ascending=False).head(TOP)
     mx = float(by.score.max()) if len(by) else 1.0
     nq = (meta.get("nq") or {}).get("ratio")
@@ -105,13 +106,14 @@ def build(day):
     levels = []
     for k, r in by.sort_index(ascending=False).iterrows():
         pc = (r.oi_put / r.oi_call) if r.oi_call > 0 else float("inf")
-        side = "support" if pc >= 1.5 else "resistance" if pc <= 0.67 else "mixed"
+        rel = pc / pc_all if pc_all > 0 else pc
+        side = "support" if rel >= 1.3 else "resistance" if rel <= 0.77 else "mixed"
         levels.append({"k": float(k), "nq": round(k * nq * 4) / 4 if nq else None, "score": round(r.score / mx * 100),
                        "side": side, "pc": None if math.isinf(pc) else round(pc, 2),
                        "iv_pct": round(r.iv / atm_iv * 100), "rich_pct": round(r.rich * 100, 1),
                        "dist": round(k - S, 2)})
     out = {"day": str(day), "spot": S, "spot_src": meta.get("spot_src"), "atm_iv": round(atm_iv, 4),
-           "iv_from_close_of": str(P), "oi": str(day), "nq_ratio": nq, "levels": levels}
+           "iv_from_close_of": str(P), "pc_all": round(pc_all, 2), "oi": str(day), "nq_ratio": nq, "levels": levels}
     (OUT / f"{day}.json").write_text(json.dumps(out, indent=1))
     print(f"{day}: {len(levels)} IV walls, QQQ {S:.2f}, ATM IV {atm_iv:.1%}")
     return out
