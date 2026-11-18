@@ -1,0 +1,143 @@
+"""IV walls (research only, not part of the NYL site).
+
+For each day: which QQQ strikes have big dealer gamma exposure AND options that are priced richer than the
+smooth IV curve around them, plus the put/call open-interest ratio at that strike.
+
+No look-ahead: IV comes from the PRIOR day's closing option prices, open interest is the figure posted that
+morning (prior close), and spot is the same pre-open QQQ price NYL saved for that day (docs/data/<day>.json).
+
+  score = gamma exposure at the strike  x  how rich its IV is vs the smooth curve (only rich strikes count)
+  side  = put-heavy (P/C >= 1.5) -> support, call-heavy (P/C <= 0.67) -> resistance, otherwise mixed
+
+Usage: python ivwalls.py 2026-09-01 2026-11-18   -> research/ivwalls/<day>.json + all.csv + levels.txt
+"""
+import os, sys, json, math, datetime as dt
+from pathlib import Path
+import numpy as np, pandas as pd
+import engine, feeds
+
+ROOT = Path(__file__).resolve().parent
+DATA = ROOT / "docs" / "data"
+OUT = ROOT / "research" / "ivwalls"; OUT.mkdir(parents=True, exist_ok=True)
+theta = feeds.Theta(lambda: os.environ.get("THETADATA_API_KEY", ""))
+TOP = 12            # levels per day
+WINDOW = 0.03       # +/- 3% around spot
+DTE_MAX = 35        # include monthlies
+FIT_WIN = 0.06      # strikes used to fit the smooth IV curve (+/- 6%)
+
+
+def prev_wd(d):
+    d -= dt.timedelta(days=1)
+    while d.weekday() >= 5: d -= dt.timedelta(days=1)
+    return d
+
+
+def get(kind, d):
+    try:
+        df = theta.oi(d) if kind == "oi" else theta.eod(d)
+        return df if df is not None and len(df) else None
+    except Exception as e:
+        print(f"  ThetaData {kind} {d}: {type(e).__name__}: {str(e)[:120]}"); return None
+
+
+def build(day):
+    js = DATA / f"{day}.json"
+    if not js.exists(): print(f"{day}: no NYL file, skipped"); return None
+    meta = json.loads(js.read_text()); S = float(meta["spot"])
+    P = prev_wd(day); eod = None
+    for _ in range(6):
+        eod = get("eod", P)
+        if eod is not None: break
+        P = prev_wd(P)
+    oi = get("oi", day)
+    if eod is None or oi is None: print(f"{day}: missing data, skipped"); return None
+    prevC = S  # IV solve anchor below uses put-call parity on the prior close
+    eod, oi = engine._prep(eod), engine._prep(oi)
+    # prior-close forward from parity (nearest expiry)
+    e0 = eod[eod.exp == eod.exp.min()]
+    c = e0[e0.call].set_index("strike"); p = e0[~e0.call].set_index("strike")
+    d = ((c.bid + c.ask) / 2 - (p.bid + p.ask) / 2).dropna()
+    if len(d): k = d.abs().idxmin(); prevC = float(k + d.loc[k])
+
+    # 1) IV per (expiry, strike) from prior close, OTM side, decent quotes only
+    eod["mid"] = (eod.bid + eod.ask) / 2
+    q = eod[(eod.exp > P) & (eod.bid > 0) & (eod.ask > 0) & ((eod.ask - eod.bid) <= 0.35 * eod.mid + 0.02)
+            & ((eod.call & (eod.strike >= prevC)) | (~eod.call & (eod.strike <= prevC)))].copy()
+    q = q[(q.strike / prevC - 1).abs() <= FIT_WIN]
+    tP = dt.datetime.combine(P, dt.time(16, 0))
+    q["T"] = [(dt.datetime.combine(x, dt.time(16, 0)) - tP).total_seconds() / (365 * 86400) for x in q.exp]
+    q["iv"] = engine.solve_iv(q.mid.to_numpy(float), prevC, q.strike.to_numpy(float), q["T"].to_numpy(float), q.call.to_numpy())
+    q = q.dropna(subset=["iv"])
+
+    # 2) smooth curve per expiry (quadratic in log-moneyness) -> richness = iv / fitted - 1
+    rows = []
+    for ex, g in q.groupby("exp"):
+        if len(g) < 8: continue
+        x = np.log(g.strike.to_numpy(float) / prevC); y = g.iv.to_numpy(float)
+        fit = np.polyval(np.polyfit(x, y, 2), x)
+        rows.append(pd.DataFrame({"exp": ex, "strike": g.strike.to_numpy(float), "iv": y, "rich": y / fit - 1}))
+    if not rows: print(f"{day}: no IV curve, skipped"); return None
+    ivs = pd.concat(rows)
+    atm = ivs[ivs.exp == ivs.exp.min()]; atm_iv = float(atm.iloc[(atm.strike - prevC).abs().argmin()].iv)
+
+    # 3) gamma exposure from this morning's open interest, using each strike's own IV
+    o = oi[oi.open_interest > 0].copy()
+    o["dte"] = [(x - day).days for x in o.exp]
+    o = o[(o.dte >= 0) & (o.dte <= DTE_MAX) & ((o.strike / S - 1).abs() <= WINDOW)]
+    o = o.merge(ivs, on=["exp", "strike"], how="inner")
+    if not len(o): print(f"{day}: no overlap between OI and IV, skipped"); return None
+    T0 = dt.datetime.combine(day, dt.time(9, 30))
+    T = np.array([max((dt.datetime.combine(x, dt.time(16, 0)) - T0).total_seconds(), 1800) / (365 * 86400) for x in o.exp])
+    gam, _, _ = engine.greeks(S, o.strike.to_numpy(float), T, o.iv.to_numpy(float))
+    o["gex"] = gam * o.open_interest.to_numpy(float) * 100 * S * S * 0.01
+    o["rich_w"] = o.rich * o.gex
+
+    by = o.groupby("strike").agg(gex=("gex", "sum"), rich_w=("rich_w", "sum"), iv=("iv", "mean"))
+    by["rich"] = by.rich_w / by.gex.replace(0, np.nan)
+    by["oi_call"] = o[o.call].groupby("strike").open_interest.sum()
+    by["oi_put"] = o[~o.call].groupby("strike").open_interest.sum()
+    by = by.fillna(0)
+    by["score"] = by.gex * by.rich.clip(lower=0)
+    by = by[by.score > 0].sort_values("score", ascending=False).head(TOP)
+    mx = float(by.score.max()) if len(by) else 1.0
+    nq = (meta.get("nq") or {}).get("ratio")
+
+    levels = []
+    for k, r in by.sort_index(ascending=False).iterrows():
+        pc = (r.oi_put / r.oi_call) if r.oi_call > 0 else float("inf")
+        side = "support" if pc >= 1.5 else "resistance" if pc <= 0.67 else "mixed"
+        levels.append({"k": float(k), "nq": round(k * nq * 4) / 4 if nq else None, "score": round(r.score / mx * 100),
+                       "side": side, "pc": None if math.isinf(pc) else round(pc, 2),
+                       "iv_pct": round(r.iv / atm_iv * 100), "rich_pct": round(r.rich * 100, 1),
+                       "dist": round(k - S, 2)})
+    out = {"day": str(day), "spot": S, "spot_src": meta.get("spot_src"), "atm_iv": round(atm_iv, 4),
+           "iv_from_close_of": str(P), "oi": str(day), "nq_ratio": nq, "levels": levels}
+    (OUT / f"{day}.json").write_text(json.dumps(out, indent=1))
+    print(f"{day}: {len(levels)} IV walls, QQQ {S:.2f}, ATM IV {atm_iv:.1%}")
+    return out
+
+
+def main():
+    if not os.environ.get("THETADATA_API_KEY"): sys.exit("THETADATA_API_KEY is not set.")
+    a, b = dt.date.fromisoformat(sys.argv[1]), dt.date.fromisoformat(sys.argv[2])
+    d = a
+    while d <= b:
+        if d.weekday() < 5:
+            try: build(d)
+            except Exception as e: print(f"{d}: FAILED {type(e).__name__}: {e}")
+        d += dt.timedelta(days=1)
+    # combined files
+    days = sorted(OUT.glob("20*.json")); rows = []; txt = []
+    for f in days:
+        j = json.loads(f.read_text())
+        for l in j["levels"]:
+            rows.append([j["day"], j["spot"], l["k"], l["nq"], l["score"], l["side"], l["pc"], l["iv_pct"], l["rich_pct"], l["dist"]])
+        txt.append(f"=== {dt.date.fromisoformat(j['day']).strftime('%a %b %d')} · QQQ {j['spot']} · ATM IV {j['atm_iv']:.1%}\n" +
+                   "\n".join(f"{l['k']:g} IVW {l['side']} {l['score']}" for l in j["levels"]) + "\n")
+    pd.DataFrame(rows, columns=["day", "qqq_spot", "strike", "nq_level", "score_0_100", "side", "put_call_oi", "iv_pct_of_atm",
+                                "iv_rich_vs_curve_pct", "dist_from_spot"]).to_csv(OUT / "all.csv", index=False)
+    (OUT / "levels.txt").write_text("IV WALLS (QQQ strikes) - built pre-open from prior-close IV, morning open interest and pre-open QQQ\nEach line: strike, side (support / resistance / mixed from put/call OI), strength 0-100.\nPaste one day's block into the IV Walls indicator.\n\n" + "\n".join(txt))
+
+
+if __name__ == "__main__":
+    main()
