@@ -1,0 +1,72 @@
+{
+ "day": "2026-11-11",
+ "spot": 687.68,
+ "spot_src": "pre-market 09:25 (backtest, nothing after 09:25 used)",
+ "atm_iv": 0.2818,
+ "iv_from_close_of": "2026-11-10",
+ "pc_all": 0.55,
+ "oi": "2026-11-11",
+ "nq_ratio": 41.251,
+ "levels": [
+  {
+   "k": 685.0,
+   "nq": 28257.0,
+   "score": 100,
+   "side": "support",
+   "pc": 1.38,
+   "iv_pct": 89,
+   "rich_pct": 0.5,
+   "dist": -2.68
+  },
+  {
+   "k": 681.0,
+   "nq": 28092.0,
+   "score": 12,
+   "side": "support",
+   "pc": 0.72,
+   "iv_pct": 92,
+   "rich_pct": 0.4,
+   "dist": -6.68
+  },
+  {
+   "k": 680.0,
+   "nq": 28050.75,
+   "score": 43,
+   "side": "mixed",
+   "pc": 0.5,
+   "iv_pct": 93,
+   "rich_pct": 0.5,
+   "dist": -7.68
+  },
+  {
+   "k": 679.0,
+   "nq": 28009.5,
+   "score": 13,
+   "side": "mixed",
+   "pc": 0.63,
+   "iv_pct": 94,
+   "rich_pct": 0.7,
+   "dist": -8.68
+  },
+  {
+   "k": 669.0,
+   "nq": 27597.0,
+   "score": 1,
+   "side": "support",
+   "pc": 2.12,
+   "iv_pct": 102,
+   "rich_pct": 0.1,
+   "dist": -18.68
+  },
+  {
+   "k": 668.0,
+   "nq": 27555.75,
+   "score": 0,
+   "side": "support",
+   "pc": 1.82,
+   "iv_pct": 102,
+   "rich_pct": 0.1,
+   "dist": -19.68
+  }
+ ]
+}

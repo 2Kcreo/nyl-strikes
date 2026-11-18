@@ -1,0 +1,132 @@
+{
+ "day": "2026-09-17",
+ "spot": 715.95,
+ "spot_src": "pre-market 09:25 (backtest, nothing after 09:25 used)",
+ "atm_iv": 0.2321,
+ "iv_from_close_of": "2026-09-16",
+ "pc_all": 0.83,
+ "oi": "2026-09-17",
+ "nq_ratio": 41.5049,
+ "levels": [
+  {
+   "k": 725.0,
+   "nq": 30091.0,
+   "score": 53,
+   "side": "resistance",
+   "pc": 0.22,
+   "iv_pct": 72,
+   "rich_pct": 1.1,
+   "dist": 9.05
+  },
+  {
+   "k": 724.0,
+   "nq": 30049.5,
+   "score": 11,
+   "side": "resistance",
+   "pc": 0.15,
+   "iv_pct": 71,
+   "rich_pct": 0.9,
+   "dist": 8.05
+  },
+  {
+   "k": 723.0,
+   "nq": 30008.0,
+   "score": 20,
+   "side": "resistance",
+   "pc": 0.11,
+   "iv_pct": 73,
+   "rich_pct": 0.9,
+   "dist": 7.05
+  },
+  {
+   "k": 721.0,
+   "nq": 29925.0,
+   "score": 18,
+   "side": "resistance",
+   "pc": 0.17,
+   "iv_pct": 72,
+   "rich_pct": 1.0,
+   "dist": 5.05
+  },
+  {
+   "k": 720.0,
+   "nq": 29883.5,
+   "score": 89,
+   "side": "resistance",
+   "pc": 0.3,
+   "iv_pct": 73,
+   "rich_pct": 0.8,
+   "dist": 4.05
+  },
+  {
+   "k": 719.0,
+   "nq": 29842.0,
+   "score": 15,
+   "side": "resistance",
+   "pc": 0.33,
+   "iv_pct": 73,
+   "rich_pct": 0.7,
+   "dist": 3.05
+  },
+  {
+   "k": 718.0,
+   "nq": 29800.5,
+   "score": 31,
+   "side": "support",
+   "pc": 1.37,
+   "iv_pct": 73,
+   "rich_pct": 0.6,
+   "dist": 2.05
+  },
+  {
+   "k": 717.0,
+   "nq": 29759.0,
+   "score": 62,
+   "side": "resistance",
+   "pc": 0.36,
+   "iv_pct": 74,
+   "rich_pct": 1.7,
+   "dist": 1.05
+  },
+  {
+   "k": 716.0,
+   "nq": 29717.5,
+   "score": 38,
+   "side": "resistance",
+   "pc": 0.28,
+   "iv_pct": 74,
+   "rich_pct": 0.8,
+   "dist": 0.05
+  },
+  {
+   "k": 715.0,
+   "nq": 29676.0,
+   "score": 100,
+   "side": "mixed",
+   "pc": 0.76,
+   "iv_pct": 75,
+   "rich_pct": 0.7,
+   "dist": -0.95
+  },
+  {
+   "k": 714.0,
+   "nq": 29634.5,
+   "score": 19,
+   "side": "resistance",
+   "pc": 0.4,
+   "iv_pct": 75,
+   "rich_pct": 0.5,
+   "dist": -1.95
+  },
+  {
+   "k": 713.0,
+   "nq": 29593.0,
+   "score": 9,
+   "side": "resistance",
+   "pc": 0.51,
+   "iv_pct": 76,
+   "rich_pct": 0.3,
+   "dist": -2.95
+  }
+ ]
+}

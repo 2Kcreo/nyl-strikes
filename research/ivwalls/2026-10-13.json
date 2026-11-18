@@ -1,0 +1,132 @@
+{
+ "day": "2026-10-13",
+ "spot": 740.2,
+ "spot_src": "pre-market 09:25 (backtest, nothing after 09:25 used)",
+ "atm_iv": 0.1376,
+ "iv_from_close_of": "2026-10-12",
+ "pc_all": 1.2,
+ "oi": "2026-10-13",
+ "nq_ratio": 41.4026,
+ "levels": [
+  {
+   "k": 760.0,
+   "nq": 31466.0,
+   "score": 30,
+   "side": "resistance",
+   "pc": 0.06,
+   "iv_pct": 106,
+   "rich_pct": 1.9,
+   "dist": 19.8
+  },
+  {
+   "k": 755.0,
+   "nq": 31259.0,
+   "score": 28,
+   "side": "resistance",
+   "pc": 0.29,
+   "iv_pct": 106,
+   "rich_pct": 1.8,
+   "dist": 14.8
+  },
+  {
+   "k": 753.0,
+   "nq": 31176.25,
+   "score": 7,
+   "side": "resistance",
+   "pc": 0.59,
+   "iv_pct": 108,
+   "rich_pct": 1.4,
+   "dist": 12.8
+  },
+  {
+   "k": 752.0,
+   "nq": 31134.75,
+   "score": 6,
+   "side": "resistance",
+   "pc": 0.45,
+   "iv_pct": 108,
+   "rich_pct": 0.9,
+   "dist": 11.8
+  },
+  {
+   "k": 745.0,
+   "nq": 30845.0,
+   "score": 20,
+   "side": "support",
+   "pc": 1.66,
+   "iv_pct": 115,
+   "rich_pct": 0.5,
+   "dist": 4.8
+  },
+  {
+   "k": 744.0,
+   "nq": 30803.5,
+   "score": 31,
+   "side": "mixed",
+   "pc": 1.11,
+   "iv_pct": 116,
+   "rich_pct": 2.3,
+   "dist": 3.8
+  },
+  {
+   "k": 743.0,
+   "nq": 30762.25,
+   "score": 31,
+   "side": "support",
+   "pc": 2.78,
+   "iv_pct": 117,
+   "rich_pct": 2.0,
+   "dist": 2.8
+  },
+  {
+   "k": 742.0,
+   "nq": 30720.75,
+   "score": 33,
+   "side": "support",
+   "pc": 3.65,
+   "iv_pct": 118,
+   "rich_pct": 1.7,
+   "dist": 1.8
+  },
+  {
+   "k": 741.0,
+   "nq": 30679.25,
+   "score": 17,
+   "side": "support",
+   "pc": 3.51,
+   "iv_pct": 119,
+   "rich_pct": 1.2,
+   "dist": 0.8
+  },
+  {
+   "k": 740.0,
+   "nq": 30638.0,
+   "score": 100,
+   "side": "support",
+   "pc": 2.18,
+   "iv_pct": 120,
+   "rich_pct": 0.9,
+   "dist": -0.2
+  },
+  {
+   "k": 734.0,
+   "nq": 30389.5,
+   "score": 9,
+   "side": "support",
+   "pc": 6.91,
+   "iv_pct": 128,
+   "rich_pct": 0.4,
+   "dist": -6.2
+  },
+  {
+   "k": 730.0,
+   "nq": 30224.0,
+   "score": 11,
+   "side": "support",
+   "pc": 2.4,
+   "iv_pct": 134,
+   "rich_pct": 0.4,
+   "dist": -10.2
+  }
+ ]
+}
