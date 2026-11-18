@@ -75,7 +75,15 @@ def build(day):
         if len(g) < 6: continue
         x = np.log(g.strike.to_numpy(float) / prevC); y = g.iv.to_numpy(float)
         fit = np.polyval(np.polyfit(x, y, 2), x)
-        rows.append(pd.DataFrame({"exp": ex, "strike": g.strike.to_numpy(float), "iv": y, "rich": y / fit - 1}))
+        # curvature: how far this strike's IV pokes above the straight line between its two neighbours
+        g2 = g.sort_values("strike"); xs = np.log(g2.strike.to_numpy(float) / prevC); ys = g2.iv.to_numpy(float)
+        cv = np.full(len(ys), np.nan)
+        if len(ys) >= 3:
+            w = (xs[1:-1] - xs[:-2]) / (xs[2:] - xs[:-2]); lin = ys[:-2] + w * (ys[2:] - ys[:-2])
+            cv[1:-1] = ys[1:-1] / lin - 1
+        cvm = dict(zip(g2.strike.to_numpy(float), cv))
+        ks = g.strike.to_numpy(float)
+        rows.append(pd.DataFrame({"exp": ex, "strike": ks, "iv": y, "rich": y / fit - 1, "curv": [cvm.get(k, np.nan) for k in ks]}))
     if not rows: print(f"{day}: no IV curve, skipped"); return None
     ivs = pd.concat(rows)
     atm = ivs[ivs.exp == ivs.exp.min()]; atm_iv = float(atm.iloc[(atm.strike - prevC).abs().argmin()].iv)
@@ -91,9 +99,11 @@ def build(day):
     gam, _, _ = engine.greeks(S, o.strike.to_numpy(float), T, o.iv.to_numpy(float))
     o["gex"] = gam * o.open_interest.to_numpy(float) * 100 * S * S * 0.01
     o["rich_w"] = o.rich * o.gex
+    o["curv_w"] = o.curv.fillna(0) * o.gex
 
-    by = o.groupby("strike").agg(gex=("gex", "sum"), rich_w=("rich_w", "sum"), iv=("iv", "mean"))
+    by = o.groupby("strike").agg(gex=("gex", "sum"), rich_w=("rich_w", "sum"), curv_w=("curv_w", "sum"), iv=("iv", "mean"))
     by["rich"] = by.rich_w / by.gex.replace(0, np.nan)
+    by["curv"] = by.curv_w / by.gex.replace(0, np.nan)
     by["oi_call"] = o[o.call].groupby("strike").open_interest.sum()
     by["oi_put"] = o[~o.call].groupby("strike").open_interest.sum()
     by = by.fillna(0)
