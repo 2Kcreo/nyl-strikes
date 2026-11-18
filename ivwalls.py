@@ -6,7 +6,7 @@ smooth IV curve around them, plus the put/call open-interest ratio at that strik
 No look-ahead: IV comes from the PRIOR day's closing option prices, open interest is the figure posted that
 morning (prior close), and spot is the same pre-open QQQ price NYL saved for that day (docs/data/<day>.json).
 
-  score = gamma exposure at the strike  x  how rich its IV is vs the smooth curve (only rich strikes count)
+  score = smile-adjusted gamma exposure (0-2 DTE) x (IV richness vs the smooth curve + curvature bump vs neighbours)
   side  = strike P/C vs the day's overall P/C: >= 1.3x -> support, <= 0.77x -> resistance, otherwise mixed
 
 Usage: python ivwalls.py 2026-09-01 2026-11-18   -> research/ivwalls/<day>.json + all.csv + levels.txt
@@ -117,7 +117,9 @@ def build(day):
     by["oi_call"] = o[o.call].groupby("strike").open_interest.sum()
     by["oi_put"] = o[~o.call].groupby("strike").open_interest.sum()
     by = by.fillna(0)
-    by["score"] = by.gex * by.rich.clip(lower=0)
+    # score (picked by test, see research/ivwalls/test.json): smile-adjusted gamma from 0-2 DTE options
+    # x (IV richness vs the curve + curvature bump vs neighbours)
+    by["score"] = by.gex_cov_near.abs() * (by.rich.clip(lower=0) + by.curv.fillna(0).clip(lower=0))
     pc_all = by.oi_put.sum() / max(by.oi_call.sum(), 1)   # the day's overall put/call, so "put-heavy" is relative
     (OUT / "cand").mkdir(exist_ok=True)
     by.assign(spot=S, pc_all=pc_all, nq=(meta.get("nq") or {}).get("ratio")).to_csv(OUT / "cand" / f"{day}.csv")   # every strike, for testing variants
