@@ -19,6 +19,26 @@
    "dist": 14.25
   },
   {
+   "k": 735.0,
+   "nq": 30420.75,
+   "score": 1,
+   "side": "resistance",
+   "pc": 0.41,
+   "iv_pct": 77,
+   "rich_pct": 0.1,
+   "dist": 9.25
+  },
+  {
+   "k": 733.0,
+   "nq": 30338.0,
+   "score": 2,
+   "side": "resistance",
+   "pc": 0.39,
+   "iv_pct": 79,
+   "rich_pct": 0.4,
+   "dist": 7.25
+  },
+  {
    "k": 732.0,
    "nq": 30296.5,
    "score": 7,
@@ -127,6 +147,46 @@
    "iv_pct": 86,
    "rich_pct": 0.3,
    "dist": -3.75
+  },
+  {
+   "k": 711.0,
+   "nq": 29427.25,
+   "score": 0,
+   "side": "support",
+   "pc": 23.9,
+   "iv_pct": 97,
+   "rich_pct": 0.0,
+   "dist": -14.75
+  },
+  {
+   "k": 707.0,
+   "nq": 29261.75,
+   "score": 0,
+   "side": "support",
+   "pc": 13.26,
+   "iv_pct": 106,
+   "rich_pct": 0.0,
+   "dist": -18.75
+  },
+  {
+   "k": 706.0,
+   "nq": 29220.5,
+   "score": 0,
+   "side": "support",
+   "pc": 9.72,
+   "iv_pct": 107,
+   "rich_pct": 0.0,
+   "dist": -19.75
+  },
+  {
+   "k": 704.0,
+   "nq": 29137.75,
+   "score": 0,
+   "side": "support",
+   "pc": 16.99,
+   "iv_pct": 113,
+   "rich_pct": 0.0,
+   "dist": -21.75
   }
  ]
 }

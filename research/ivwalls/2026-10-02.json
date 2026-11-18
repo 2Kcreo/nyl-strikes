@@ -59,6 +59,16 @@
    "dist": 1.19
   },
   {
+   "k": 751.0,
+   "nq": 31136.0,
+   "score": 2,
+   "side": "resistance",
+   "pc": 0.05,
+   "iv_pct": 74,
+   "rich_pct": 0.0,
+   "dist": -0.81
+  },
+  {
    "k": 750.0,
    "nq": 31094.5,
    "score": 100,
@@ -117,6 +127,26 @@
    "iv_pct": 79,
    "rich_pct": 0.2,
    "dist": -6.81
+  },
+  {
+   "k": 737.0,
+   "nq": 30555.5,
+   "score": 0,
+   "side": "support",
+   "pc": 2.21,
+   "iv_pct": 83,
+   "rich_pct": 0.0,
+   "dist": -14.81
+  },
+  {
+   "k": 731.0,
+   "nq": 30306.75,
+   "score": 0,
+   "side": "support",
+   "pc": 3.94,
+   "iv_pct": 87,
+   "rich_pct": 0.0,
+   "dist": -20.81
   },
   {
    "k": 730.0,

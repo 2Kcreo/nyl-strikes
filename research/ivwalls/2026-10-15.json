@@ -9,6 +9,36 @@
  "nq_ratio": 41.396,
  "levels": [
   {
+   "k": 733.0,
+   "nq": 30343.25,
+   "score": 0,
+   "side": "resistance",
+   "pc": 0.75,
+   "iv_pct": 77,
+   "rich_pct": 0.0,
+   "dist": 13.61
+  },
+  {
+   "k": 732.0,
+   "nq": 30301.75,
+   "score": 4,
+   "side": "resistance",
+   "pc": 1.63,
+   "iv_pct": 78,
+   "rich_pct": 0.3,
+   "dist": 12.61
+  },
+  {
+   "k": 731.0,
+   "nq": 30260.5,
+   "score": 3,
+   "side": "resistance",
+   "pc": 0.87,
+   "iv_pct": 79,
+   "rich_pct": 0.4,
+   "dist": 11.61
+  },
+  {
    "k": 730.0,
    "nq": 30219.0,
    "score": 55,
@@ -37,6 +67,16 @@
    "iv_pct": 81,
    "rich_pct": 0.8,
    "dist": 8.61
+  },
+  {
+   "k": 723.0,
+   "nq": 29929.25,
+   "score": 2,
+   "side": "support",
+   "pc": 4.49,
+   "iv_pct": 84,
+   "rich_pct": 0.1,
+   "dist": 3.61
   },
   {
    "k": 722.0,
@@ -119,6 +159,26 @@
    "dist": -4.39
   },
   {
+   "k": 714.0,
+   "nq": 29556.75,
+   "score": 12,
+   "side": "mixed",
+   "pc": 2.89,
+   "iv_pct": 90,
+   "rich_pct": 0.8,
+   "dist": -5.39
+  },
+  {
+   "k": 713.0,
+   "nq": 29515.25,
+   "score": 14,
+   "side": "support",
+   "pc": 9.32,
+   "iv_pct": 91,
+   "rich_pct": 0.7,
+   "dist": -6.39
+  },
+  {
    "k": 712.0,
    "nq": 29474.0,
    "score": 16,
@@ -127,6 +187,26 @@
    "iv_pct": 92,
    "rich_pct": 0.4,
    "dist": -7.39
+  },
+  {
+   "k": 711.0,
+   "nq": 29432.5,
+   "score": 5,
+   "side": "support",
+   "pc": 29.68,
+   "iv_pct": 92,
+   "rich_pct": 0.2,
+   "dist": -8.39
+  },
+  {
+   "k": 710.0,
+   "nq": 29391.25,
+   "score": 6,
+   "side": "support",
+   "pc": 12.2,
+   "iv_pct": 92,
+   "rich_pct": 0.1,
+   "dist": -9.39
   }
  ]
 }

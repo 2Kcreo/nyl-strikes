@@ -1,0 +1,155 @@
+{
+ "days": 49,
+ "groups": {
+  "A_gex_x_rich": {
+   "touches": 353,
+   "hold_pct": 67.0,
+   "trades": 172,
+   "win_pct": 34.3,
+   "pts_per_trade": -14.61
+  },
+  "B_rich_bigGEX": {
+   "touches": 293,
+   "hold_pct": 68.4,
+   "trades": 147,
+   "win_pct": 38.1,
+   "pts_per_trade": -11.31
+  },
+  "C_gex_only": {
+   "touches": 492,
+   "hold_pct": 67.9,
+   "trades": 245,
+   "win_pct": 35.5,
+   "pts_per_trade": -12.44
+  },
+  "D_gex_x_1plusrich": {
+   "touches": 492,
+   "hold_pct": 67.9,
+   "trades": 245,
+   "win_pct": 35.5,
+   "pts_per_trade": -12.44
+  },
+  "E_sqrtgex_x_rich": {
+   "touches": 343,
+   "hold_pct": 67.2,
+   "trades": 168,
+   "win_pct": 34.5,
+   "pts_per_trade": -13.08
+  },
+  "NYL_12": {
+   "touches": 542,
+   "hold_pct": 66.7,
+   "trades": 261,
+   "win_pct": 35.2,
+   "pts_per_trade": -15.35
+  },
+  "Random": {
+   "touches": 1716,
+   "hold_pct": 69.1,
+   "trades": 864,
+   "win_pct": 36.9,
+   "pts_per_trade": -6.64
+  }
+ },
+ "edge": {
+  "A_gex_x_rich": {
+   "hold_pct_minus_random": -2.0,
+   "range_90": [
+    -6.7,
+    2.7
+   ],
+   "chance_no_edge": 0.769
+  },
+  "B_rich_bigGEX": {
+   "hold_pct_minus_random": -0.6,
+   "range_90": [
+    -5.0,
+    3.7
+   ],
+   "chance_no_edge": 0.596
+  },
+  "C_gex_only": {
+   "hold_pct_minus_random": -1.3,
+   "range_90": [
+    -4.4,
+    2.2
+   ],
+   "chance_no_edge": 0.737
+  },
+  "D_gex_x_1plusrich": {
+   "hold_pct_minus_random": -1.2,
+   "range_90": [
+    -4.5,
+    2.1
+   ],
+   "chance_no_edge": 0.713
+  },
+  "E_sqrtgex_x_rich": {
+   "hold_pct_minus_random": -1.9,
+   "range_90": [
+    -6.6,
+    2.8
+   ],
+   "chance_no_edge": 0.758
+  },
+  "NYL_12": {
+   "hold_pct_minus_random": -2.4,
+   "range_90": [
+    -6.1,
+    1.1
+   ],
+   "chance_no_edge": 0.86
+  }
+ },
+ "A_split": {
+  "strong (40+)": {
+   "touches": 104,
+   "hold_pct": 67.0,
+   "trades": 53,
+   "win_pct": 41.5,
+   "pts_per_trade": -3.69
+  },
+  "weak (<40)": {
+   "touches": 249,
+   "hold_pct": 66.9,
+   "trades": 119,
+   "win_pct": 31.1,
+   "pts_per_trade": -19.48
+  },
+  "support hit from above": {
+   "touches": 110,
+   "hold_pct": 63.6,
+   "trades": 54,
+   "win_pct": 27.8,
+   "pts_per_trade": -9.22
+  },
+  "support hit from below": {
+   "touches": 65,
+   "hold_pct": 73.8,
+   "trades": 33,
+   "win_pct": 51.5,
+   "pts_per_trade": -2.24
+  },
+  "resistance hit from below": {
+   "touches": 103,
+   "hold_pct": 66.7,
+   "trades": 52,
+   "win_pct": 26.9,
+   "pts_per_trade": -34.83
+  },
+  "resistance hit from above": {
+   "touches": 38,
+   "hold_pct": 63.2,
+   "trades": 15,
+   "win_pct": 53.3,
+   "pts_per_trade": 7.87
+  },
+  "mixed": {
+   "touches": 37,
+   "hold_pct": 69.4,
+   "trades": 18,
+   "win_pct": 27.8,
+   "pts_per_trade": -13.78
+  }
+ }
+}

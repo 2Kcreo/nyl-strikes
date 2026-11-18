@@ -127,6 +127,36 @@
    "iv_pct": 106,
    "rich_pct": 1.1,
    "dist": -1.01
+  },
+  {
+   "k": 752.0,
+   "nq": 31154.75,
+   "score": 0,
+   "side": "support",
+   "pc": 1.62,
+   "iv_pct": 108,
+   "rich_pct": 0.0,
+   "dist": -2.01
+  },
+  {
+   "k": 740.0,
+   "nq": 30657.75,
+   "score": 0,
+   "side": "support",
+   "pc": 1.71,
+   "iv_pct": 126,
+   "rich_pct": 0.0,
+   "dist": -14.01
+  },
+  {
+   "k": 735.0,
+   "nq": 30450.5,
+   "score": 0,
+   "side": "support",
+   "pc": 1.79,
+   "iv_pct": 137,
+   "rich_pct": 0.0,
+   "dist": -19.01
   }
  ]
 }

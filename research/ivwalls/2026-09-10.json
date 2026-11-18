@@ -127,6 +127,56 @@
    "iv_pct": 119,
    "rich_pct": 0.1,
    "dist": -6.81
+  },
+  {
+   "k": 696.0,
+   "nq": 28612.25,
+   "score": 0,
+   "side": "support",
+   "pc": 11.65,
+   "iv_pct": 136,
+   "rich_pct": 0.1,
+   "dist": -10.81
+  },
+  {
+   "k": 693.0,
+   "nq": 28488.75,
+   "score": 0,
+   "side": "support",
+   "pc": 8.87,
+   "iv_pct": 142,
+   "rich_pct": 0.0,
+   "dist": -13.81
+  },
+  {
+   "k": 691.0,
+   "nq": 28406.5,
+   "score": 0,
+   "side": "support",
+   "pc": 15.48,
+   "iv_pct": 146,
+   "rich_pct": 0.0,
+   "dist": -15.81
+  },
+  {
+   "k": 687.0,
+   "nq": 28242.25,
+   "score": 0,
+   "side": "support",
+   "pc": 13.39,
+   "iv_pct": 154,
+   "rich_pct": 0.0,
+   "dist": -19.81
+  },
+  {
+   "k": 686.0,
+   "nq": 28201.0,
+   "score": 1,
+   "side": "support",
+   "pc": 66.54,
+   "iv_pct": 157,
+   "rich_pct": 0.0,
+   "dist": -20.81
   }
  ]
 }

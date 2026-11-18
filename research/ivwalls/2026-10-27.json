@@ -29,16 +29,6 @@
    "dist": 14.23
   },
   {
-   "k": 727.0,
-   "nq": 30051.0,
-   "score": 12,
-   "side": "resistance",
-   "pc": 0.19,
-   "iv_pct": 106,
-   "rich_pct": 0.8,
-   "dist": 12.23
-  },
-  {
    "k": 725.0,
    "nq": 29968.5,
    "score": 86,
@@ -47,16 +37,6 @@
    "iv_pct": 107,
    "rich_pct": 0.7,
    "dist": 10.23
-  },
-  {
-   "k": 724.0,
-   "nq": 29927.0,
-   "score": 16,
-   "side": "resistance",
-   "pc": 0.22,
-   "iv_pct": 108,
-   "rich_pct": 0.8,
-   "dist": 9.23
   },
   {
    "k": 722.0,
@@ -127,6 +107,96 @@
    "iv_pct": 115,
    "rich_pct": 0.6,
    "dist": 1.23
+  },
+  {
+   "k": 706.0,
+   "nq": 29183.0,
+   "score": 0,
+   "side": "support",
+   "pc": 2.03,
+   "iv_pct": 124,
+   "rich_pct": 0.0,
+   "dist": -8.77
+  },
+  {
+   "k": 705.0,
+   "nq": 29141.75,
+   "score": 3,
+   "side": "support",
+   "pc": 3.5,
+   "iv_pct": 125,
+   "rich_pct": 0.0,
+   "dist": -9.77
+  },
+  {
+   "k": 704.0,
+   "nq": 29100.25,
+   "score": 1,
+   "side": "support",
+   "pc": 2.35,
+   "iv_pct": 125,
+   "rich_pct": 0.1,
+   "dist": -10.77
+  },
+  {
+   "k": 703.0,
+   "nq": 29059.0,
+   "score": 1,
+   "side": "support",
+   "pc": 7.13,
+   "iv_pct": 126,
+   "rich_pct": 0.1,
+   "dist": -11.77
+  },
+  {
+   "k": 702.0,
+   "nq": 29017.75,
+   "score": 0,
+   "side": "support",
+   "pc": 5.36,
+   "iv_pct": 127,
+   "rich_pct": 0.0,
+   "dist": -12.77
+  },
+  {
+   "k": 698.0,
+   "nq": 28852.25,
+   "score": 0,
+   "side": "support",
+   "pc": 25.54,
+   "iv_pct": 132,
+   "rich_pct": 0.0,
+   "dist": -16.77
+  },
+  {
+   "k": 697.0,
+   "nq": 28811.0,
+   "score": 0,
+   "side": "support",
+   "pc": 19.32,
+   "iv_pct": 133,
+   "rich_pct": 0.1,
+   "dist": -17.77
+  },
+  {
+   "k": 695.0,
+   "nq": 28728.25,
+   "score": 0,
+   "side": "support",
+   "pc": 17.59,
+   "iv_pct": 135,
+   "rich_pct": 0.0,
+   "dist": -19.77
+  },
+  {
+   "k": 694.0,
+   "nq": 28687.0,
+   "score": 0,
+   "side": "support",
+   "pc": 12.54,
+   "iv_pct": 137,
+   "rich_pct": 0.0,
+   "dist": -20.77
   }
  ]
 }

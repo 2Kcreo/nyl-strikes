@@ -9,6 +9,16 @@
  "nq_ratio": 41.344,
  "levels": [
   {
+   "k": 709.0,
+   "nq": 29313.0,
+   "score": 6,
+   "side": "resistance",
+   "pc": 0.79,
+   "iv_pct": 81,
+   "rich_pct": 0.2,
+   "dist": 6.16
+  },
+  {
    "k": 708.0,
    "nq": 29271.5,
    "score": 25,
@@ -117,6 +127,26 @@
    "iv_pct": 97,
    "rich_pct": 1.2,
    "dist": -8.84
+  },
+  {
+   "k": 693.0,
+   "nq": 28651.5,
+   "score": 6,
+   "side": "support",
+   "pc": 21.48,
+   "iv_pct": 98,
+   "rich_pct": 1.1,
+   "dist": -9.84
+  },
+  {
+   "k": 692.0,
+   "nq": 28610.0,
+   "score": 7,
+   "side": "support",
+   "pc": 17.25,
+   "iv_pct": 98,
+   "rich_pct": 1.1,
+   "dist": -10.84
   },
   {
    "k": 690.0,
