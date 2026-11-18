@@ -1,0 +1,131 @@
+{
+ "day": "2026-09-30",
+ "spot": 740.31,
+ "spot_src": "pre-market 09:25 (backtest, nothing after 09:25 used)",
+ "atm_iv": 0.203,
+ "iv_from_close_of": "2026-09-29",
+ "oi": "2026-09-30",
+ "nq_ratio": 41.4769,
+ "levels": [
+  {
+   "k": 742.0,
+   "nq": 30775.75,
+   "score": 8,
+   "side": "resistance",
+   "pc": 0.5,
+   "iv_pct": 92,
+   "rich_pct": 2.0,
+   "dist": 1.69
+  },
+  {
+   "k": 741.0,
+   "nq": 30734.5,
+   "score": 13,
+   "side": "resistance",
+   "pc": 0.43,
+   "iv_pct": 93,
+   "rich_pct": 3.0,
+   "dist": 0.69
+  },
+  {
+   "k": 740.0,
+   "nq": 30693.0,
+   "score": 62,
+   "side": "resistance",
+   "pc": 0.47,
+   "iv_pct": 93,
+   "rich_pct": 3.9,
+   "dist": -0.31
+  },
+  {
+   "k": 739.0,
+   "nq": 30651.5,
+   "score": 31,
+   "side": "mixed",
+   "pc": 0.68,
+   "iv_pct": 94,
+   "rich_pct": 5.0,
+   "dist": -1.31
+  },
+  {
+   "k": 738.0,
+   "nq": 30610.0,
+   "score": 22,
+   "side": "mixed",
+   "pc": 0.77,
+   "iv_pct": 93,
+   "rich_pct": 3.5,
+   "dist": -2.31
+  },
+  {
+   "k": 737.0,
+   "nq": 30568.5,
+   "score": 26,
+   "side": "support",
+   "pc": 2.22,
+   "iv_pct": 94,
+   "rich_pct": 4.6,
+   "dist": -3.31
+  },
+  {
+   "k": 736.0,
+   "nq": 30527.0,
+   "score": 100,
+   "side": "support",
+   "pc": 11.04,
+   "iv_pct": 94,
+   "rich_pct": 5.1,
+   "dist": -4.31
+  },
+  {
+   "k": 735.0,
+   "nq": 30485.5,
+   "score": 27,
+   "side": "support",
+   "pc": 1.69,
+   "iv_pct": 95,
+   "rich_pct": 3.7,
+   "dist": -5.31
+  },
+  {
+   "k": 734.0,
+   "nq": 30444.0,
+   "score": 6,
+   "side": "support",
+   "pc": 3.28,
+   "iv_pct": 96,
+   "rich_pct": 3.5,
+   "dist": -6.31
+  },
+  {
+   "k": 733.0,
+   "nq": 30402.5,
+   "score": 5,
+   "side": "support",
+   "pc": 6.66,
+   "iv_pct": 96,
+   "rich_pct": 1.9,
+   "dist": -7.31
+  },
+  {
+   "k": 730.0,
+   "nq": 30278.25,
+   "score": 14,
+   "side": "support",
+   "pc": 7.95,
+   "iv_pct": 98,
+   "rich_pct": 1.6,
+   "dist": -10.31
+  },
+  {
+   "k": 725.0,
+   "nq": 30070.75,
+   "score": 5,
+   "side": "mixed",
+   "pc": 1.04,
+   "iv_pct": 101,
+   "rich_pct": 0.8,
+   "dist": -15.31
+  }
+ ]
+}

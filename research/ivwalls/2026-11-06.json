@@ -1,0 +1,101 @@
+{
+ "day": "2026-11-06",
+ "spot": 657.95,
+ "spot_src": "pre-market 09:25 (backtest, nothing after 09:25 used)",
+ "atm_iv": 0.5791,
+ "iv_from_close_of": "2026-11-05",
+ "oi": "2026-11-06",
+ "nq_ratio": 41.2687,
+ "levels": [
+  {
+   "k": 653.0,
+   "nq": 26948.5,
+   "score": 4,
+   "side": "mixed",
+   "pc": 1.12,
+   "iv_pct": 77,
+   "rich_pct": 0.2,
+   "dist": -4.95
+  },
+  {
+   "k": 652.0,
+   "nq": 26907.25,
+   "score": 10,
+   "side": "mixed",
+   "pc": 1.19,
+   "iv_pct": 78,
+   "rich_pct": 0.5,
+   "dist": -5.95
+  },
+  {
+   "k": 651.0,
+   "nq": 26866.0,
+   "score": 15,
+   "side": "support",
+   "pc": 2.17,
+   "iv_pct": 78,
+   "rich_pct": 0.8,
+   "dist": -6.95
+  },
+  {
+   "k": 650.0,
+   "nq": 26824.75,
+   "score": 100,
+   "side": "support",
+   "pc": 9.17,
+   "iv_pct": 78,
+   "rich_pct": 0.7,
+   "dist": -7.95
+  },
+  {
+   "k": 649.0,
+   "nq": 26783.5,
+   "score": 0,
+   "side": "support",
+   "pc": 1.66,
+   "iv_pct": 75,
+   "rich_pct": 0.3,
+   "dist": -8.95
+  },
+  {
+   "k": 648.0,
+   "nq": 26742.0,
+   "score": 0,
+   "side": "support",
+   "pc": 7.94,
+   "iv_pct": 76,
+   "rich_pct": 0.3,
+   "dist": -9.95
+  },
+  {
+   "k": 647.0,
+   "nq": 26700.75,
+   "score": 0,
+   "side": "support",
+   "pc": 3.75,
+   "iv_pct": 76,
+   "rich_pct": 0.4,
+   "dist": -10.95
+  },
+  {
+   "k": 645.0,
+   "nq": 26618.25,
+   "score": 13,
+   "side": "support",
+   "pc": 7.25,
+   "iv_pct": 80,
+   "rich_pct": 0.3,
+   "dist": -12.95
+  },
+  {
+   "k": 640.0,
+   "nq": 26412.0,
+   "score": 19,
+   "side": "support",
+   "pc": 17.03,
+   "iv_pct": 82,
+   "rich_pct": 0.7,
+   "dist": -17.95
+  }
+ ]
+}
