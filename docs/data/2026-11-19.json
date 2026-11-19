@@ -1,15 +1,15 @@
 {
  "day": "2026-11-19",
- "built": "2026-11-19 08:45 ET",
+ "built": "2026-11-19 09:10 ET",
  "oi": "2026-11-19 (snapshot)",
- "spot": 671.26,
- "spot_src": "pre-market 08:45 (updates at the open)",
+ "spot": 672.0,
+ "spot_src": "pre-market 09:10 (updates at the open)",
  "nq": {
-  "price": 27673.0,
-  "ratio": 41.2255,
-  "at": "08:35"
+  "price": 27681.5,
+  "ratio": 41.1927,
+  "at": "09:00"
  },
- "em": 18.42,
+ "em": 18.44,
  "flip": [
   656.8
  ],
@@ -56,7 +56,6 @@
   {
    "k": 690,
    "tags": [
-    "CHX",
     "EM",
     "GEX",
     "VEX"
@@ -77,6 +76,7 @@
    "k": 688.0,
    "tags": [
     "CHX",
+    "GEX",
     "VEX"
    ],
    "dens": 12,
@@ -99,7 +99,7 @@
     "GEX",
     "VEX"
    ],
-   "dens": 8,
+   "dens": 5,
    "star": true
   },
   {
@@ -176,6 +176,7 @@
   {
    "k": 670.0,
    "tags": [
+    "CHX",
     "GEX",
     "OI",
     "VOL"
@@ -236,11 +237,10 @@
    "k": 663.0,
    "tags": [
     "CHX",
-    "GEX",
     "VEX",
     "VOL"
    ],
-   "dens": 8,
+   "dens": 5,
    "star": true
   },
   {
@@ -286,7 +286,7 @@
    "tags": [
     "VOL"
    ],
-   "dens": 5,
+   "dens": 8,
    "star": false
   },
   {
@@ -319,21 +319,21 @@
    "star": true
   },
   {
-   "k": 654.0,
+   "k": 654,
    "tags": [
+    "EM",
     "NDX",
     "VOL"
    ],
-   "dens": 12,
+   "dens": 5,
    "star": true
   },
   {
-   "k": 653,
+   "k": 653.0,
    "tags": [
-    "EM",
     "VOL"
    ],
-   "dens": 5,
+   "dens": 20,
    "star": false
   },
   {
