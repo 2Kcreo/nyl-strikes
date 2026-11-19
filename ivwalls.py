@@ -12,6 +12,7 @@ morning (prior close), and spot is the same pre-open QQQ price NYL saved for tha
 Usage: python ivwalls.py 2026-09-01 2026-11-18   -> research/ivwalls/<day>.json + all.csv + levels.txt
 """
 import os, sys, json, math, datetime as dt
+from zoneinfo import ZoneInfo
 from pathlib import Path
 import numpy as np, pandas as pd
 import engine, feeds
@@ -115,7 +116,7 @@ def table(day, S, P, eod, oi):
     return by, pc_all, atm_iv
 
 
-def build(day):
+def build(day, publish=False):
     js = DATA / f"{day}.json"
     if not js.exists(): print(f"{day}: no NYL file, skipped"); return None
     meta = json.loads(js.read_text()); S = float(meta["spot"])
@@ -125,6 +126,11 @@ def build(day):
         if eod is not None: break
         P = prev_wd(P)
     oi = get("oi", day)
+    if oi is None and day == dt.datetime.now(ZoneInfo("America/New_York")).date():   # today's OI: snapshot (posts ~6:30 ET)
+        try:
+            oi = theta.oi_snapshot(); oi = oi if oi is not None and len(oi) else None
+        except Exception as e: print(f"  oi snapshot: {type(e).__name__}: {e}"); oi = None
+        if oi is None: oi = get("oi", P)
     if eod is None or oi is None: print(f"{day}: missing data, skipped"); return None
     t = table(day, S, P, eod, oi)
     if t is None: print(f"{day}: no IV curve / overlap, skipped"); return None
@@ -148,12 +154,18 @@ def build(day):
     out = {"day": str(day), "spot": S, "spot_src": meta.get("spot_src"), "atm_iv": round(atm_iv, 4),
            "iv_from_close_of": str(P), "pc_all": round(pc_all, 2), "oi": str(day), "nq_ratio": nq, "levels": levels}
     (OUT / f"{day}.json").write_text(json.dumps(out, indent=1))
+    if publish:   # served by the website for NYL Sync (not shown on the NYL page)
+        pub = ROOT / "docs" / "data" / "ivwalls"; pub.mkdir(parents=True, exist_ok=True)
+        (pub / f"{day}.json").write_text(json.dumps(out, indent=1)); (pub / "latest.json").write_text(json.dumps(out, indent=1))
     print(f"{day}: {len(levels)} IV walls, QQQ {S:.2f}, ATM IV {atm_iv:.1%}")
     return out
 
 
 def main():
     if not os.environ.get("THETADATA_API_KEY"): sys.exit("THETADATA_API_KEY is not set.")
+    if sys.argv[1:2] == ["--today"]:   # daily build (GitHub Actions, right after the NYL strikes)
+        day = dt.date.fromisoformat(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2] else dt.datetime.now(ZoneInfo("America/New_York")).date()
+        build(day, publish=True); return
     a, b = dt.date.fromisoformat(sys.argv[1]), dt.date.fromisoformat(sys.argv[2])
     d = a
     while d <= b:

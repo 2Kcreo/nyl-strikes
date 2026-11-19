@@ -31,6 +31,11 @@ jobs:
         env:
           THETADATA_API_KEY: ${{ secrets.THETADATA_API_KEY }}
         run: python strikes.py ${{ github.event.inputs.day || '' }}
+      - name: Build IV walls (for NYL Sync / TradingView)
+        continue-on-error: true
+        env:
+          THETADATA_API_KEY: ${{ secrets.THETADATA_API_KEY }}
+        run: python ivwalls.py --today ${{ github.event.inputs.day || '' }}
       - name: Save to the website
         run: |
           git config user.name "nyl-bot"
