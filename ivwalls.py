@@ -40,17 +40,8 @@ def get(kind, d):
         print(f"  ThetaData {kind} {d}: {type(e).__name__}: {str(e)[:120]}"); return None
 
 
-def build(day):
-    js = DATA / f"{day}.json"
-    if not js.exists(): print(f"{day}: no NYL file, skipped"); return None
-    meta = json.loads(js.read_text()); S = float(meta["spot"])
-    P = prev_wd(day); eod = None
-    for _ in range(6):
-        eod = get("eod", P)
-        if eod is not None: break
-        P = prev_wd(P)
-    oi = get("oi", day)
-    if eod is None or oi is None: print(f"{day}: missing data, skipped"); return None
+def table(day, S, P, eod, oi):
+    """Every strike near S with gamma, smile-adjusted gamma, IV richness, curvature, put/call OI. None if no data."""
     prevC = S  # IV solve anchor below uses put-call parity on the prior close
     eod, oi = engine._prep(eod), engine._prep(oi)
     # prior-close forward from parity (nearest expiry)
@@ -85,7 +76,7 @@ def build(day):
         cvm = dict(zip(g2.strike.to_numpy(float), cv))
         ks = g.strike.to_numpy(float)
         rows.append(pd.DataFrame({"exp": ex, "strike": ks, "iv": y, "rich": y / fit - 1, "curv": [cvm.get(k, np.nan) for k in ks], "fp": fp, "fpp": fpp}))
-    if not rows: print(f"{day}: no IV curve, skipped"); return None
+    if not rows: return None
     ivs = pd.concat(rows)
     atm = ivs[ivs.exp == ivs.exp.min()]; atm_iv = float(atm.iloc[(atm.strike - prevC).abs().argmin()].iv)
 
@@ -94,7 +85,7 @@ def build(day):
     o["dte"] = [(x - day).days for x in o.exp]
     o = o[(o.dte >= 0) & (o.dte <= DTE_MAX) & ((o.strike / S - 1).abs() <= WINDOW)]
     o = o.merge(ivs, on=["exp", "strike"], how="inner")
-    if not len(o): print(f"{day}: no overlap between OI and IV, skipped"); return None
+    if not len(o): return None
     T0 = dt.datetime.combine(day, dt.time(9, 30))
     T = np.array([max((dt.datetime.combine(x, dt.time(16, 0)) - T0).total_seconds(), 1800) / (365 * 86400) for x in o.exp])
     gam, _, _ = engine.greeks(S, o.strike.to_numpy(float), T, o.iv.to_numpy(float))
@@ -121,6 +112,23 @@ def build(day):
     # x (IV richness vs the curve + curvature bump vs neighbours)
     by["score"] = by.gex_cov_near.abs() * (by.rich.clip(lower=0) + by.curv.fillna(0).clip(lower=0))
     pc_all = by.oi_put.sum() / max(by.oi_call.sum(), 1)   # the day's overall put/call, so "put-heavy" is relative
+    return by, pc_all, atm_iv
+
+
+def build(day):
+    js = DATA / f"{day}.json"
+    if not js.exists(): print(f"{day}: no NYL file, skipped"); return None
+    meta = json.loads(js.read_text()); S = float(meta["spot"])
+    P = prev_wd(day); eod = None
+    for _ in range(6):
+        eod = get("eod", P)
+        if eod is not None: break
+        P = prev_wd(P)
+    oi = get("oi", day)
+    if eod is None or oi is None: print(f"{day}: missing data, skipped"); return None
+    t = table(day, S, P, eod, oi)
+    if t is None: print(f"{day}: no IV curve / overlap, skipped"); return None
+    by, pc_all, atm_iv = t
     (OUT / "cand").mkdir(exist_ok=True)
     by.assign(spot=S, pc_all=pc_all, nq=(meta.get("nq") or {}).get("ratio")).to_csv(OUT / "cand" / f"{day}.csv")   # every strike, for testing variants
     by = by[by.score > 0]
