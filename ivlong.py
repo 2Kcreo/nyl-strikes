@@ -21,15 +21,18 @@ CFG = json.load(open(ROOT / "config.json"))
 LAYERS = {5: (5, .02), 8: (8, .03), 12: (12, .03), 20: (20, .045)}
 
 
-def call(fn, tries=3, **kw):
+def call(fn, tries=6, **kw):
+    import time
     for i in range(tries):
         try:
             df = theta._df(fn, **kw); return df if df is not None and len(df) else None
         except Exception as e:
             msg = str(e)
             if "No data" in msg or "NoDataFound" in type(e).__name__: return None
-            print(f"  {fn} try {i + 1}: {type(e).__name__}: {msg[:120]}")
-    return None
+            print(f"  {fn} try {i + 1}: {type(e).__name__}: {msg[msg.find('details'):][:90]}")
+            if "UNAUTHENTICATED" in msg or "Invalid session" in msg: theta.client = None   # log in again
+            time.sleep(3 * (i + 1))
+    raise RuntimeError(f"{fn} kept failing")
 
 
 def minute_path(day):
