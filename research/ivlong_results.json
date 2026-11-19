@@ -1,0 +1,442 @@
+{
+ "days": 4,
+ "first": "2026-11-10",
+ "last": "2026-11-13",
+ "overall": {
+  "IVW strong": {
+   "n": 12,
+   "hold": 50.0,
+   "trades": 4,
+   "win": 50.0,
+   "pts": 15.45
+  },
+  "IVW all": {
+   "n": 56,
+   "hold": 33.9,
+   "trades": 16,
+   "win": 37.5,
+   "pts": 8.72
+  },
+  "NYL 12": {
+   "n": 87,
+   "hold": 31.0,
+   "trades": 26,
+   "win": 38.5,
+   "pts": 9.2
+  },
+  "Both (IVW strong on NYL)": {
+   "n": 12,
+   "hold": 50.0,
+   "trades": 4,
+   "win": 50.0,
+   "pts": 15.45
+  },
+  "NYL only (no strong IVW)": {
+   "n": 75,
+   "hold": 28.0,
+   "trades": 22,
+   "win": 36.4,
+   "pts": 8.06
+  },
+  "Random": {
+   "n": 234,
+   "hold": 31.2,
+   "trades": 59,
+   "win": 33.9,
+   "pts": 6.66
+  }
+ },
+ "edge": {
+  "IVW strong": {
+   "hold_vs_random": 18.8,
+   "hold_chance_no_edge": 0.0,
+   "pts_vs_random": NaN,
+   "pts_chance_no_edge": 0.259
+  },
+  "IVW all": {
+   "hold_vs_random": 2.7,
+   "hold_chance_no_edge": 0.03,
+   "pts_vs_random": 2.06,
+   "pts_chance_no_edge": 0.354
+  },
+  "NYL 12": {
+   "hold_vs_random": -0.2,
+   "hold_chance_no_edge": 0.525,
+   "pts_vs_random": 2.54,
+   "pts_chance_no_edge": 0.248
+  },
+  "Both (IVW strong on NYL)": {
+   "hold_vs_random": 18.8,
+   "hold_chance_no_edge": 0.0,
+   "pts_vs_random": NaN,
+   "pts_chance_no_edge": 0.269
+  },
+  "NYL only (no strong IVW)": {
+   "hold_vs_random": -3.2,
+   "hold_chance_no_edge": 0.8,
+   "pts_vs_random": 0.85,
+   "pts_chance_no_edge": 0.147
+  }
+ },
+ "regime": {
+  "long gamma (above flip)": {
+   "IVW strong": {
+    "n": 2,
+    "hold": 50.0,
+    "trades": 1,
+    "win": 0.0,
+    "pts": -9.02
+   },
+   "IVW all": {
+    "n": 11,
+    "hold": 45.5,
+    "trades": 5,
+    "win": 20.0,
+    "pts": -0.47
+   },
+   "NYL 12": {
+    "n": 18,
+    "hold": 50.0,
+    "trades": 9,
+    "win": 33.3,
+    "pts": 6.45
+   },
+   "Both (IVW strong on NYL)": {
+    "n": 2,
+    "hold": 50.0,
+    "trades": 1,
+    "win": 0.0,
+    "pts": -9.02
+   },
+   "NYL only (no strong IVW)": {
+    "n": 16,
+    "hold": 50.0,
+    "trades": 8,
+    "win": 37.5,
+    "pts": 8.38
+   },
+   "Random": {
+    "n": 55,
+    "hold": 41.8,
+    "trades": 14,
+    "win": 35.7,
+    "pts": 7.18
+   },
+   "edge IVW strong": {
+    "hold_vs_random": 8.2,
+    "hold_chance_no_edge": 0.0,
+    "pts_vs_random": -16.19,
+    "pts_chance_no_edge": 1.0
+   },
+   "edge NYL 12": {
+    "hold_vs_random": 8.2,
+    "hold_chance_no_edge": 0.0,
+    "pts_vs_random": -0.73,
+    "pts_chance_no_edge": 1.0
+   }
+  },
+  "short gamma (below flip)": {
+   "IVW strong": {
+    "n": 10,
+    "hold": 50.0,
+    "trades": 3,
+    "win": 66.7,
+    "pts": 23.6
+   },
+   "IVW all": {
+    "n": 45,
+    "hold": 31.1,
+    "trades": 11,
+    "win": 45.5,
+    "pts": 12.89
+   },
+   "NYL 12": {
+    "n": 69,
+    "hold": 26.1,
+    "trades": 17,
+    "win": 41.2,
+    "pts": 10.65
+   },
+   "Both (IVW strong on NYL)": {
+    "n": 10,
+    "hold": 50.0,
+    "trades": 3,
+    "win": 66.7,
+    "pts": 23.6
+   },
+   "NYL only (no strong IVW)": {
+    "n": 59,
+    "hold": 22.0,
+    "trades": 14,
+    "win": 35.7,
+    "pts": 7.88
+   },
+   "Random": {
+    "n": 179,
+    "hold": 27.9,
+    "trades": 45,
+    "win": 33.3,
+    "pts": 6.5
+   },
+   "edge IVW strong": {
+    "hold_vs_random": 22.4,
+    "hold_chance_no_edge": 0.0,
+    "pts_vs_random": NaN,
+    "pts_chance_no_edge": 0.0
+   },
+   "edge NYL 12": {
+    "hold_vs_random": -1.6,
+    "hold_chance_no_edge": 0.625,
+    "pts_vs_random": 4.04,
+    "pts_chance_no_edge": 0.054
+   }
+  }
+ },
+ "time_of_day": {
+  "first hour": {
+   "IVW strong": {
+    "n": 9,
+    "hold": 44.4,
+    "trades": 2,
+    "win": 50.0,
+    "pts": 15.49
+   },
+   "IVW all": {
+    "n": 39,
+    "hold": 30.8,
+    "trades": 9,
+    "win": 33.3,
+    "pts": 6.89
+   },
+   "NYL 12": {
+    "n": 55,
+    "hold": 29.1,
+    "trades": 13,
+    "win": 38.5,
+    "pts": 9.45
+   },
+   "Both (IVW strong on NYL)": {
+    "n": 9,
+    "hold": 44.4,
+    "trades": 2,
+    "win": 50.0,
+    "pts": 15.49
+   },
+   "NYL only (no strong IVW)": {
+    "n": 46,
+    "hold": 26.1,
+    "trades": 11,
+    "win": 36.4,
+    "pts": 8.35
+   },
+   "Random": {
+    "n": 145,
+    "hold": 31.0,
+    "trades": 25,
+    "win": 32.0,
+    "pts": 5.94
+   },
+   "edge IVW strong": {
+    "hold_vs_random": 13.2,
+    "hold_chance_no_edge": 0.0,
+    "pts_vs_random": NaN,
+    "pts_chance_no_edge": 0.271
+   }
+  },
+  "midday 10:30-14:00": {
+   "IVW strong": {
+    "n": 3,
+    "hold": 66.7,
+    "trades": 2,
+    "win": 50.0,
+    "pts": 15.4
+   },
+   "IVW all": {
+    "n": 16,
+    "hold": 37.5,
+    "trades": 7,
+    "win": 42.9,
+    "pts": 11.07
+   },
+   "NYL 12": {
+    "n": 31,
+    "hold": 32.3,
+    "trades": 13,
+    "win": 38.5,
+    "pts": 8.94
+   },
+   "Both (IVW strong on NYL)": {
+    "n": 3,
+    "hold": 66.7,
+    "trades": 2,
+    "win": 50.0,
+    "pts": 15.4
+   },
+   "NYL only (no strong IVW)": {
+    "n": 28,
+    "hold": 28.6,
+    "trades": 11,
+    "win": 36.4,
+    "pts": 7.77
+   },
+   "Random": {
+    "n": 84,
+    "hold": 31.0,
+    "trades": 34,
+    "win": 35.3,
+    "pts": 7.19
+   },
+   "edge IVW strong": {
+    "hold_vs_random": 38.3,
+    "hold_chance_no_edge": 0.0,
+    "pts_vs_random": 12.07,
+    "pts_chance_no_edge": 0.0
+   }
+  },
+  "last 2 hours": {
+   "IVW strong": {
+    "n": 0,
+    "hold": null,
+    "trades": 0,
+    "win": null,
+    "pts": null
+   },
+   "IVW all": {
+    "n": 1,
+    "hold": 100.0,
+    "trades": 0,
+    "win": null,
+    "pts": null
+   },
+   "NYL 12": {
+    "n": 1,
+    "hold": 100.0,
+    "trades": 0,
+    "win": null,
+    "pts": null
+   },
+   "Both (IVW strong on NYL)": {
+    "n": 0,
+    "hold": null,
+    "trades": 0,
+    "win": null,
+    "pts": null
+   },
+   "NYL only (no strong IVW)": {
+    "n": 1,
+    "hold": 100.0,
+    "trades": 0,
+    "win": null,
+    "pts": null
+   },
+   "Random": {
+    "n": 5,
+    "hold": 40.0,
+    "trades": 0,
+    "win": null,
+    "pts": null
+   },
+   "edge IVW strong": {
+    "hold_vs_random": NaN,
+    "hold_chance_no_edge": NaN,
+    "pts_vs_random": NaN,
+    "pts_chance_no_edge": NaN
+   }
+  }
+ },
+ "year": {
+  "year 2 (Nov25-Nov26)": {
+   "IVW strong": {
+    "n": 12,
+    "hold": 50.0,
+    "trades": 4,
+    "win": 50.0,
+    "pts": 15.45
+   },
+   "IVW all": {
+    "n": 56,
+    "hold": 33.9,
+    "trades": 16,
+    "win": 37.5,
+    "pts": 8.72
+   },
+   "NYL 12": {
+    "n": 87,
+    "hold": 31.0,
+    "trades": 26,
+    "win": 38.5,
+    "pts": 9.2
+   },
+   "Both (IVW strong on NYL)": {
+    "n": 12,
+    "hold": 50.0,
+    "trades": 4,
+    "win": 50.0,
+    "pts": 15.45
+   },
+   "NYL only (no strong IVW)": {
+    "n": 75,
+    "hold": 28.0,
+    "trades": 22,
+    "win": 36.4,
+    "pts": 8.06
+   },
+   "Random": {
+    "n": 234,
+    "hold": 31.2,
+    "trades": 59,
+    "win": 33.9,
+    "pts": 6.66
+   },
+   "edge IVW strong": {
+    "hold_vs_random": 18.8,
+    "hold_chance_no_edge": 0.0,
+    "pts_vs_random": NaN,
+    "pts_chance_no_edge": 0.248
+   },
+   "edge NYL 12": {
+    "hold_vs_random": -0.2,
+    "hold_chance_no_edge": 0.53,
+    "pts_vs_random": 2.54,
+    "pts_chance_no_edge": 0.222
+   }
+  }
+ },
+ "magnet": {
+  "IVW strong": {
+   "levels": 6,
+   "reach_pct": 83.3,
+   "mirror_reach_pct": 100.0,
+   "stall_min": 2.8,
+   "mirror_stall_min": 1.7
+  },
+  "IVW all": {
+   "levels": 45,
+   "reach_pct": 53.3,
+   "mirror_reach_pct": 64.4,
+   "stall_min": 2.7,
+   "mirror_stall_min": 2.9
+  },
+  "NYL 12": {
+   "levels": 59,
+   "reach_pct": 61.0,
+   "mirror_reach_pct": 54.2,
+   "stall_min": 3.0,
+   "mirror_stall_min": 2.5
+  },
+  "Both (IVW strong on NYL)": {
+   "levels": 6,
+   "reach_pct": 83.3,
+   "mirror_reach_pct": 100.0,
+   "stall_min": 2.8,
+   "mirror_stall_min": 1.7
+  },
+  "NYL only (no strong IVW)": {
+   "levels": 53,
+   "reach_pct": 58.5,
+   "mirror_reach_pct": 49.1,
+   "stall_min": 3.0,
+   "mirror_stall_min": 2.7
+  }
+ }
+}
