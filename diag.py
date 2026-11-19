@@ -1,26 +1,18 @@
 import os, inspect, feeds, datetime as dt
-D=dt.date.fromisoformat
+D = dt.date.fromisoformat
 t = feeds.Theta(lambda: os.environ.get("THETADATA_API_KEY", ""))
 c = t._c()
-names = [n for n in dir(c) if n.startswith(("stock_", "index_")) and "history" in n]
-print("methods:", names)
-for n in ("stock_history_ohlc", "option_history_eod", "option_history_open_interest", "option_history_greeks_first_order"):
+for n in ("option_history_quote", "option_history_ohlc", "option_history_greeks_first_order", "index_history_ohlc", "index_history_price"):
     if hasattr(c, n): print(n, inspect.signature(getattr(c, n)))
 tests = [
- ("stock_history_ohlc", dict(symbol="QQQ", date=D("2026-11-17"), interval="1m")),
- ("stock_history_ohlc", dict(symbol="QQQ", start_date=D("2026-11-17"), end_date=D("2026-11-17"), interval="1m")),
- ("stock_history_ohlc", dict(symbol="QQQ", date=D("2024-11-19"), interval="1m")),
- ("stock_history_ohlc", dict(symbol="QQQ", start_date=D("2024-11-19"), end_date=D("2024-11-19"), interval="1m")),
- ("stock_history_eod", dict(symbol="QQQ", start_date=D("2024-11-18"), end_date=D("2024-11-19"))),
- ("stock_history_ohlc", dict(symbol="QQQ", date=D("2025-01-15"), interval="5m")),
- ("option_history_open_interest", dict(symbol="QQQ", expiration="*", date=D("2025-01-15"), max_dte=8)),
- ("option_history_eod", dict(symbol="QQQ", expiration="*", start_date=D("2024-11-18"), end_date=D("2024-11-18"), max_dte=9)),
- ("option_history_open_interest", dict(symbol="QQQ", expiration="*", date=D("2024-11-19"), max_dte=8)),
- ("option_history_eod", dict(symbol="QQQ", expiration="*", start_date=D("2023-11-17"), end_date=D("2023-11-17"), max_dte=9)),
+ ("option_history_greeks_first_order", dict(symbol="QQQ", expiration=D("2024-11-19"), date=D("2024-11-19"), interval="1m", strike_range=2)),
+ ("option_history_quote", dict(symbol="QQQ", expiration=D("2024-11-19"), date=D("2024-11-19"), interval="1m", strike_range=2)),
+ ("option_history_ohlc", dict(symbol="QQQ", expiration=D("2024-11-19"), date=D("2024-11-19"), interval="1m", strike_range=2)),
+ ("option_history_quote", dict(symbol="QQQ", expiration=D("2023-01-18"), date=D("2023-01-18"), interval="1m", strike_range=2)),
+ ("index_history_price", dict(symbol="NDX", date=D("2024-11-19"), interval="1m")),
 ]
 for fn, kw in tests:
     try:
         df = t._df(fn, **kw)
-        print("OK", fn, kw, None if df is None else len(df)); 
-        if df is not None and len(df): print(df.head(3).to_string()[:600])
-    except Exception as e: print("ERR", fn, kw, type(e).__name__, str(e)[:200])
+        print("OK", fn, None if df is None else len(df)); print(list(df.columns)); print(df.head(4).to_string()[:900])
+    except Exception as e: print("ERR", fn, type(e).__name__, str(e)[:300])
