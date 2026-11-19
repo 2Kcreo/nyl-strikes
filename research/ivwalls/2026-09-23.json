@@ -11,7 +11,7 @@
   {
    "k": 760.0,
    "nq": 31550.0,
-   "score": 6,
+   "score": 3,
    "side": "resistance",
    "pc": 0.01,
    "iv_pct": 99,
@@ -71,7 +71,7 @@
   {
    "k": 750.0,
    "nq": 31135.0,
-   "score": 33,
+   "score": 28,
    "side": "resistance",
    "pc": 0.16,
    "iv_pct": 100,
@@ -81,7 +81,7 @@
   {
    "k": 749.0,
    "nq": 31093.5,
-   "score": 32,
+   "score": 31,
    "side": "resistance",
    "pc": 0.23,
    "iv_pct": 101,
@@ -91,7 +91,7 @@
   {
    "k": 748.0,
    "nq": 31052.0,
-   "score": 73,
+   "score": 70,
    "side": "resistance",
    "pc": 0.32,
    "iv_pct": 101,
@@ -101,7 +101,7 @@
   {
    "k": 747.0,
    "nq": 31010.5,
-   "score": 90,
+   "score": 81,
    "side": "mixed",
    "pc": 0.55,
    "iv_pct": 102,
@@ -121,7 +121,7 @@
   {
    "k": 745.0,
    "nq": 30927.5,
-   "score": 64,
+   "score": 47,
    "side": "resistance",
    "pc": 0.45,
    "iv_pct": 104,
@@ -131,7 +131,7 @@
   {
    "k": 744.0,
    "nq": 30886.0,
-   "score": 39,
+   "score": 41,
    "side": "support",
    "pc": 0.95,
    "iv_pct": 105,
@@ -141,7 +141,7 @@
   {
    "k": 743.0,
    "nq": 30844.5,
-   "score": 13,
+   "score": 11,
    "side": "support",
    "pc": 1.48,
    "iv_pct": 106,
@@ -151,12 +151,62 @@
   {
    "k": 742.0,
    "nq": 30802.75,
-   "score": 2,
+   "score": 1,
    "side": "support",
    "pc": 1.33,
    "iv_pct": 107,
    "rich_pct": 0.1,
    "dist": -4.05
+  },
+  {
+   "k": 741.0,
+   "nq": 30761.25,
+   "score": 1,
+   "side": "support",
+   "pc": 1.23,
+   "iv_pct": 108,
+   "rich_pct": -0.2,
+   "dist": -5.05
+  },
+  {
+   "k": 738.0,
+   "nq": 30636.75,
+   "score": 0,
+   "side": "support",
+   "pc": 1.51,
+   "iv_pct": 112,
+   "rich_pct": -0.5,
+   "dist": -8.05
+  },
+  {
+   "k": 733.0,
+   "nq": 30429.25,
+   "score": 0,
+   "side": "support",
+   "pc": 1.43,
+   "iv_pct": 119,
+   "rich_pct": -0.5,
+   "dist": -13.05
+  },
+  {
+   "k": 728.0,
+   "nq": 30221.75,
+   "score": 0,
+   "side": "support",
+   "pc": 1.52,
+   "iv_pct": 128,
+   "rich_pct": -0.3,
+   "dist": -18.05
+  },
+  {
+   "k": 725.0,
+   "nq": 30097.25,
+   "score": 0,
+   "side": "mixed",
+   "pc": 0.82,
+   "iv_pct": 135,
+   "rich_pct": -0.0,
+   "dist": -21.05
   }
  ]
 }

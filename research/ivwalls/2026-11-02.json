@@ -9,16 +9,6 @@
  "nq_ratio": 41.3922,
  "levels": [
   {
-   "k": 713.0,
-   "nq": 29512.75,
-   "score": 5,
-   "side": "support",
-   "pc": 2.55,
-   "iv_pct": 112,
-   "rich_pct": 0.1,
-   "dist": 18.22
-  },
-  {
    "k": 712.0,
    "nq": 29471.25,
    "score": 1,
@@ -31,22 +21,12 @@
   {
    "k": 710.0,
    "nq": 29388.5,
-   "score": 8,
+   "score": 3,
    "side": "resistance",
    "pc": 0.98,
    "iv_pct": 115,
    "rich_pct": 0.1,
    "dist": 15.22
-  },
-  {
-   "k": 708.0,
-   "nq": 29305.75,
-   "score": 3,
-   "side": "support",
-   "pc": 2.59,
-   "iv_pct": 112,
-   "rich_pct": 0.1,
-   "dist": 13.22
   },
   {
    "k": 707.0,
@@ -71,7 +51,7 @@
   {
    "k": 705.0,
    "nq": 29181.5,
-   "score": 9,
+   "score": 3,
    "side": "resistance",
    "pc": 0.58,
    "iv_pct": 116,
@@ -79,9 +59,29 @@
    "dist": 10.22
   },
   {
+   "k": 704.0,
+   "nq": 29140.0,
+   "score": 1,
+   "side": "resistance",
+   "pc": 0.35,
+   "iv_pct": 114,
+   "rich_pct": 0.1,
+   "dist": 9.22
+  },
+  {
+   "k": 700.0,
+   "nq": 28974.5,
+   "score": 27,
+   "side": "resistance",
+   "pc": 0.95,
+   "iv_pct": 118,
+   "rich_pct": 0.0,
+   "dist": 5.22
+  },
+  {
    "k": 697.0,
    "nq": 28850.25,
-   "score": 2,
+   "score": 11,
    "side": "resistance",
    "pc": 0.33,
    "iv_pct": 117,
@@ -111,7 +111,7 @@
   {
    "k": 694.0,
    "nq": 28726.25,
-   "score": 45,
+   "score": 52,
    "side": "resistance",
    "pc": 0.6,
    "iv_pct": 119,
@@ -121,7 +121,7 @@
   {
    "k": 693.0,
    "nq": 28684.75,
-   "score": 47,
+   "score": 27,
    "side": "support",
    "pc": 5.68,
    "iv_pct": 119,
@@ -131,7 +131,7 @@
   {
    "k": 692.0,
    "nq": 28643.5,
-   "score": 59,
+   "score": 60,
    "side": "resistance",
    "pc": 0.9,
    "iv_pct": 120,
@@ -139,9 +139,19 @@
    "dist": -2.78
   },
   {
+   "k": 689.0,
+   "nq": 28519.25,
+   "score": 3,
+   "side": "resistance",
+   "pc": 1.18,
+   "iv_pct": 124,
+   "rich_pct": -0.7,
+   "dist": -5.78
+  },
+  {
    "k": 687.0,
    "nq": 28436.5,
-   "score": 4,
+   "score": 6,
    "side": "resistance",
    "pc": 1.12,
    "iv_pct": 125,
@@ -161,7 +171,7 @@
   {
    "k": 685.0,
    "nq": 28353.75,
-   "score": 12,
+   "score": 7,
    "side": "support",
    "pc": 5.66,
    "iv_pct": 129,
@@ -191,22 +201,12 @@
   {
    "k": 680.0,
    "nq": 28146.75,
-   "score": 17,
+   "score": 6,
    "side": "support",
    "pc": 42.63,
    "iv_pct": 131,
    "rich_pct": 0.2,
    "dist": -14.78
-  },
-  {
-   "k": 678.0,
-   "nq": 28064.0,
-   "score": 2,
-   "side": "support",
-   "pc": 57.86,
-   "iv_pct": 137,
-   "rich_pct": 0.2,
-   "dist": -16.78
   }
  ]
 }

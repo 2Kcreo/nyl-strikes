@@ -9,9 +9,69 @@
  "nq_ratio": 41.4892,
  "levels": [
   {
+   "k": 766.0,
+   "nq": 31780.75,
+   "score": 0,
+   "side": "resistance",
+   "pc": 0.0,
+   "iv_pct": 92,
+   "rich_pct": -0.3,
+   "dist": 22.26
+  },
+  {
+   "k": 762.0,
+   "nq": 31614.75,
+   "score": 0,
+   "side": "resistance",
+   "pc": 0.0,
+   "iv_pct": 88,
+   "rich_pct": -0.4,
+   "dist": 18.26
+  },
+  {
+   "k": 757.0,
+   "nq": 31407.25,
+   "score": 0,
+   "side": "resistance",
+   "pc": 0.01,
+   "iv_pct": 82,
+   "rich_pct": -0.7,
+   "dist": 13.26
+  },
+  {
+   "k": 753.0,
+   "nq": 31241.25,
+   "score": 0,
+   "side": "resistance",
+   "pc": 0.01,
+   "iv_pct": 83,
+   "rich_pct": -1.4,
+   "dist": 9.26
+  },
+  {
+   "k": 751.0,
+   "nq": 31158.5,
+   "score": 0,
+   "side": "resistance",
+   "pc": 0.04,
+   "iv_pct": 83,
+   "rich_pct": -1.6,
+   "dist": 7.26
+  },
+  {
+   "k": 747.0,
+   "nq": 30992.5,
+   "score": 1,
+   "side": "resistance",
+   "pc": 0.23,
+   "iv_pct": 83,
+   "rich_pct": -2.0,
+   "dist": 3.26
+  },
+  {
    "k": 744.0,
    "nq": 30868.0,
-   "score": 6,
+   "score": 8,
    "side": "resistance",
    "pc": 0.43,
    "iv_pct": 84,
@@ -21,7 +81,7 @@
   {
    "k": 743.0,
    "nq": 30826.5,
-   "score": 18,
+   "score": 27,
    "side": "resistance",
    "pc": 0.48,
    "iv_pct": 85,
@@ -31,7 +91,7 @@
   {
    "k": 742.0,
    "nq": 30785.0,
-   "score": 34,
+   "score": 47,
    "side": "resistance",
    "pc": 0.31,
    "iv_pct": 85,
@@ -41,7 +101,7 @@
   {
    "k": 741.0,
    "nq": 30743.5,
-   "score": 59,
+   "score": 83,
    "side": "mixed",
    "pc": 0.61,
    "iv_pct": 86,
@@ -101,7 +161,7 @@
   {
    "k": 735.0,
    "nq": 30494.5,
-   "score": 2,
+   "score": 1,
    "side": "support",
    "pc": 1.16,
    "iv_pct": 90,
@@ -109,14 +169,14 @@
    "dist": -8.74
   },
   {
-   "k": 730.0,
-   "nq": 30287.0,
-   "score": 1,
+   "k": 734.0,
+   "nq": 30453.0,
+   "score": 0,
    "side": "support",
-   "pc": 5.83,
-   "iv_pct": 94,
-   "rich_pct": 0.0,
-   "dist": -13.74
+   "pc": 2.32,
+   "iv_pct": 91,
+   "rich_pct": 0.3,
+   "dist": -9.74
   }
  ]
 }
