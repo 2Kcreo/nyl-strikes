@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "docs" / "data"
 OUT = ROOT / "research" / "ivwalls"; OUT.mkdir(parents=True, exist_ok=True)
 theta = feeds.Theta(lambda: os.environ.get("THETADATA_API_KEY", ""))
-TOP = 20            # levels per day (half above price, half below)
+TOP = 40            # levels per day (up to 20 above price, 20 below), each tagged with its layer 5/8/12/20
 WINDOW = 0.03       # +/- 3% around spot
 DTE_MAX = 35        # include monthlies
 FIT_WIN = 0.06      # strikes used to fit the smooth IV curve (+/- 6%)
@@ -138,7 +138,10 @@ def build(day, publish=False):
     (OUT / "cand").mkdir(exist_ok=True)
     by.assign(spot=S, pc_all=pc_all, nq=(meta.get("nq") or {}).get("ratio")).to_csv(OUT / "cand" / f"{day}.csv")   # every strike, for testing variants
     by = by[by.score > 0]
-    by = pd.concat([by[by.index >= S].nlargest(TOP // 2, "score"), by[by.index < S].nlargest(TOP // 2, "score")])
+    up, dn = by[by.index >= S].nlargest(TOP // 2, "score"), by[by.index < S].nlargest(TOP // 2, "score")
+    up = up.assign(rank=range(1, len(up) + 1)); dn = dn.assign(rank=range(1, len(dn) + 1))
+    by = pd.concat([up, dn])
+    by["layer"] = [5 if r <= 5 else 8 if r <= 8 else 12 if r <= 12 else 20 for r in by["rank"]]   # like NYL's per-layer
     mx = float(by.score.max()) if len(by) else 1.0
     nq = (meta.get("nq") or {}).get("ratio")
 
@@ -147,7 +150,7 @@ def build(day, publish=False):
         pc = (r.oi_put / r.oi_call) if r.oi_call > 0 else float("inf")
         rel = pc / pc_all if pc_all > 0 else pc
         side = "support" if rel >= 1.3 else "resistance" if rel <= 0.77 else "mixed"
-        levels.append({"k": float(k), "nq": round(k * nq * 4) / 4 if nq else None, "score": round(r.score / mx * 100),
+        levels.append({"k": float(k), "nq": round(k * nq * 4) / 4 if nq else None, "score": round(r.score / mx * 100), "layer": int(r.layer),
                        "side": side, "pc": None if math.isinf(pc) else round(pc, 2),
                        "iv_pct": round(r.iv / atm_iv * 100), "rich_pct": round(r.rich * 100, 1),
                        "dist": round(k - S, 2)})
@@ -180,7 +183,7 @@ def main():
         for l in j["levels"]:
             rows.append([j["day"], j["spot"], l["k"], l["nq"], l["score"], l["side"], l["pc"], l["iv_pct"], l["rich_pct"], l["dist"]])
         txt.append(f"=== {dt.date.fromisoformat(j['day']).strftime('%a %b %d')} · QQQ {j['spot']} · ATM IV {j['atm_iv']:.1%}\n" +
-                   "\n".join(f"{l['k']:g} IVW {l['side']} {l['score']}" for l in j["levels"]) + "\n")
+                   "\n".join(f"{l['k']:g} IVW {l['side']} {l['score']} L{l.get('layer', 20)}" for l in j["levels"]) + "\n")
     pd.DataFrame(rows, columns=["day", "qqq_spot", "strike", "nq_level", "score_0_100", "side", "put_call_oi", "iv_pct_of_atm",
                                 "iv_rich_vs_curve_pct", "dist_from_spot"]).to_csv(OUT / "all.csv", index=False)
     (OUT / "levels.txt").write_text("IV WALLS (QQQ strikes) - built pre-open from prior-close IV, morning open interest and pre-open QQQ\nEach line: strike, side (support / resistance / mixed from put/call OI), strength 0-100.\nPaste one day's block into the IV Walls indicator.\n\n" + "\n".join(txt))
