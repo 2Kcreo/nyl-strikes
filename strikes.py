@@ -48,18 +48,23 @@ def main():
     if poi is None: poi = oi
     prevC = parity_spot(eod); spot = prevC; spot_src = "prior close"; nq = None
     if asof:   # backtest: only data that existed before HH:MM ET (pre-market 5m bars that CLOSED by then)
-        t = dt.time.fromisoformat(asof); Y = feeds.Yahoo()
+        at_open = asof == "open"   # backtest of the live 9:30 lock: the 9:30 opening price (known at 9:30:00, nothing after it)
+        t = dt.time(9, 30) if at_open else dt.time.fromisoformat(asof); Y = feeds.Yahoo()
         def last_before(sym):
+            if at_open:
+                bs = [x for x in Y.bars(sym, "5m", "60d") if x[0].date() == day and x[0].time() == dt.time(9, 30)]
+                return bs[0] if bs else None
             bs = [x for x in Y.bars(sym, "5m", "60d") if x[0].date() == day and dt.time(4, 0) <= x[0].time()
                   and x[0] + dt.timedelta(minutes=5) <= dt.datetime.combine(day, t)]
             return bs[-1] if bs else None
+        px = 1 if at_open else 4   # open of the 9:30 bar, or close of the last pre-market bar
         q = last_before("QQQ")
-        if q: spot, spot_src = q[4], f"pre-market {asof} (backtest, nothing after {asof} used)"
-        else: spot_src = f"prior close (backtest, no pre-market bars before {asof})"
+        if q: spot, spot_src = q[px], ("9:30 open (locked, backtest)" if at_open else f"pre-market {asof} (backtest, nothing after {asof} used)")
+        else: spot_src = f"prior close (backtest, no bars before {asof})"
         try:
             n = last_before("NQ=F")
-            print("asof bars: QQQ", q[0] if q else None, q[4] if q else None, "| NQ", n[0] if n else None, n[4] if n else None)
-            if q and n: nq = {"price": round(n[4], 2), "ratio": round(n[4] / spot, 4), "at": n[0].strftime("%H:%M") + " bar"}
+            print("asof bars: QQQ", q[0] if q else None, q[px] if q else None, "| NQ", n[0] if n else None, n[px] if n else None)
+            if q and n: nq = {"price": round(n[px], 2), "ratio": round(n[px] / spot, 4), "at": n[0].strftime("%H:%M") + (" open" if at_open else " bar")}
         except Exception as e: print(f"NQ: {e}")
         now = dt.datetime.combine(day, t, tzinfo=ET)
     if not asof:
