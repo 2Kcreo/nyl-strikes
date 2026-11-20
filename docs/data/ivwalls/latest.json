@@ -1,430 +1,452 @@
 {
  "day": "2026-11-20",
- "spot": 632.49,
- "spot_src": "pre-market 08:45 (updates at the open)",
+ "spot": 637.67,
+ "spot_src": "pre-market 09:10 (updates at the open)",
  "atm_iv": 0.5013,
  "iv_from_close_of": "2026-11-19",
- "pc_all": 3.84,
+ "pc_all": 2.93,
  "oi": "2026-11-20",
- "nq_ratio": 41.1205,
+ "nq_ratio": 41.0769,
  "levels": [
   {
-   "k": 660.0,
-   "nq": 27139.5,
+   "k": 664.0,
+   "nq": 27275.0,
    "score": 0,
    "layer": 20,
+   "side": "resistance",
+   "pc": 1.09,
+   "iv_pct": 72,
+   "rich_pct": 0.2,
+   "dist": 26.33
+  },
+  {
+   "k": 663.0,
+   "nq": 27234.0,
+   "score": 0,
+   "layer": 20,
+   "side": "resistance",
+   "pc": 0.55,
+   "iv_pct": 72,
+   "rich_pct": 0.0,
+   "dist": 25.33
+  },
+  {
+   "k": 662.0,
+   "nq": 27193.0,
+   "score": 0,
+   "layer": 20,
+   "side": "resistance",
+   "pc": 0.63,
+   "iv_pct": 72,
+   "rich_pct": 0.1,
+   "dist": 24.33
+  },
+  {
+   "k": 661.0,
+   "nq": 27151.75,
+   "score": 0,
+   "layer": 20,
+   "side": "resistance",
+   "pc": 0.62,
+   "iv_pct": 73,
+   "rich_pct": 0.2,
+   "dist": 23.33
+  },
+  {
+   "k": 660.0,
+   "nq": 27110.75,
+   "score": 2,
+   "layer": 12,
    "side": "resistance",
    "pc": 0.91,
    "iv_pct": 73,
    "rich_pct": 0.2,
-   "dist": 27.51
+   "dist": 22.33
+  },
+  {
+   "k": 659.0,
+   "nq": 27069.75,
+   "score": 0,
+   "layer": 20,
+   "side": "resistance",
+   "pc": 1.0,
+   "iv_pct": 73,
+   "rich_pct": 0.1,
+   "dist": 21.33
   },
   {
    "k": 658.0,
-   "nq": 27057.25,
+   "nq": 27028.5,
    "score": 0,
    "layer": 20,
    "side": "resistance",
    "pc": 1.28,
    "iv_pct": 74,
    "rich_pct": 0.1,
-   "dist": 25.51
+   "dist": 20.33
   },
   {
    "k": 657.0,
-   "nq": 27016.25,
-   "score": 0,
-   "layer": 20,
+   "nq": 26987.5,
+   "score": 2,
+   "layer": 12,
    "side": "resistance",
    "pc": 1.08,
    "iv_pct": 74,
    "rich_pct": 0.3,
-   "dist": 24.51
+   "dist": 19.33
   },
   {
    "k": 656.0,
-   "nq": 26975.0,
-   "score": 0,
-   "layer": 20,
+   "nq": 26946.5,
+   "score": 4,
+   "layer": 8,
    "side": "resistance",
    "pc": 0.69,
    "iv_pct": 75,
-   "rich_pct": 0.3,
-   "dist": 23.51
+   "rich_pct": 0.4,
+   "dist": 18.33
   },
   {
    "k": 655.0,
-   "nq": 26934.0,
-   "score": 3,
-   "layer": 12,
+   "nq": 26905.25,
+   "score": 20,
+   "layer": 5,
    "side": "resistance",
    "pc": 2.26,
    "iv_pct": 75,
    "rich_pct": 0.3,
-   "dist": 22.51
+   "dist": 17.33
   },
   {
    "k": 653.0,
-   "nq": 26851.75,
+   "nq": 26823.25,
    "score": 0,
    "layer": 20,
    "side": "resistance",
    "pc": 0.9,
    "iv_pct": 76,
    "rich_pct": 0.0,
-   "dist": 20.51
+   "dist": 15.33
   },
   {
    "k": 652.0,
-   "nq": 26810.5,
-   "score": 5,
-   "layer": 8,
-   "side": "resistance",
-   "pc": 0.52,
-   "iv_pct": 77,
-   "rich_pct": 0.4,
-   "dist": 19.51
-  },
-  {
-   "k": 651.0,
-   "nq": 26769.5,
-   "score": 0,
-   "layer": 20,
-   "side": "resistance",
-   "pc": 2.47,
-   "iv_pct": 78,
-   "rich_pct": 0.0,
-   "dist": 18.51
-  },
-  {
-   "k": 650.0,
-   "nq": 26728.25,
+   "nq": 26782.25,
    "score": 27,
    "layer": 5,
    "side": "resistance",
+   "pc": 0.52,
+   "iv_pct": 77,
+   "rich_pct": 0.5,
+   "dist": 14.33
+  },
+  {
+   "k": 651.0,
+   "nq": 26741.0,
+   "score": 2,
+   "layer": 12,
+   "side": "mixed",
+   "pc": 2.47,
+   "iv_pct": 78,
+   "rich_pct": 0.1,
+   "dist": 13.33
+  },
+  {
+   "k": 650.0,
+   "nq": 26700.0,
+   "score": 100,
+   "layer": 5,
+   "side": "mixed",
    "pc": 2.56,
    "iv_pct": 78,
-   "rich_pct": 0.2,
-   "dist": 17.51
+   "rich_pct": 0.3,
+   "dist": 12.33
   },
   {
    "k": 649.0,
-   "nq": 26687.25,
-   "score": 1,
-   "layer": 20,
+   "nq": 26659.0,
+   "score": 7,
+   "layer": 5,
    "side": "resistance",
    "pc": 1.91,
    "iv_pct": 79,
    "rich_pct": 0.1,
-   "dist": 16.51
+   "dist": 11.33
   },
   {
    "k": 647.0,
-   "nq": 26605.0,
-   "score": 2,
-   "layer": 12,
+   "nq": 26576.75,
+   "score": 5,
+   "layer": 8,
    "side": "resistance",
    "pc": 1.71,
    "iv_pct": 80,
    "rich_pct": -0.2,
-   "dist": 14.51
+   "dist": 9.33
   },
   {
    "k": 643.0,
-   "nq": 26440.5,
-   "score": 3,
-   "layer": 12,
+   "nq": 26412.5,
+   "score": 6,
+   "layer": 8,
    "side": "resistance",
    "pc": 1.78,
    "iv_pct": 81,
    "rich_pct": -0.5,
-   "dist": 10.51
+   "dist": 5.33
   },
   {
    "k": 641.0,
-   "nq": 26358.25,
-   "score": 2,
+   "nq": 26330.25,
+   "score": 4,
    "layer": 12,
    "side": "support",
    "pc": 14.73,
    "iv_pct": 82,
    "rich_pct": -0.2,
-   "dist": 8.51
+   "dist": 3.33
   },
   {
    "k": 639.0,
-   "nq": 26276.0,
+   "nq": 26248.25,
    "score": 1,
    "layer": 20,
    "side": "support",
    "pc": 12.19,
    "iv_pct": 84,
    "rich_pct": 0.0,
-   "dist": 6.51
+   "dist": 1.33
   },
   {
    "k": 638.0,
-   "nq": 26235.0,
-   "score": 16,
+   "nq": 26207.0,
+   "score": 23,
    "layer": 5,
    "side": "support",
    "pc": 17.77,
    "iv_pct": 84,
    "rich_pct": 0.6,
-   "dist": 5.51
+   "dist": 0.33
   },
   {
    "k": 637.0,
-   "nq": 26193.75,
-   "score": 18,
+   "nq": 26166.0,
+   "score": 24,
    "layer": 5,
    "side": "support",
    "pc": 6.26,
    "iv_pct": 85,
    "rich_pct": 0.6,
-   "dist": 4.51
+   "dist": -0.67
   },
   {
    "k": 636.0,
-   "nq": 26152.75,
-   "score": 15,
-   "layer": 8,
-   "side": "mixed",
+   "nq": 26125.0,
+   "score": 18,
+   "layer": 5,
+   "side": "support",
    "pc": 4.76,
    "iv_pct": 85,
    "rich_pct": 0.7,
-   "dist": 3.51
+   "dist": -1.67
   },
   {
    "k": 635.0,
-   "nq": 26111.5,
-   "score": 42,
+   "nq": 26083.75,
+   "score": 49,
    "layer": 5,
    "side": "support",
    "pc": 21.67,
    "iv_pct": 86,
    "rich_pct": 0.5,
-   "dist": 2.51
+   "dist": -2.67
   },
   {
    "k": 634.0,
-   "nq": 26070.5,
-   "score": 13,
+   "nq": 26042.75,
+   "score": 14,
    "layer": 8,
    "side": "support",
    "pc": 28.76,
    "iv_pct": 86,
    "rich_pct": 0.6,
-   "dist": 1.51
+   "dist": -3.67
   },
   {
    "k": 633.0,
-   "nq": 26029.25,
-   "score": 17,
-   "layer": 5,
+   "nq": 26001.75,
+   "score": 18,
+   "layer": 8,
    "side": "support",
    "pc": 59.22,
    "iv_pct": 87,
    "rich_pct": 0.6,
-   "dist": 0.51
+   "dist": -4.67
   },
   {
    "k": 632.0,
-   "nq": 25988.25,
+   "nq": 25960.5,
    "score": 50,
    "layer": 5,
    "side": "support",
    "pc": 71.78,
    "iv_pct": 87,
    "rich_pct": 0.7,
-   "dist": -0.49
+   "dist": -5.67
   },
   {
    "k": 631.0,
-   "nq": 25947.0,
+   "nq": 25919.5,
    "score": 5,
-   "layer": 8,
+   "layer": 12,
    "side": "support",
    "pc": 57.12,
    "iv_pct": 88,
    "rich_pct": 0.4,
-   "dist": -1.49
+   "dist": -6.67
   },
   {
    "k": 630.0,
-   "nq": 25906.0,
-   "score": 100,
+   "nq": 25878.5,
+   "score": 89,
    "layer": 5,
    "side": "support",
    "pc": 92.27,
    "iv_pct": 88,
    "rich_pct": 0.4,
-   "dist": -2.49
+   "dist": -7.67
   },
   {
    "k": 629.0,
-   "nq": 25864.75,
-   "score": 3,
-   "layer": 8,
+   "nq": 25837.25,
+   "score": 2,
+   "layer": 12,
    "side": "support",
    "pc": 31.6,
    "iv_pct": 89,
    "rich_pct": 0.3,
-   "dist": -3.49
+   "dist": -8.67
   },
   {
    "k": 628.0,
-   "nq": 25823.75,
-   "score": 14,
-   "layer": 5,
+   "nq": 25796.25,
+   "score": 11,
+   "layer": 12,
    "side": "support",
    "pc": 63.89,
    "iv_pct": 90,
    "rich_pct": 0.3,
-   "dist": -4.49
+   "dist": -9.67
   },
   {
    "k": 627.0,
-   "nq": 25782.5,
-   "score": 4,
-   "layer": 8,
+   "nq": 25755.25,
+   "score": 3,
+   "layer": 12,
    "side": "support",
    "pc": 117.87,
    "iv_pct": 91,
    "rich_pct": 0.2,
-   "dist": -5.49
+   "dist": -10.67
   },
   {
    "k": 626.0,
-   "nq": 25741.5,
+   "nq": 25714.25,
    "score": 0,
    "layer": 20,
    "side": "support",
    "pc": 26.45,
    "iv_pct": 90,
    "rich_pct": 0.0,
-   "dist": -6.49
+   "dist": -11.67
   },
   {
    "k": 624.0,
-   "nq": 25659.25,
-   "score": 2,
-   "layer": 12,
+   "nq": 25632.0,
+   "score": 1,
+   "layer": 20,
    "side": "support",
    "pc": 40.69,
    "iv_pct": 100,
    "rich_pct": -0.0,
-   "dist": -8.49
+   "dist": -13.67
   },
   {
    "k": 623.0,
-   "nq": 25618.0,
-   "score": 2,
-   "layer": 12,
+   "nq": 25591.0,
+   "score": 1,
+   "layer": 20,
    "side": "support",
    "pc": 77.49,
    "iv_pct": 100,
    "rich_pct": -0.3,
-   "dist": -9.49
+   "dist": -14.67
   },
   {
    "k": 620.0,
-   "nq": 25494.75,
-   "score": 26,
-   "layer": 5,
+   "nq": 25467.75,
+   "score": 14,
+   "layer": 8,
    "side": "support",
    "pc": 54.6,
    "iv_pct": 92,
    "rich_pct": -0.2,
-   "dist": -12.49
-  },
-  {
-   "k": 618.0,
-   "nq": 25412.5,
-   "score": 0,
-   "layer": 20,
-   "side": "support",
-   "pc": 1158.5,
-   "iv_pct": 125,
-   "rich_pct": -0.7,
-   "dist": -14.49
+   "dist": -17.67
   },
   {
    "k": 616.0,
-   "nq": 25330.25,
-   "score": 1,
-   "layer": 12,
+   "nq": 25303.25,
+   "score": 0,
+   "layer": 20,
    "side": "support",
    "pc": null,
    "iv_pct": 127,
    "rich_pct": -0.5,
-   "dist": -16.49
+   "dist": -21.67
   },
   {
    "k": 615.0,
-   "nq": 25289.0,
+   "nq": 25262.25,
    "score": 0,
    "layer": 20,
    "side": "support",
    "pc": 38.47,
    "iv_pct": 94,
-   "rich_pct": -0.4,
-   "dist": -17.49
+   "rich_pct": -0.2,
+   "dist": -22.67
   },
   {
    "k": 612.0,
-   "nq": 25165.75,
+   "nq": 25139.0,
    "score": 1,
-   "layer": 12,
+   "layer": 20,
    "side": "support",
    "pc": 2401.0,
    "iv_pct": 130,
    "rich_pct": 0.1,
-   "dist": -20.49
+   "dist": -25.67
   },
   {
    "k": 610.0,
-   "nq": 25083.5,
-   "score": 7,
-   "layer": 5,
+   "nq": 25057.0,
+   "score": 2,
+   "layer": 20,
    "side": "support",
    "pc": 43.78,
    "iv_pct": 97,
-   "rich_pct": 0.4,
-   "dist": -22.49
+   "rich_pct": 0.3,
+   "dist": -27.67
   },
   {
    "k": 609.0,
-   "nq": 25042.5,
+   "nq": 25015.75,
    "score": 0,
    "layer": 20,
    "side": "support",
    "pc": 2126.0,
    "iv_pct": 133,
    "rich_pct": 0.3,
-   "dist": -23.49
-  },
-  {
-   "k": 608.0,
-   "nq": 25001.25,
-   "score": 1,
-   "layer": 20,
-   "side": "support",
-   "pc": 1992.0,
-   "iv_pct": 134,
-   "rich_pct": 0.7,
-   "dist": -24.49
-  },
-  {
-   "k": 607.0,
-   "nq": 24960.25,
-   "score": 1,
-   "layer": 20,
-   "side": "support",
-   "pc": 1404.0,
-   "iv_pct": 135,
-   "rich_pct": 1.2,
-   "dist": -25.49
+   "dist": -28.67
   }
  ]
 }
