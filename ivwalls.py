@@ -116,6 +116,27 @@ def table(day, S, P, eod, oi):
     return by, pc_all, atm_iv
 
 
+def pick_walls(by, S, pc_all, atm_iv, nq):
+    """Top walls each side of S, each tagged with its layer (5/8/12/20) like NYL, strength 0-100 vs the day's top."""
+    by = by[by.score > 0]
+    up, dn = by[by.index >= S].nlargest(TOP // 2, "score"), by[by.index < S].nlargest(TOP // 2, "score")
+    up = up.assign(rank=range(1, len(up) + 1)); dn = dn.assign(rank=range(1, len(dn) + 1))
+    by = pd.concat([up, dn])
+    if not len(by): return []
+    by["layer"] = [5 if r <= 5 else 8 if r <= 8 else 12 if r <= 12 else 20 for r in by["rank"]]   # like NYL's per-layer
+    mx = float(by.score.max()) if len(by) else 1.0
+    levels = []
+    for k, r in by.sort_index(ascending=False).iterrows():
+        pc = (r.oi_put / r.oi_call) if r.oi_call > 0 else float("inf")
+        rel = pc / pc_all if pc_all > 0 else pc
+        side = "support" if rel >= 1.3 else "resistance" if rel <= 0.77 else "mixed"
+        levels.append({"k": float(k), "nq": round(k * nq * 4) / 4 if nq else None, "score": round(r.score / mx * 100), "layer": int(r.layer),
+                       "side": side, "pc": None if math.isinf(pc) else round(pc, 2),
+                       "iv_pct": round(r.iv / atm_iv * 100), "rich_pct": round(r.rich * 100, 1),
+                       "dist": round(k - S, 2)})
+    return levels
+
+
 def build(day, publish=False):
     js = DATA / f"{day}.json"
     if not js.exists(): print(f"{day}: no NYL file, skipped"); return None
@@ -137,30 +158,37 @@ def build(day, publish=False):
     by, pc_all, atm_iv = t
     (OUT / "cand").mkdir(exist_ok=True)
     by.assign(spot=S, pc_all=pc_all, nq=(meta.get("nq") or {}).get("ratio")).to_csv(OUT / "cand" / f"{day}.csv")   # every strike, for testing variants
-    by = by[by.score > 0]
-    up, dn = by[by.index >= S].nlargest(TOP // 2, "score"), by[by.index < S].nlargest(TOP // 2, "score")
-    up = up.assign(rank=range(1, len(up) + 1)); dn = dn.assign(rank=range(1, len(dn) + 1))
-    by = pd.concat([up, dn])
-    by["layer"] = [5 if r <= 5 else 8 if r <= 8 else 12 if r <= 12 else 20 for r in by["rank"]]   # like NYL's per-layer
-    mx = float(by.score.max()) if len(by) else 1.0
     nq = (meta.get("nq") or {}).get("ratio")
+    levels = pick_walls(by, S, pc_all, atm_iv, nq)
 
-    levels = []
-    for k, r in by.sort_index(ascending=False).iterrows():
-        pc = (r.oi_put / r.oi_call) if r.oi_call > 0 else float("inf")
-        rel = pc / pc_all if pc_all > 0 else pc
-        side = "support" if rel >= 1.3 else "resistance" if rel <= 0.77 else "mixed"
-        levels.append({"k": float(k), "nq": round(k * nq * 4) / 4 if nq else None, "score": round(r.score / mx * 100), "layer": int(r.layer),
-                       "side": side, "pc": None if math.isinf(pc) else round(pc, 2),
-                       "iv_pct": round(r.iv / atm_iv * 100), "rich_pct": round(r.rich * 100, 1),
-                       "dist": round(k - S, 2)})
+    # NDX walls: same formula on NDXP options (daily NDX expiries = the 0-2 DTE gamma). NDX at the open =
+    # QQQ open x (NDX / QQQ at the prior close), so it is the same moment as the QQQ walls.
+    ndx_levels, S_ndx = [], None
+    try:
+        nm = meta.get("ndx") or {}
+        if nm.get("ratio"):
+            S_ndx = S * float(nm["ratio"])
+            eodn = theta._df("option_history_eod", symbol="NDXP", expiration="*", start_date=P, end_date=P, max_dte=9)
+            oin = None
+            try: oin = theta._df("option_history_open_interest", symbol="NDXP", expiration="*", date=day, max_dte=8)
+            except Exception: oin = None
+            if (oin is None or not len(oin)) and day == dt.datetime.now(ZoneInfo("America/New_York")).date():
+                oin = theta._df("option_snapshot_open_interest", symbol="NDXP", expiration="*", max_dte=8)
+            if eodn is not None and len(eodn) and oin is not None and len(oin):
+                tn = table(day, S_ndx, P, eodn, oin)
+                if tn is not None:
+                    ndx_levels = pick_walls(tn[0], S_ndx, tn[1], tn[2], None)
+                    for l in ndx_levels: l["qqq"] = round(l["k"] / float(nm["ratio"]), 2)
+    except Exception as e:
+        print(f"  NDX walls: {type(e).__name__}: {str(e)[:150]}")
     out = {"day": str(day), "spot": S, "spot_src": meta.get("spot_src"), "atm_iv": round(atm_iv, 4),
-           "iv_from_close_of": str(P), "pc_all": round(pc_all, 2), "oi": str(day), "nq_ratio": nq, "levels": levels}
+           "iv_from_close_of": str(P), "pc_all": round(pc_all, 2), "oi": str(day), "nq_ratio": nq, "levels": levels,
+           "ndx_spot": round(S_ndx, 2) if S_ndx else None, "ndx_levels": ndx_levels}
     (OUT / f"{day}.json").write_text(json.dumps(out, indent=1))
     if publish:   # served by the website for NYL Sync (not shown on the NYL page)
         pub = ROOT / "docs" / "data" / "ivwalls"; pub.mkdir(parents=True, exist_ok=True)
         (pub / f"{day}.json").write_text(json.dumps(out, indent=1)); (pub / "latest.json").write_text(json.dumps(out, indent=1))
-    print(f"{day}: {len(levels)} IV walls, QQQ {S:.2f}, ATM IV {atm_iv:.1%}")
+    print(f"{day}: {len(levels)} IV walls, QQQ {S:.2f}, ATM IV {atm_iv:.1%}; {len(ndx_levels)} NDX walls" + (f", NDX {S_ndx:.1f}" if S_ndx else ""))
     return out
 
 
