@@ -33,12 +33,28 @@ for f in files:
     ivw_all = set(top.index)
     nyl = {round(k, 2) for k, dens, nt in j["nyl"] if dens <= 12}
     both = {k for k in strong if any(abs(k - n) <= 0.5 for n in nyl)}
+    # NDX IV walls (same formula on NDXP options), moved onto QQQ prices with the 9:31 NDX/QQQ ratio
+    ndx_strong, ndx_all = set(), set()
+    nf = D.parent / "ivlong_ndx" / f"{day}.json"
+    if nf.exists():
+        n = json.loads(nf.read_text()); conv = S / n["S_ndx"]
+        cn = pd.DataFrame(n["cand"], columns=n["cand_cols"]).set_index("k")
+        cn["score"] = cn.gex_cov_near.abs() * (cn.rich.clip(lower=0) + cn.curv.fillna(0).clip(lower=0))
+        cn = cn[cn.score > 0]; Sn = n["S_ndx"]
+        tn = pd.concat([cn[cn.index >= Sn].nlargest(10, "score"), cn[cn.index < Sn].nlargest(10, "score")])
+        if len(tn):
+            mxn = tn.score.max()
+            ndx_strong = {round(k * conv, 3) for k in tn[tn.score / mxn >= 0.4].index}
+            ndx_all = {round(k * conv, 3) for k in tn.index}
+    tol = 0.0005 * S
+    both_iv = {k for k in strong if any(abs(k - n) <= tol for n in ndx_strong)}
     flip = j["flip"][0] if j["flip"] else None
     regime = "unknown" if flip is None else ("long gamma (above flip)" if S >= flip else "short gamma (below flip)")
     year = "year 1 (Nov24-Nov25)" if day < "2025-11-17" else "year 2 (Nov25-Nov26)"
     lo, hi = px.min(), px.max()
     groups = [("IVW strong", strong), ("IVW all", ivw_all), ("NYL 12", nyl), ("Both (IVW strong on NYL)", both),
               ("NYL only (no strong IVW)", nyl - {n for n in nyl if any(abs(n - k) <= 0.5 for k in strong)}),
+              ("NDX IVW strong", ndx_strong), ("NDX IVW all", ndx_all), ("QQQ + NDX IVW strong agree", both_iv),
               ("Random", {rng.uniform(lo - 0.002 * S, hi + 0.002 * S) for _ in range(40)})]
     for g, levels in groups:
         for L in levels:
@@ -104,7 +120,7 @@ def edge(g, filt=None, B=1000):
     return dict(hold_vs_random=round(float(np.median(h)), 1), hold_chance_no_edge=round(float((h <= 0).mean()), 3),
                 pts_vs_random=round(float(np.median(p)), 2), pts_chance_no_edge=round(float((p <= 0).mean()), 3))
 
-G = ["IVW strong", "IVW all", "NYL 12", "Both (IVW strong on NYL)", "NYL only (no strong IVW)", "Random"]
+G = ["IVW strong", "IVW all", "NDX IVW strong", "NDX IVW all", "QQQ + NDX IVW strong agree", "NYL 12", "Both (IVW strong on NYL)", "NYL only (no strong IVW)", "Random"]
 R = {"days": int(len(ud)), "first": str(ud[0]), "last": str(ud[-1]), "overall": {}, "edge": {}, "regime": {}, "time_of_day": {}, "year": {}, "magnet": {}}
 for g in G:
     R["overall"][g] = st(E[E.g == g])
@@ -112,18 +128,21 @@ for g in G:
 for rg in ["long gamma (above flip)", "short gamma (below flip)"]:
     R["regime"][rg] = {g: st(E[(E.g == g) & (E.regime == rg)]) for g in G}
     R["regime"][rg]["edge IVW strong"] = edge("IVW strong", lambda s, rg=rg: s.regime == rg, 500)
+    R["regime"][rg]["edge NDX IVW strong"] = edge("NDX IVW strong", lambda s, rg=rg: s.regime == rg, 500)
     R["regime"][rg]["edge NYL 12"] = edge("NYL 12", lambda s, rg=rg: s.regime == rg, 500)
 for t in ["first hour", "midday 10:30-14:00", "last 2 hours"]:
     R["time_of_day"][t] = {g: st(E[(E.g == g) & (E.tod == t)]) for g in G}
     R["time_of_day"][t]["edge IVW strong"] = edge("IVW strong", lambda s, t=t: s.tod == t, 500)
+    R["time_of_day"][t]["edge NDX IVW strong"] = edge("NDX IVW strong", lambda s, t=t: s.tod == t, 500)
 for y in sorted(E.year.unique()):
     R["year"][y] = {g: st(E[(E.g == g) & (E.year == y)]) for g in G}
     R["year"][y]["edge IVW strong"] = edge("IVW strong", lambda s, y=y: s.year == y, 500)
     R["year"][y]["edge NYL 12"] = edge("NYL 12", lambda s, y=y: s.year == y, 500)
+    R["year"][y]["edge NDX IVW strong"] = edge("NDX IVW strong", lambda s, y=y: s.year == y, 500)
 for g in G[:-1]:
     s = M[M.g == g]
     lv, mi = s[s.kind == "level"], s[s.kind == "mirror"]
     R["magnet"][g] = dict(levels=int(len(lv)), reach_pct=round(lv.hit.mean() * 100, 1), mirror_reach_pct=round(mi.hit.mean() * 100, 1),
                           stall_min=round(lv.stall.dropna().mean(), 1), mirror_stall_min=round(mi.stall.dropna().mean(), 1))
-out = Path(__file__).resolve().parent / "research" / "ivlong_results.json"
+out = Path(__file__).resolve().parent / "research" / ("ivlong_results_ndx.json" if (D.parent / "ivlong_ndx").exists() else "ivlong_results.json")
 out.write_text(json.dumps(R, indent=1)); print(json.dumps(R, indent=1))
