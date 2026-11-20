@@ -22,7 +22,7 @@ DATA = ROOT / "docs" / "data"
 OUT = ROOT / "research" / "ivwalls"; OUT.mkdir(parents=True, exist_ok=True)
 theta = feeds.Theta(lambda: os.environ.get("THETADATA_API_KEY", ""))
 TOP = 40            # levels per day (up to 20 above price, 20 below), each tagged with its layer 5/8/12/20
-WINDOW = 0.03       # +/- 3% around spot
+WINDOW = 0.045      # +/- 4.5% around spot (same reach as NYL 20 per layer)
 DTE_MAX = 35        # include monthlies
 FIT_WIN = 0.06      # strikes used to fit the smooth IV curve (+/- 6%)
 
