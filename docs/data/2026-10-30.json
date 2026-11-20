@@ -1,13 +1,13 @@
 {
  "day": "2026-10-30",
- "built": "2026-10-30 09:25 ET",
+ "built": "2026-10-30 09:30 ET",
  "oi": "2026-10-30",
- "spot": 697.03,
- "spot_src": "pre-market 09:25 (backtest, nothing after 09:25 used)",
+ "spot": 697.13,
+ "spot_src": "9:30 open (locked, backtest)",
  "nq": {
-  "price": 28790.0,
-  "ratio": 41.3038,
-  "at": "09:20 bar"
+  "price": 28798.25,
+  "ratio": 41.3097,
+  "at": "09:30 open"
  },
  "em": 13.26,
  "flip": [],
@@ -100,7 +100,7 @@
     "NDX",
     "VOL"
    ],
-   "dens": 20,
+   "dens": 8,
    "star": true
   },
   {
@@ -177,7 +177,7 @@
     "NEW",
     "VOL"
    ],
-   "dens": 8,
+   "dens": 5,
    "star": true
   },
   {
@@ -264,7 +264,7 @@
     "GEX",
     "VEX"
    ],
-   "dens": 12,
+   "dens": 20,
    "star": true
   },
   {

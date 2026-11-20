@@ -1,15 +1,15 @@
 {
  "day": "2026-10-23",
- "built": "2026-10-23 09:25 ET",
+ "built": "2026-10-23 09:30 ET",
  "oi": "2026-10-23",
- "spot": 702.84,
- "spot_src": "pre-market 09:25 (backtest, nothing after 09:25 used)",
+ "spot": 702.1,
+ "spot_src": "9:30 open (locked, backtest)",
  "nq": {
-  "price": 29058.25,
-  "ratio": 41.344,
-  "at": "09:20 bar"
+  "price": 29029.5,
+  "ratio": 41.3466,
+  "at": "09:30 open"
  },
- "em": 15.39,
+ "em": 15.37,
  "flip": [],
  "strikes": [
   {
@@ -70,21 +70,21 @@
    "star": true
   },
   {
-   "k": 718,
+   "k": 718.0,
    "tags": [
-    "EM",
     "NDX",
     "VOL"
    ],
-   "dens": 5,
+   "dens": 20,
    "star": true
   },
   {
-   "k": 717.0,
+   "k": 717,
    "tags": [
+    "EM",
     "VOL"
    ],
-   "dens": 20,
+   "dens": 5,
    "star": false
   },
   {
@@ -113,6 +113,7 @@
    "tags": [
     "NDX",
     "NEW",
+    "VEX",
     "VOL"
    ],
    "dens": 20,
@@ -276,21 +277,12 @@
    "star": true
   },
   {
-   "k": 699.0,
-   "tags": [
-    "CHX"
-   ],
-   "dens": 20,
-   "star": false
-  },
-  {
    "k": 698.0,
    "tags": [
     "CHX",
-    "NDX",
-    "VEX"
+    "NDX"
    ],
-   "dens": 8,
+   "dens": 12,
    "star": true
   },
   {
@@ -330,7 +322,7 @@
     "CHX",
     "VEX"
    ],
-   "dens": 12,
+   "dens": 8,
    "star": true
   },
   {
@@ -368,6 +360,15 @@
     "VEX"
    ],
    "dens": 5,
+   "star": true
+  },
+  {
+   "k": 689.0,
+   "tags": [
+    "CHX",
+    "NDX"
+   ],
+   "dens": 20,
    "star": true
   },
   {

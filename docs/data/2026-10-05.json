@@ -1,15 +1,15 @@
 {
  "day": "2026-10-05",
- "built": "2026-10-05 09:25 ET",
+ "built": "2026-10-05 09:30 ET",
  "oi": "2026-10-05",
- "spot": 748.22,
- "spot_src": "pre-market 09:25 (backtest, nothing after 09:25 used)",
+ "spot": 749.34,
+ "spot_src": "9:30 open (locked, backtest)",
  "nq": {
-  "price": 31011.5,
-  "ratio": 41.4471,
-  "at": "09:20 bar"
+  "price": 31055.0,
+  "ratio": 41.4431,
+  "at": "09:30 open"
  },
- "em": 4.77,
+ "em": 4.78,
  "flip": [
   749.0
  ],
@@ -30,7 +30,16 @@
     "NEW",
     "VEX"
    ],
-   "dens": 12,
+   "dens": 8,
+   "star": true
+  },
+  {
+   "k": 763.0,
+   "tags": [
+    "CHX",
+    "VEX"
+   ],
+   "dens": 20,
    "star": true
   },
   {
@@ -69,6 +78,7 @@
   {
    "k": 757.0,
    "tags": [
+    "CHX",
     "VEX",
     "VOL"
    ],
@@ -100,6 +110,7 @@
    "k": 754.0,
    "tags": [
     "CHX",
+    "EM",
     "GEX",
     "NDX",
     "NEW",
@@ -110,13 +121,13 @@
    "star": true
   },
   {
-   "k": 753,
+   "k": 753.0,
    "tags": [
     "CHX",
-    "EM",
     "GEX",
     "NDX",
     "NEW",
+    "VEX",
     "VOL"
    ],
    "dens": 5,
@@ -152,7 +163,6 @@
     "GEX",
     "NDX",
     "NEW",
-    "VEX",
     "VOL",
     "WALL"
    ],
@@ -162,7 +172,6 @@
   {
    "k": 749.0,
    "tags": [
-    "CHX",
     "GEX",
     "NDX",
     "NEW",
@@ -178,8 +187,8 @@
     "GEX",
     "NDX",
     "NEW",
-    "VOL",
-    "WALL"
+    "VEX",
+    "VOL"
    ],
    "dens": 5,
    "star": true
@@ -205,13 +214,14 @@
     "NEW",
     "VOL"
    ],
-   "dens": 5,
+   "dens": 8,
    "star": true
   },
   {
    "k": 745.0,
    "tags": [
     "CHX",
+    "EM",
     "GEX",
     "NEW",
     "VEX",
@@ -225,22 +235,19 @@
    "tags": [
     "CHX",
     "GEX",
-    "VEX",
     "VOL"
    ],
-   "dens": 5,
+   "dens": 12,
    "star": true
   },
   {
-   "k": 743,
+   "k": 743.0,
    "tags": [
-    "CHX",
-    "EM",
     "GEX",
     "NDX",
     "VOL"
    ],
-   "dens": 5,
+   "dens": 20,
    "star": true
   },
   {
@@ -253,7 +260,7 @@
     "VEX",
     "VOL"
    ],
-   "dens": 8,
+   "dens": 12,
    "star": true
   },
   {
@@ -295,12 +302,13 @@
     "NDX",
     "VEX"
    ],
-   "dens": 12,
+   "dens": 20,
    "star": true
   },
   {
    "k": 735.0,
    "tags": [
+    "CHX",
     "GEX",
     "VEX"
    ],
@@ -324,7 +332,7 @@
    "tags": [
     "VEX"
    ],
-   "dens": 12,
+   "dens": 20,
    "star": false
   },
   {
@@ -348,15 +356,6 @@
    "k": 720.0,
    "tags": [
     "NEW",
-    "VEX"
-   ],
-   "dens": 20,
-   "star": true
-  },
-  {
-   "k": 715.0,
-   "tags": [
-    "CHX",
     "VEX"
    ],
    "dens": 20,

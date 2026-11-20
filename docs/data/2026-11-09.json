@@ -1,15 +1,15 @@
 {
  "day": "2026-11-09",
- "built": "2026-11-09 09:25 ET",
+ "built": "2026-11-09 09:30 ET",
  "oi": "2026-11-09",
- "spot": 662.0,
- "spot_src": "pre-market 09:25 (backtest, nothing after 09:25 used)",
+ "spot": 662.68,
+ "spot_src": "9:30 open (locked, backtest)",
  "nq": {
-  "price": 27312.75,
-  "ratio": 41.2579,
-  "at": "09:20 bar"
+  "price": 27342.25,
+  "ratio": 41.2601,
+  "at": "09:30 open"
  },
- "em": 10.9,
+ "em": 10.91,
  "flip": [
   660.9
  ],
@@ -56,7 +56,7 @@
    "tags": [
     "VEX"
    ],
-   "dens": 20,
+   "dens": 12,
    "star": false
   },
   {
@@ -91,13 +91,21 @@
    "star": true
   },
   {
-   "k": 673,
+   "k": 674,
    "tags": [
-    "EM",
-    "NDX",
-    "NEW"
+    "EM"
    ],
    "dens": 5,
+   "star": false
+  },
+  {
+   "k": 673.0,
+   "tags": [
+    "NDX",
+    "NEW",
+    "VEX"
+   ],
+   "dens": 20,
    "star": true
   },
   {
@@ -139,7 +147,7 @@
     "NDX",
     "VEX"
    ],
-   "dens": 12,
+   "dens": 8,
    "star": true
   },
   {
@@ -154,6 +162,7 @@
    "k": 666.0,
    "tags": [
     "CHX",
+    "GEX",
     "NDX",
     "VOL"
    ],
@@ -188,7 +197,6 @@
     "CHX",
     "GEX",
     "NEW",
-    "VEX",
     "VOL"
    ],
    "dens": 5,
@@ -197,12 +205,13 @@
   {
    "k": 662.0,
    "tags": [
+    "CHX",
     "GEX",
     "NDX",
     "NEW",
     "VOL"
    ],
-   "dens": 5,
+   "dens": 8,
    "star": true
   },
   {
@@ -271,7 +280,6 @@
     "GEX",
     "NDX",
     "NEW",
-    "VEX",
     "VOL"
    ],
    "dens": 8,
@@ -309,22 +317,21 @@
    "star": true
   },
   {
-   "k": 652.0,
-   "tags": [
-    "CHX",
-    "VOL"
-   ],
-   "dens": 20,
-   "star": true
-  },
-  {
-   "k": 651,
+   "k": 652,
    "tags": [
     "EM",
-    "NDX",
     "VOL"
    ],
    "dens": 5,
+   "star": false
+  },
+  {
+   "k": 651.0,
+   "tags": [
+    "NDX",
+    "VOL"
+   ],
+   "dens": 20,
    "star": true
   },
   {
@@ -354,10 +361,18 @@
    "star": true
   },
   {
+   "k": 644.0,
+   "tags": [
+    "NDX",
+    "VEX"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
    "k": 640.0,
    "tags": [
     "CHX",
-    "GEX",
     "NEW",
     "VEX",
     "VOL"

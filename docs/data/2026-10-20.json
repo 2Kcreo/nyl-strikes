@@ -1,13 +1,13 @@
 {
  "day": "2026-10-20",
- "built": "2026-10-20 09:25 ET",
+ "built": "2026-10-20 09:30 ET",
  "oi": "2026-10-20",
- "spot": 715.44,
- "spot_src": "pre-market 09:25 (backtest, nothing after 09:25 used)",
+ "spot": 715.19,
+ "spot_src": "9:30 open (locked, backtest)",
  "nq": {
-  "price": 29601.5,
-  "ratio": 41.3752,
-  "at": "09:20 bar"
+  "price": 29594.0,
+  "ratio": 41.3792,
+  "at": "09:30 open"
  },
  "em": 9.96,
  "flip": [
@@ -224,7 +224,6 @@
   {
    "k": 715.0,
    "tags": [
-    "CHX",
     "GEX",
     "NDX",
     "NEW",
@@ -240,7 +239,7 @@
     "NDX",
     "VOL"
    ],
-   "dens": 20,
+   "dens": 12,
    "star": true
   },
   {
@@ -262,7 +261,7 @@
     "NDX",
     "VOL"
    ],
-   "dens": 12,
+   "dens": 20,
    "star": true
   },
   {
@@ -308,7 +307,7 @@
     "CHX",
     "NDX"
    ],
-   "dens": 20,
+   "dens": 12,
    "star": true
   },
   {
@@ -341,6 +340,14 @@
    ],
    "dens": 5,
    "star": true
+  },
+  {
+   "k": 704.0,
+   "tags": [
+    "CHX"
+   ],
+   "dens": 20,
+   "star": false
   },
   {
    "k": 703.0,
