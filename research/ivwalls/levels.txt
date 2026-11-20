@@ -3,1190 +3,1916 @@ Each line: strike, side (support / resistance / mixed from put/call OI), strengt
 Paste one day's block into the IV Walls indicator.
 
 === Tue Sep 01 · QQQ 707.33 · ATM IV 15.0%
-725 IVW resistance 1
-724 IVW resistance 0
-723 IVW resistance 0
-720 IVW resistance 1
-715 IVW mixed 1
-712 IVW support 7
-711 IVW mixed 8
-710 IVW support 44
-709 IVW support 19
-708 IVW support 100
-707 IVW support 21
-706 IVW support 1
-704 IVW support 0
-703 IVW support 0
-701 IVW support 0
-698 IVW support 1
-696 IVW support 0
-694 IVW support 0
-691 IVW support 0
-689 IVW support 0
+725 IVW resistance 1 L20
+724 IVW resistance 0 L20
+723 IVW resistance 0 L20
+720 IVW resistance 1 L20
+715 IVW mixed 1 L20
+712 IVW support 7 L20
+711 IVW mixed 8 L20
+710 IVW support 44 L20
+709 IVW support 19 L20
+708 IVW support 100 L20
+707 IVW support 21 L20
+706 IVW support 1 L20
+704 IVW support 0 L20
+703 IVW support 0 L20
+701 IVW support 0 L20
+698 IVW support 1 L20
+696 IVW support 0 L20
+694 IVW support 0 L20
+691 IVW support 0 L20
+689 IVW support 0 L20
 
 === Wed Sep 02 · QQQ 706.86 · ATM IV 17.8%
-720 IVW resistance 53
-718 IVW resistance 25
-717 IVW resistance 12
-716 IVW resistance 21
-715 IVW resistance 100
-714 IVW resistance 28
-713 IVW resistance 51
-712 IVW resistance 74
-711 IVW resistance 34
-710 IVW mixed 42
-706 IVW support 11
-705 IVW support 17
-704 IVW support 11
-703 IVW support 19
-702 IVW support 13
-701 IVW support 13
-700 IVW support 17
-699 IVW support 7
-698 IVW support 4
-695 IVW support 10
+720 IVW resistance 53 L20
+718 IVW resistance 25 L20
+717 IVW resistance 12 L20
+716 IVW resistance 21 L20
+715 IVW resistance 100 L20
+714 IVW resistance 28 L20
+713 IVW resistance 51 L20
+712 IVW resistance 74 L20
+711 IVW resistance 34 L20
+710 IVW mixed 42 L20
+706 IVW support 11 L20
+705 IVW support 17 L20
+704 IVW support 11 L20
+703 IVW support 19 L20
+702 IVW support 13 L20
+701 IVW support 13 L20
+700 IVW support 17 L20
+699 IVW support 7 L20
+698 IVW support 4 L20
+695 IVW support 10 L20
 
 === Thu Sep 03 · QQQ 710.19 · ATM IV 16.2%
-722.5 IVW resistance 27
-719 IVW resistance 1
-718 IVW resistance 27
-717.5 IVW resistance 1
-717 IVW resistance 6
-716 IVW resistance 16
-715 IVW resistance 13
-714 IVW resistance 28
-713 IVW resistance 15
-712 IVW resistance 100
-706 IVW support 7
-705 IVW support 10
-704 IVW support 26
-703 IVW support 13
-702 IVW support 6
-701 IVW support 3
-700 IVW support 16
-699 IVW support 2
-698 IVW support 2
-695 IVW support 2
+722.5 IVW resistance 27 L20
+719 IVW resistance 1 L20
+718 IVW resistance 27 L20
+717.5 IVW resistance 1 L20
+717 IVW resistance 6 L20
+716 IVW resistance 16 L20
+715 IVW resistance 13 L20
+714 IVW resistance 28 L20
+713 IVW resistance 15 L20
+712 IVW resistance 100 L20
+706 IVW support 7 L20
+705 IVW support 10 L20
+704 IVW support 26 L20
+703 IVW support 13 L20
+702 IVW support 6 L20
+701 IVW support 3 L20
+700 IVW support 16 L20
+699 IVW support 2 L20
+698 IVW support 2 L20
+695 IVW support 2 L20
 
 === Fri Sep 04 · QQQ 719.23 · ATM IV 17.1%
-731 IVW resistance 0
-730 IVW resistance 0
-729 IVW resistance 0
-728 IVW resistance 1
-727.5 IVW resistance 0
-727 IVW resistance 0
-726 IVW resistance 1
-724 IVW resistance 2
-722 IVW resistance 24
-720 IVW resistance 41
-719 IVW mixed 9
-718 IVW support 14
-717.5 IVW support 13
-717 IVW support 100
-716 IVW support 54
-715 IVW support 84
-714 IVW support 6
-713 IVW support 1
-712 IVW support 0
-707 IVW support 0
+731 IVW resistance 0 L20
+730 IVW resistance 0 L20
+729 IVW resistance 0 L20
+728 IVW resistance 1 L20
+727.5 IVW resistance 0 L20
+727 IVW resistance 0 L20
+726 IVW resistance 1 L20
+724 IVW resistance 2 L20
+722 IVW resistance 24 L20
+720 IVW resistance 41 L20
+719 IVW mixed 9 L20
+718 IVW support 14 L20
+717.5 IVW support 13 L20
+717 IVW support 100 L20
+716 IVW support 54 L20
+715 IVW support 84 L20
+714 IVW support 6 L20
+713 IVW support 1 L20
+712 IVW support 0 L20
+707 IVW support 0 L20
 
 === Tue Sep 08 · QQQ 721.17 · ATM IV 8.9%
-735 IVW resistance 2
-733 IVW resistance 3
-732 IVW resistance 3
-731 IVW resistance 10
-730 IVW resistance 21
-729 IVW resistance 4
-728 IVW resistance 40
-727 IVW resistance 6
-726 IVW resistance 14
-725 IVW resistance 3
-719 IVW mixed 37
-718 IVW support 100
-717 IVW support 7
-716 IVW support 2
-713 IVW support 1
-712 IVW support 0
-711 IVW support 0
-710 IVW support 1
-709 IVW support 0
-705 IVW support 0
+735 IVW resistance 2 L20
+733 IVW resistance 3 L20
+732 IVW resistance 3 L20
+731 IVW resistance 10 L20
+730 IVW resistance 21 L20
+729 IVW resistance 4 L20
+728 IVW resistance 40 L20
+727 IVW resistance 6 L20
+726 IVW resistance 14 L20
+725 IVW resistance 3 L20
+719 IVW mixed 37 L20
+718 IVW support 100 L20
+717 IVW support 7 L20
+716 IVW support 2 L20
+713 IVW support 1 L20
+712 IVW support 0 L20
+711 IVW support 0 L20
+710 IVW support 1 L20
+709 IVW support 0 L20
+705 IVW support 0 L20
 
 === Wed Sep 09 · QQQ 715.4 · ATM IV 16.4%
-734 IVW resistance 12
-731 IVW resistance 18
-730 IVW resistance 36
-729 IVW resistance 22
-727 IVW resistance 18
-726 IVW resistance 11
-725 IVW resistance 42
-724 IVW resistance 13
-723 IVW resistance 14
-722 IVW resistance 25
-715 IVW support 24
-714 IVW support 10
-713 IVW support 17
-712 IVW support 43
-711 IVW support 50
-710 IVW support 100
-709 IVW support 37
-708 IVW support 24
-707 IVW support 8
-705 IVW support 7
+734 IVW resistance 12 L20
+731 IVW resistance 18 L20
+730 IVW resistance 36 L20
+729 IVW resistance 22 L20
+727 IVW resistance 18 L20
+726 IVW resistance 11 L20
+725 IVW resistance 42 L20
+724 IVW resistance 13 L20
+723 IVW resistance 14 L20
+722 IVW resistance 25 L20
+715 IVW support 24 L20
+714 IVW support 10 L20
+713 IVW support 17 L20
+712 IVW support 43 L20
+711 IVW support 50 L20
+710 IVW support 100 L20
+709 IVW support 37 L20
+708 IVW support 24 L20
+707 IVW support 8 L20
+705 IVW support 7 L20
 
 === Thu Sep 10 · QQQ 706.81 · ATM IV 18.8%
-722 IVW resistance 9
-721 IVW resistance 9
-714 IVW support 9
-713 IVW mixed 28
-712 IVW support 39
-711 IVW support 58
-710 IVW resistance 100
-709 IVW support 79
-708 IVW support 92
-707 IVW support 16
-706 IVW support 8
-705 IVW support 16
-703 IVW support 5
-700 IVW support 9
-699 IVW support 2
-697 IVW support 1
-696 IVW support 1
-695 IVW support 1
-691 IVW support 1
-687 IVW support 0
+722 IVW resistance 9 L20
+721 IVW resistance 9 L20
+714 IVW support 9 L20
+713 IVW mixed 28 L20
+712 IVW support 39 L20
+711 IVW support 58 L20
+710 IVW resistance 100 L20
+709 IVW support 79 L20
+708 IVW support 92 L20
+707 IVW support 16 L20
+706 IVW support 8 L20
+705 IVW support 16 L20
+703 IVW support 5 L20
+700 IVW support 9 L20
+699 IVW support 2 L20
+697 IVW support 1 L20
+696 IVW support 1 L20
+695 IVW support 1 L20
+691 IVW support 1 L20
+687 IVW support 0 L20
 
 === Fri Sep 11 · QQQ 715.97 · ATM IV 25.5%
-726 IVW resistance 2
-725 IVW resistance 11
-724 IVW resistance 12
-723 IVW resistance 6
-722 IVW resistance 33
-721 IVW resistance 12
-720 IVW resistance 100
-719 IVW resistance 26
-718 IVW mixed 2
-717 IVW resistance 24
-714 IVW resistance 12
-713 IVW resistance 10
-712 IVW support 4
-711 IVW support 3
-708 IVW support 6
-707 IVW support 2
-705 IVW support 12
-704 IVW support 2
-703 IVW support 2
-702 IVW support 1
+726 IVW resistance 2 L20
+725 IVW resistance 11 L20
+724 IVW resistance 12 L20
+723 IVW resistance 6 L20
+722 IVW resistance 33 L20
+721 IVW resistance 12 L20
+720 IVW resistance 100 L20
+719 IVW resistance 26 L20
+718 IVW mixed 2 L20
+717 IVW resistance 24 L20
+714 IVW resistance 12 L20
+713 IVW resistance 10 L20
+712 IVW support 4 L20
+711 IVW support 3 L20
+708 IVW support 6 L20
+707 IVW support 2 L20
+705 IVW support 12 L20
+704 IVW support 2 L20
+703 IVW support 2 L20
+702 IVW support 1 L20
 
 === Mon Sep 14 · QQQ 703.33 · ATM IV 9.7%
-722 IVW resistance 1
-720 IVW resistance 1
-712 IVW support 2
-710 IVW resistance 100
-709 IVW support 14
-708 IVW support 12
-707 IVW support 70
-706 IVW support 96
-705 IVW mixed 81
-704 IVW support 7
-696 IVW support 0
-693 IVW support 0
-690 IVW support 0
-688 IVW support 0
-687 IVW support 0
-685 IVW support 0
-683 IVW support 0
+722 IVW resistance 1 L20
+720 IVW resistance 1 L20
+712 IVW support 2 L20
+710 IVW resistance 100 L20
+709 IVW support 14 L20
+708 IVW support 12 L20
+707 IVW support 70 L20
+706 IVW support 96 L20
+705 IVW mixed 81 L20
+704 IVW support 7 L20
+696 IVW support 0 L20
+693 IVW support 0 L20
+690 IVW support 0 L20
+688 IVW support 0 L20
+687 IVW support 0 L20
+685 IVW support 0 L20
+683 IVW support 0 L20
 
 === Tue Sep 15 · QQQ 708.71 · ATM IV 25.5%
-726 IVW resistance 13
-725 IVW resistance 17
-720 IVW resistance 57
-719 IVW resistance 23
-718 IVW resistance 19
-717 IVW resistance 16
-716 IVW resistance 41
-715 IVW resistance 85
-713 IVW resistance 34
-711 IVW resistance 100
-707 IVW mixed 17
-706 IVW mixed 2
-705 IVW support 48
-702 IVW support 7
-701 IVW support 6
-699 IVW support 2
-698 IVW support 0
-696 IVW support 1
-691 IVW support 0
-690 IVW support 4
+726 IVW resistance 13 L20
+725 IVW resistance 17 L20
+720 IVW resistance 57 L20
+719 IVW resistance 23 L20
+718 IVW resistance 19 L20
+717 IVW resistance 16 L20
+716 IVW resistance 41 L20
+715 IVW resistance 85 L20
+713 IVW resistance 34 L20
+711 IVW resistance 100 L20
+707 IVW mixed 17 L20
+706 IVW mixed 2 L20
+705 IVW support 48 L20
+702 IVW support 7 L20
+701 IVW support 6 L20
+699 IVW support 2 L20
+698 IVW support 0 L20
+696 IVW support 1 L20
+691 IVW support 0 L20
+690 IVW support 4 L20
 
 === Wed Sep 16 · QQQ 708.2 · ATM IV 24.6%
-720 IVW resistance 42
-718 IVW resistance 17
-717 IVW resistance 16
-716 IVW resistance 16
-715 IVW resistance 66
-714 IVW resistance 18
-713 IVW resistance 14
-712 IVW resistance 37
-711 IVW resistance 25
-710 IVW resistance 63
-708 IVW resistance 11
-704 IVW support 5
-701 IVW support 4
-700 IVW support 100
-699 IVW support 6
-698 IVW support 5
-696 IVW support 3
-695 IVW support 12
-693 IVW support 3
-690 IVW support 7
+720 IVW resistance 42 L20
+718 IVW resistance 17 L20
+717 IVW resistance 16 L20
+716 IVW resistance 16 L20
+715 IVW resistance 66 L20
+714 IVW resistance 18 L20
+713 IVW resistance 14 L20
+712 IVW resistance 37 L20
+711 IVW resistance 25 L20
+710 IVW resistance 63 L20
+708 IVW resistance 11 L20
+704 IVW support 5 L20
+701 IVW support 4 L20
+700 IVW support 100 L20
+699 IVW support 6 L20
+698 IVW support 5 L20
+696 IVW support 3 L20
+695 IVW support 12 L20
+693 IVW support 3 L20
+690 IVW support 7 L20
 
 === Thu Sep 17 · QQQ 715.95 · ATM IV 23.2%
-730 IVW resistance 9
-725 IVW resistance 63
-724 IVW resistance 9
-723 IVW resistance 42
-721 IVW resistance 32
-720 IVW resistance 92
-719 IVW resistance 15
-718 IVW support 27
-717 IVW resistance 100
-716 IVW resistance 41
-715 IVW mixed 98
-714 IVW resistance 20
-713 IVW resistance 9
-709 IVW mixed 1
-704 IVW support 0
-702 IVW support 0
-700 IVW support 6
-698 IVW support 0
-696 IVW support 0
-695 IVW support 1
+730 IVW resistance 9 L20
+725 IVW resistance 63 L20
+724 IVW resistance 9 L20
+723 IVW resistance 42 L20
+721 IVW resistance 32 L20
+720 IVW resistance 92 L20
+719 IVW resistance 15 L20
+718 IVW support 27 L20
+717 IVW resistance 100 L20
+716 IVW resistance 41 L20
+715 IVW mixed 98 L20
+714 IVW resistance 20 L20
+713 IVW resistance 9 L20
+709 IVW mixed 1 L20
+704 IVW support 0 L20
+702 IVW support 0 L20
+700 IVW support 6 L20
+698 IVW support 0 L20
+696 IVW support 0 L20
+695 IVW support 1 L20
 
 === Fri Sep 18 · QQQ 717.7 · ATM IV 17.1%
-727 IVW resistance 0
-726 IVW resistance 0
-725 IVW resistance 3
-724 IVW resistance 1
-723 IVW resistance 3
-722 IVW resistance 9
-721 IVW resistance 12
-720 IVW resistance 100
-719 IVW resistance 10
-718 IVW support 1
-716 IVW support 47
-715 IVW support 34
-714 IVW support 1
-711 IVW support 0
-709 IVW support 0
-706 IVW support 0
-705 IVW support 0
-702 IVW support 0
-698 IVW support 0
-697 IVW support 0
+727 IVW resistance 0 L20
+726 IVW resistance 0 L20
+725 IVW resistance 3 L20
+724 IVW resistance 1 L20
+723 IVW resistance 3 L20
+722 IVW resistance 9 L20
+721 IVW resistance 12 L20
+720 IVW resistance 100 L20
+719 IVW resistance 10 L20
+718 IVW support 1 L20
+716 IVW support 47 L20
+715 IVW support 34 L20
+714 IVW support 1 L20
+711 IVW support 0 L20
+709 IVW support 0 L20
+706 IVW support 0 L20
+705 IVW support 0 L20
+702 IVW support 0 L20
+698 IVW support 0 L20
+697 IVW support 0 L20
 
 === Mon Sep 21 · QQQ 727.44 · ATM IV 11.2%
-738 IVW resistance 1
-737 IVW resistance 2
-736 IVW resistance 2
-735 IVW resistance 9
-734 IVW resistance 8
-733 IVW resistance 11
-732 IVW resistance 17
-731 IVW resistance 21
-730 IVW resistance 100
-728 IVW resistance 11
-727 IVW resistance 1
-725 IVW resistance 10
-724 IVW resistance 0
-722 IVW resistance 2
-721 IVW resistance 1
-720 IVW resistance 0
-719 IVW support 0
-716 IVW support 0
-714 IVW support 0
-707 IVW support 0
+738 IVW resistance 1 L20
+737 IVW resistance 2 L20
+736 IVW resistance 2 L20
+735 IVW resistance 9 L20
+734 IVW resistance 8 L20
+733 IVW resistance 11 L20
+732 IVW resistance 17 L20
+731 IVW resistance 21 L20
+730 IVW resistance 100 L20
+728 IVW resistance 11 L20
+727 IVW resistance 1 L20
+725 IVW resistance 10 L20
+724 IVW resistance 0 L20
+722 IVW resistance 2 L20
+721 IVW resistance 1 L20
+720 IVW resistance 0 L20
+719 IVW support 0 L20
+716 IVW support 0 L20
+714 IVW support 0 L20
+707 IVW support 0 L20
 
 === Tue Sep 22 · QQQ 741.0 · ATM IV 11.2%
-760 IVW resistance 0
-759 IVW resistance 0
-758 IVW resistance 0
-757 IVW resistance 0
-756 IVW resistance 0
-751 IVW resistance 0
-750 IVW resistance 7
-748 IVW resistance 1
-746 IVW resistance 1
-743 IVW resistance 1
-740 IVW mixed 100
-737 IVW support 28
-736 IVW support 22
-735 IVW support 42
-734 IVW support 7
-733 IVW support 4
-732 IVW support 5
-731 IVW support 1
-730 IVW support 1
-729 IVW support 0
+760 IVW resistance 0 L20
+759 IVW resistance 0 L20
+758 IVW resistance 0 L20
+757 IVW resistance 0 L20
+756 IVW resistance 0 L20
+751 IVW resistance 0 L20
+750 IVW resistance 7 L20
+748 IVW resistance 1 L20
+746 IVW resistance 1 L20
+743 IVW resistance 1 L20
+740 IVW mixed 100 L20
+737 IVW support 28 L20
+736 IVW support 22 L20
+735 IVW support 42 L20
+734 IVW support 7 L20
+733 IVW support 4 L20
+732 IVW support 5 L20
+731 IVW support 1 L20
+730 IVW support 1 L20
+729 IVW support 0 L20
 
 === Wed Sep 23 · QQQ 746.05 · ATM IV 15.0%
-760 IVW resistance 3
-756 IVW resistance 1
-755 IVW resistance 7
-754 IVW resistance 2
-752 IVW resistance 5
-751 IVW resistance 4
-750 IVW resistance 28
-749 IVW resistance 31
-748 IVW resistance 70
-747 IVW mixed 81
-746 IVW mixed 100
-745 IVW resistance 47
-744 IVW support 41
-743 IVW support 11
-742 IVW support 1
-741 IVW support 1
-738 IVW support 0
-733 IVW support 0
-728 IVW support 0
-725 IVW mixed 0
+760 IVW resistance 3 L20
+756 IVW resistance 1 L20
+755 IVW resistance 7 L20
+754 IVW resistance 2 L20
+752 IVW resistance 5 L20
+751 IVW resistance 4 L20
+750 IVW resistance 28 L20
+749 IVW resistance 31 L20
+748 IVW resistance 70 L20
+747 IVW mixed 81 L20
+746 IVW mixed 100 L20
+745 IVW resistance 47 L20
+744 IVW support 41 L20
+743 IVW support 11 L20
+742 IVW support 1 L20
+741 IVW support 1 L20
+738 IVW support 0 L20
+733 IVW support 0 L20
+728 IVW support 0 L20
+725 IVW mixed 0 L20
 
 === Thu Sep 24 · QQQ 735.0 · ATM IV 18.0%
-755 IVW resistance 0
-754 IVW resistance 0
-750 IVW resistance 0
-748 IVW resistance 0
-741 IVW resistance 2
-739 IVW mixed 1
-738 IVW support 3
-737 IVW support 8
-736 IVW support 100
-735 IVW mixed 12
-734 IVW support 7
-733 IVW support 6
-732 IVW resistance 7
-731 IVW support 2
-730 IVW support 2
-729 IVW mixed 1
-728 IVW support 0
-725 IVW mixed 0
-724 IVW support 0
-719 IVW support 0
+755 IVW resistance 0 L20
+754 IVW resistance 0 L20
+750 IVW resistance 0 L20
+748 IVW resistance 0 L20
+741 IVW resistance 2 L20
+739 IVW mixed 1 L20
+738 IVW support 3 L20
+737 IVW support 8 L20
+736 IVW support 100 L20
+735 IVW mixed 12 L20
+734 IVW support 7 L20
+733 IVW support 6 L20
+732 IVW resistance 7 L20
+731 IVW support 2 L20
+730 IVW support 2 L20
+729 IVW mixed 1 L20
+728 IVW support 0 L20
+725 IVW mixed 0 L20
+724 IVW support 0 L20
+719 IVW support 0 L20
 
 === Fri Sep 25 · QQQ 743.74 · ATM IV 18.0%
-756 IVW resistance 1
-755 IVW resistance 13
-754 IVW resistance 14
-753 IVW resistance 11
-752 IVW resistance 8
-751 IVW resistance 25
-750 IVW resistance 61
-749 IVW resistance 88
-748 IVW resistance 100
-747 IVW resistance 47
-743 IVW resistance 10
-737 IVW support 14
-735 IVW support 11
-734 IVW support 10
-733 IVW support 2
-732 IVW support 1
-731 IVW support 0
-730 IVW support 1
-729 IVW mixed 0
-728 IVW support 0
+756 IVW resistance 1 L20
+755 IVW resistance 13 L20
+754 IVW resistance 14 L20
+753 IVW resistance 11 L20
+752 IVW resistance 8 L20
+751 IVW resistance 25 L20
+750 IVW resistance 61 L20
+749 IVW resistance 88 L20
+748 IVW resistance 100 L20
+747 IVW resistance 47 L20
+743 IVW resistance 10 L20
+737 IVW support 14 L20
+735 IVW support 11 L20
+734 IVW support 10 L20
+733 IVW support 2 L20
+732 IVW support 1 L20
+731 IVW support 0 L20
+730 IVW support 1 L20
+729 IVW mixed 0 L20
+728 IVW support 0 L20
 
 === Mon Sep 28 · QQQ 739.98 · ATM IV 18.0%
-760 IVW resistance 3
-755 IVW resistance 6
-753 IVW resistance 6
-752 IVW resistance 22
-751 IVW resistance 9
-750 IVW resistance 31
-749 IVW resistance 8
-748 IVW resistance 11
-747 IVW resistance 42
-745 IVW resistance 4
-737 IVW support 19
-736 IVW support 96
-735 IVW mixed 51
-734 IVW support 12
-733 IVW support 2
-732 IVW mixed 2
-731 IVW support 1
-730 IVW support 100
-727 IVW support 3
-726 IVW resistance 9
+760 IVW resistance 3 L20
+755 IVW resistance 6 L20
+753 IVW resistance 6 L20
+752 IVW resistance 22 L20
+751 IVW resistance 9 L20
+750 IVW resistance 31 L20
+749 IVW resistance 8 L20
+748 IVW resistance 11 L20
+747 IVW resistance 42 L20
+745 IVW resistance 4 L20
+737 IVW support 19 L20
+736 IVW support 96 L20
+735 IVW mixed 51 L20
+734 IVW support 12 L20
+733 IVW support 2 L20
+732 IVW mixed 2 L20
+731 IVW support 1 L20
+730 IVW support 100 L20
+727 IVW support 3 L20
+726 IVW resistance 9 L20
 
 === Tue Sep 29 · QQQ 739.3 · ATM IV 17.8%
-761 IVW resistance 0
-759 IVW resistance 0
-758 IVW resistance 0
-756 IVW resistance 1
-755 IVW resistance 1
-753 IVW resistance 1
-752 IVW resistance 1
-750 IVW resistance 4
-746 IVW resistance 0
-740 IVW resistance 57
-739 IVW resistance 74
-738 IVW resistance 55
-737 IVW resistance 100
-735 IVW support 36
-732 IVW support 1
-727 IVW mixed 2
-726 IVW resistance 12
-725 IVW support 3
-721 IVW resistance 4
-720 IVW support 13
+761 IVW resistance 0 L20
+759 IVW resistance 0 L20
+758 IVW resistance 0 L20
+756 IVW resistance 1 L20
+755 IVW resistance 1 L20
+753 IVW resistance 1 L20
+752 IVW resistance 1 L20
+750 IVW resistance 4 L20
+746 IVW resistance 0 L20
+740 IVW resistance 57 L20
+739 IVW resistance 74 L20
+738 IVW resistance 55 L20
+737 IVW resistance 100 L20
+735 IVW support 36 L20
+732 IVW support 1 L20
+727 IVW mixed 2 L20
+726 IVW resistance 12 L20
+725 IVW support 3 L20
+721 IVW resistance 4 L20
+720 IVW support 13 L20
 
 === Wed Sep 30 · QQQ 740.31 · ATM IV 20.3%
-754 IVW resistance 5
-752 IVW resistance 5
-750 IVW resistance 25
-749 IVW resistance 4
-748 IVW resistance 5
-745 IVW resistance 25
-744 IVW resistance 14
-743 IVW resistance 19
-742 IVW resistance 31
-741 IVW resistance 9
-737 IVW support 34
-736 IVW support 100
-735 IVW support 34
-734 IVW support 11
-733 IVW support 10
-732 IVW mixed 7
-731 IVW support 2
-730 IVW support 29
-729 IVW support 1
-725 IVW mixed 26
+754 IVW resistance 5 L20
+752 IVW resistance 5 L20
+750 IVW resistance 25 L20
+749 IVW resistance 4 L20
+748 IVW resistance 5 L20
+745 IVW resistance 25 L20
+744 IVW resistance 14 L20
+743 IVW resistance 19 L20
+742 IVW resistance 31 L20
+741 IVW resistance 9 L20
+737 IVW support 34 L20
+736 IVW support 100 L20
+735 IVW support 34 L20
+734 IVW support 11 L20
+733 IVW support 10 L20
+732 IVW mixed 7 L20
+731 IVW support 2 L20
+730 IVW support 29 L20
+729 IVW support 1 L20
+725 IVW mixed 26 L20
 
-=== Thu Oct 01 · QQQ 742.85 · ATM IV 20.3%
-755 IVW resistance 7
-752 IVW resistance 9
-750 IVW resistance 46
-749 IVW resistance 11
-748 IVW resistance 32
-747 IVW resistance 27
-746 IVW resistance 21
-745 IVW resistance 100
-744 IVW mixed 24
-743 IVW mixed 16
-742 IVW mixed 1
-733 IVW support 2
-732 IVW mixed 2
-731 IVW support 1
-730 IVW support 17
-729 IVW support 1
-728 IVW support 1
-727 IVW support 1
-726 IVW support 0
-725 IVW support 11
+=== Thu Oct 01 · QQQ 742.58 · ATM IV 20.7%
+775 IVW resistance 0 L20
+774 IVW resistance 0 L20
+773 IVW resistance 0 L20
+771 IVW resistance 0 L20
+770 IVW resistance 0 L12
+769 IVW resistance 0 L20
+767 IVW resistance 0 L20
+765 IVW resistance 0 L12
+764 IVW resistance 0 L12
+763 IVW resistance 0 L20
+762 IVW resistance 0 L12
+761 IVW resistance 0 L8
+760 IVW resistance 3 L8
+758 IVW resistance 0 L20
+755 IVW resistance 2 L8
+750 IVW resistance 9 L5
+746 IVW resistance 15 L5
+745 IVW resistance 74 L5
+744 IVW resistance 100 L5
+743 IVW resistance 94 L5
+742 IVW mixed 57 L5
+741 IVW resistance 9 L8
+739 IVW support 7 L8
+737 IVW support 2 L20
+736 IVW support 6 L12
+735 IVW support 13 L5
+734 IVW support 6 L12
+733 IVW support 15 L5
+732 IVW mixed 9 L8
+731 IVW support 4 L12
+730 IVW support 53 L5
+729 IVW support 3 L20
+728 IVW support 3 L12
+727 IVW support 1 L20
+726 IVW support 1 L20
+725 IVW mixed 18 L5
+724 IVW support 0 L20
+723 IVW support 0 L20
+722 IVW support 0 L20
+721 IVW support 0 L20
 
-=== Fri Oct 02 · QQQ 751.81 · ATM IV 22.5%
-770 IVW resistance 0
-768 IVW resistance 0
-765 IVW resistance 0
-763 IVW resistance 0
-760 IVW resistance 33
-759 IVW resistance 2
-756 IVW resistance 32
-755 IVW resistance 4
-753 IVW resistance 32
-751 IVW resistance 2
-750 IVW resistance 100
-749 IVW resistance 60
-748 IVW resistance 34
-747 IVW resistance 36
-746 IVW resistance 13
-745 IVW resistance 18
-744 IVW mixed 3
-741 IVW mixed 0
-735 IVW support 0
+=== Fri Oct 02 · QQQ 751.31 · ATM IV 22.5%
+770 IVW resistance 0 L12
+768 IVW resistance 0 L8
+765 IVW resistance 0 L8
+763 IVW resistance 0 L8
+760 IVW resistance 24 L5
+759 IVW resistance 2 L5
+756 IVW resistance 26 L5
+755 IVW resistance 9 L5
+753 IVW resistance 29 L5
+751 IVW resistance 2 L8
+750 IVW resistance 100 L5
+749 IVW resistance 62 L5
+748 IVW resistance 37 L5
+747 IVW resistance 40 L5
+746 IVW resistance 16 L8
+745 IVW resistance 24 L5
+744 IVW resistance 4 L8
+741 IVW mixed 0 L12
+739 IVW support 0 L12
+737 IVW support 0 L12
+735 IVW support 0 L12
+733 IVW support 0 L20
+731 IVW support 0 L20
+730 IVW support 0 L20
+729 IVW support 0 L20
+728 IVW support 0 L20
+727 IVW support 0 L20
+726 IVW support 0 L20
+725 IVW support 0 L20
 
-=== Mon Oct 05 · QQQ 748.22 · ATM IV 10.1%
-763 IVW resistance 3
-760 IVW resistance 11
-758 IVW resistance 1
-757 IVW resistance 8
-756 IVW resistance 4
-755 IVW resistance 10
-754 IVW resistance 2
-753 IVW resistance 9
-751 IVW resistance 3
-749 IVW support 12
-748 IVW mixed 100
-747 IVW support 25
-746 IVW support 25
-740 IVW support 2
-738 IVW support 2
-737 IVW support 1
-736 IVW support 4
-735 IVW support 1
-733 IVW support 0
-730 IVW support 0
+=== Mon Oct 05 · QQQ 749.34 · ATM IV 10.1%
+772 IVW resistance 0 L20
+770 IVW resistance 0 L20
+767 IVW resistance 0 L20
+766 IVW resistance 0 L20
+765 IVW resistance 1 L20
+764 IVW resistance 0 L20
+763 IVW resistance 4 L8
+762 IVW resistance 2 L12
+761 IVW resistance 1 L20
+760 IVW resistance 17 L5
+759 IVW resistance 2 L12
+758 IVW resistance 2 L12
+757 IVW resistance 14 L8
+756 IVW resistance 6 L8
+755 IVW resistance 19 L5
+754 IVW resistance 4 L12
+753 IVW resistance 46 L5
+752 IVW resistance 19 L5
+751 IVW resistance 30 L5
+749 IVW support 17 L5
+748 IVW mixed 100 L5
+747 IVW mixed 19 L5
+746 IVW support 14 L5
+743 IVW mixed 0 L12
+740 IVW support 3 L5
+739 IVW support 0 L20
+738 IVW support 2 L8
+737 IVW support 1 L8
+736 IVW support 3 L8
+735 IVW support 1 L12
+734 IVW support 0 L20
+733 IVW support 0 L12
+732 IVW support 0 L20
+731 IVW support 0 L20
+730 IVW support 0 L12
+729 IVW support 0 L20
+728 IVW support 0 L20
+727 IVW support 0 L20
+726 IVW support 0 L20
 
-=== Tue Oct 06 · QQQ 760.33 · ATM IV 14.8%
-770 IVW resistance 5
-769 IVW resistance 1
-768 IVW resistance 2
-767 IVW resistance 3
-766 IVW resistance 2
-765 IVW resistance 12
-764 IVW resistance 8
-763 IVW resistance 100
-762 IVW resistance 84
-761 IVW resistance 66
-760 IVW resistance 54
-756 IVW resistance 14
-755 IVW mixed 3
-754 IVW resistance 1
-749 IVW support 2
-748 IVW support 0
-746 IVW support 0
-745 IVW support 0
-743 IVW support 0
-740 IVW support 0
+=== Tue Oct 06 · QQQ 760.54 · ATM IV 14.8%
+793 IVW resistance 0 L20
+787 IVW resistance 0 L20
+785 IVW resistance 0 L20
+781 IVW resistance 0 L20
+779 IVW resistance 0 L20
+777 IVW resistance 0 L20
+774 IVW resistance 0 L20
+773 IVW resistance 0 L20
+772 IVW resistance 0 L12
+771 IVW resistance 0 L12
+770 IVW resistance 5 L8
+769 IVW resistance 1 L12
+768 IVW resistance 2 L12
+767 IVW resistance 3 L8
+766 IVW resistance 2 L8
+765 IVW resistance 12 L5
+764 IVW resistance 8 L5
+763 IVW resistance 100 L5
+762 IVW resistance 81 L5
+761 IVW resistance 63 L5
+760 IVW resistance 50 L5
+756 IVW resistance 12 L5
+755 IVW resistance 2 L5
+754 IVW resistance 1 L5
+751 IVW support 0 L20
+750 IVW mixed 0 L20
+749 IVW support 2 L5
+748 IVW support 0 L8
+747 IVW support 0 L12
+746 IVW support 0 L12
+745 IVW support 0 L8
+744 IVW support 0 L12
+743 IVW support 0 L8
+742 IVW support 0 L20
+741 IVW support 0 L20
+740 IVW support 0 L12
+739 IVW support 0 L20
+738 IVW support 0 L20
+736 IVW support 0 L20
+734 IVW support 0 L20
 
-=== Wed Oct 07 · QQQ 753.85 · ATM IV 14.8%
-770 IVW resistance 24
-768 IVW resistance 10
-767 IVW resistance 16
-766 IVW resistance 23
-765 IVW resistance 77
-764 IVW resistance 23
-763 IVW resistance 30
-762 IVW resistance 43
-761 IVW resistance 20
-754 IVW mixed 100
-750 IVW support 7
-749 IVW support 33
-748 IVW mixed 33
-747 IVW support 8
-746 IVW support 10
-745 IVW support 29
-744 IVW support 9
-743 IVW support 7
-742 IVW support 6
-740 IVW support 13
+=== Wed Oct 07 · QQQ 753.85 · ATM IV 13.8%
+775 IVW resistance 1 L20
+774 IVW resistance 0 L20
+773 IVW resistance 1 L20
+772 IVW resistance 1 L20
+771 IVW resistance 1 L20
+770 IVW resistance 8 L8
+769 IVW resistance 2 L20
+768 IVW resistance 3 L12
+767 IVW resistance 4 L12
+766 IVW resistance 3 L12
+765 IVW resistance 4 L12
+764 IVW resistance 0 L20
+763 IVW resistance 1 L20
+760 IVW resistance 89 L5
+759 IVW mixed 80 L8
+758 IVW mixed 92 L5
+757 IVW mixed 86 L5
+756 IVW mixed 85 L5
+755 IVW support 100 L5
+754 IVW mixed 35 L8
+749 IVW support 7 L5
+747 IVW support 0 L8
+745 IVW support 1 L5
+744 IVW support 1 L5
+742 IVW support 0 L12
+740 IVW support 0 L8
+739 IVW mixed 0 L20
+736 IVW support 0 L8
+734 IVW mixed 1 L5
+733 IVW support 0 L20
+731 IVW support 0 L12
+730 IVW support 3 L5
+729 IVW support 0 L20
+728 IVW support 0 L20
+727 IVW support 0 L12
+724 IVW support 0 L20
+723 IVW support 0 L20
+722 IVW support 0 L20
+721 IVW support 0 L12
+720 IVW support 0 L20
 
-=== Thu Oct 08 · QQQ 754.01 · ATM IV 14.0%
-766 IVW resistance 0
-765 IVW resistance 1
-764 IVW resistance 1
-763 IVW resistance 2
-762 IVW resistance 2
-761 IVW resistance 1
-759 IVW resistance 0
-757 IVW support 100
-756 IVW support 85
-755 IVW mixed 95
-754 IVW support 52
-753 IVW support 11
-752 IVW support 0
-751 IVW support 1
-747 IVW support 0
-744 IVW support 0
-742 IVW support 0
-740 IVW support 0
-737 IVW support 0
-735 IVW support 0
+=== Thu Oct 08 · QQQ 753.94 · ATM IV 14.0%
+775 IVW resistance 0 L20
+774 IVW resistance 0 L20
+773 IVW resistance 0 L20
+772 IVW resistance 0 L20
+771 IVW resistance 0 L20
+770 IVW resistance 0 L20
+769 IVW resistance 0 L20
+768 IVW resistance 0 L20
+767 IVW resistance 0 L12
+766 IVW resistance 0 L12
+765 IVW resistance 1 L8
+764 IVW resistance 1 L12
+763 IVW resistance 2 L5
+762 IVW resistance 2 L8
+761 IVW resistance 1 L8
+759 IVW resistance 0 L12
+757 IVW support 100 L5
+756 IVW support 86 L5
+755 IVW mixed 97 L5
+754 IVW support 54 L5
+753 IVW support 12 L5
+752 IVW support 0 L5
+751 IVW support 1 L5
+747 IVW support 0 L5
+744 IVW support 0 L5
+742 IVW support 0 L8
+740 IVW support 0 L8
+737 IVW support 0 L12
+736 IVW support 0 L12
+735 IVW support 0 L12
+733 IVW support 0 L20
+730 IVW support 0 L8
+728 IVW support 0 L20
+726 IVW support 0 L20
+725 IVW support 0 L12
+723 IVW support 0 L20
+722 IVW support 0 L20
 
-=== Fri Oct 09 · QQQ 753.05 · ATM IV 13.8%
-767 IVW resistance 0
-766 IVW resistance 0
-765 IVW resistance 0
-760 IVW resistance 7
-759 IVW resistance 4
-758 IVW resistance 5
-757 IVW resistance 7
-756 IVW resistance 2
-755 IVW resistance 35
-754 IVW resistance 100
-752 IVW resistance 4
-750 IVW support 13
-745 IVW support 0
-744 IVW support 0
-742 IVW support 0
-737 IVW support 0
-734 IVW support 0
-731 IVW support 0
+=== Fri Oct 09 · QQQ 752.55 · ATM IV 18.6%
+773 IVW resistance 0 L20
+769 IVW resistance 0 L20
+768 IVW resistance 0 L12
+767 IVW resistance 0 L20
+766 IVW resistance 0 L20
+765 IVW resistance 0 L12
+764 IVW resistance 0 L12
+763 IVW resistance 0 L12
+762 IVW resistance 0 L8
+761 IVW resistance 0 L8
+760 IVW resistance 2 L5
+759 IVW resistance 1 L8
+756 IVW resistance 7 L5
+755 IVW resistance 22 L5
+754 IVW mixed 100 L5
+753 IVW mixed 55 L5
+752 IVW mixed 33 L5
+751 IVW mixed 11 L5
+750 IVW resistance 1 L5
+744 IVW support 0 L5
+741 IVW support 0 L8
+740 IVW support 0 L5
+739 IVW support 0 L8
+738 IVW support 0 L12
+737 IVW support 0 L12
+736 IVW support 0 L12
+735 IVW support 0 L8
+734 IVW support 0 L12
+733 IVW support 0 L20
+732 IVW support 0 L20
+731 IVW support 0 L20
+729 IVW support 0 L20
+727 IVW support 0 L20
+726 IVW support 0 L20
+723 IVW support 0 L20
+721 IVW support 0 L20
 
-=== Mon Oct 12 · QQQ 750.0 · ATM IV 9.1%
-765 IVW resistance 0
-762 IVW resistance 0
-761 IVW resistance 0
-760 IVW resistance 1
-759 IVW resistance 1
-758 IVW resistance 1
-757 IVW resistance 1
-755 IVW resistance 0
-751 IVW mixed 100
-750 IVW resistance 63
-749 IVW support 30
-748 IVW support 13
-747 IVW support 6
-746 IVW support 0
-745 IVW support 0
-740 IVW support 0
-739 IVW support 0
-738 IVW support 0
-737 IVW support 0
-735 IVW support 0
+=== Mon Oct 12 · QQQ 749.64 · ATM IV 9.1%
+780 IVW resistance 0 L20
+772 IVW resistance 0 L20
+771 IVW resistance 0 L20
+770 IVW resistance 0 L20
+769 IVW resistance 0 L20
+768 IVW resistance 0 L20
+767 IVW resistance 0 L20
+766 IVW resistance 0 L20
+765 IVW resistance 0 L12
+764 IVW resistance 0 L12
+763 IVW resistance 0 L12
+762 IVW resistance 0 L12
+761 IVW resistance 0 L8
+760 IVW resistance 1 L5
+759 IVW resistance 1 L5
+758 IVW resistance 1 L8
+757 IVW resistance 1 L5
+755 IVW resistance 0 L8
+751 IVW mixed 100 L5
+750 IVW resistance 70 L5
+749 IVW support 37 L5
+748 IVW support 18 L5
+747 IVW support 10 L5
+746 IVW support 1 L5
+745 IVW support 0 L5
+742 IVW support 0 L20
+741 IVW support 0 L12
+740 IVW support 0 L8
+739 IVW support 0 L12
+738 IVW support 0 L12
+737 IVW support 0 L8
+736 IVW support 0 L12
+735 IVW support 0 L8
+734 IVW support 0 L20
+733 IVW support 0 L20
+732 IVW support 0 L20
+731 IVW support 0 L20
+727 IVW support 0 L20
+722 IVW support 0 L20
+720 IVW support 0 L20
 
-=== Tue Oct 13 · QQQ 740.2 · ATM IV 13.8%
-755 IVW resistance 4
-754 IVW resistance 2
-753 IVW resistance 4
-752 IVW resistance 3
-751 IVW resistance 1
-745 IVW support 12
-744 IVW mixed 41
-743 IVW support 40
-742 IVW support 47
-741 IVW support 18
-740 IVW support 100
-739 IVW support 5
-738 IVW support 8
-736 IVW support 1
-734 IVW support 3
-732 IVW support 2
-730 IVW support 2
-729 IVW support 1
-728 IVW support 0
-725 IVW support 0
+=== Tue Oct 13 · QQQ 739.53 · ATM IV 13.8%
+763 IVW resistance 0 L20
+762 IVW resistance 0 L20
+761 IVW resistance 0 L20
+760 IVW resistance 1 L12
+759 IVW resistance 0 L20
+758 IVW resistance 1 L20
+757 IVW resistance 1 L20
+756 IVW resistance 1 L20
+755 IVW resistance 3 L8
+754 IVW resistance 2 L12
+753 IVW resistance 3 L8
+752 IVW resistance 2 L8
+751 IVW resistance 1 L12
+749 IVW resistance 0 L20
+745 IVW support 2 L12
+744 IVW mixed 26 L5
+743 IVW support 29 L5
+742 IVW support 39 L5
+741 IVW support 16 L5
+740 IVW support 100 L5
+739 IVW support 5 L5
+738 IVW support 8 L5
+736 IVW support 1 L8
+734 IVW support 3 L5
+732 IVW support 2 L5
+730 IVW support 2 L5
+729 IVW support 1 L8
+728 IVW support 0 L12
+726 IVW support 0 L12
+725 IVW support 1 L8
+722 IVW support 0 L12
+719 IVW support 0 L20
+717 IVW support 0 L20
+715 IVW support 0 L12
+714 IVW support 0 L20
+712 IVW support 0 L20
+711 IVW support 0 L20
+709 IVW support 0 L20
+707 IVW support 0 L20
 
-=== Wed Oct 14 · QQQ 738.26 · ATM IV 20.5%
-760 IVW resistance 70
-755 IVW resistance 94
-754 IVW resistance 18
-753 IVW resistance 25
-752 IVW resistance 35
-751 IVW resistance 19
-750 IVW resistance 100
-741 IVW support 34
-740 IVW support 49
-739 IVW support 78
-738 IVW support 51
-737 IVW support 35
-736 IVW support 24
-735 IVW support 50
-734 IVW support 55
-730 IVW support 33
-729 IVW support 1
-728 IVW support 3
-720 IVW support 5
-718 IVW resistance 1
+=== Wed Oct 14 · QQQ 738.0 · ATM IV 20.5%
+761 IVW resistance 2 L20
+760 IVW resistance 68 L5
+759 IVW resistance 5 L20
+758 IVW resistance 8 L20
+757 IVW resistance 9 L20
+756 IVW resistance 15 L12
+755 IVW resistance 93 L5
+754 IVW resistance 18 L12
+753 IVW resistance 24 L12
+752 IVW resistance 35 L8
+751 IVW resistance 19 L12
+750 IVW resistance 100 L5
+749 IVW resistance 3 L20
+747 IVW resistance 4 L20
+745 IVW mixed 7 L20
+742 IVW mixed 10 L20
+741 IVW support 33 L8
+740 IVW support 48 L8
+739 IVW support 80 L5
+738 IVW support 53 L5
+737 IVW support 36 L5
+736 IVW support 25 L5
+735 IVW support 52 L5
+734 IVW support 57 L5
+730 IVW support 32 L5
+729 IVW support 1 L12
+728 IVW support 3 L8
+727 IVW support 0 L20
+725 IVW support 1 L12
+724 IVW support 0 L20
+720 IVW support 5 L8
+718 IVW resistance 1 L8
+716 IVW support 0 L20
+715 IVW support 0 L20
+712 IVW support 1 L12
+710 IVW support 0 L20
+709 IVW support 0 L20
+707 IVW support 1 L12
+706 IVW support 0 L20
 
-=== Thu Oct 15 · QQQ 719.39 · ATM IV 25.7%
-732 IVW resistance 5
-731 IVW resistance 4
-730 IVW resistance 72
-729 IVW resistance 16
-728 IVW mixed 33
-725 IVW support 5
-723 IVW support 3
-722 IVW support 16
-721 IVW mixed 24
-720 IVW mixed 100
-719 IVW support 35
-718 IVW resistance 60
-717 IVW support 52
-716 IVW support 36
-715 IVW support 66
-714 IVW mixed 11
-713 IVW support 14
-712 IVW mixed 16
-710 IVW support 3
-705 IVW support 2
+=== Thu Oct 15 · QQQ 718.54 · ATM IV 25.7%
+750 IVW resistance 0 L20
+749 IVW resistance 0 L20
+747 IVW resistance 0 L20
+745 IVW resistance 0 L20
+744 IVW resistance 0 L20
+739 IVW resistance 0 L20
+734 IVW mixed 1 L20
+733 IVW resistance 0 L20
+732 IVW mixed 4 L12
+731 IVW resistance 3 L12
+730 IVW mixed 63 L5
+729 IVW resistance 12 L8
+728 IVW mixed 28 L5
+726 IVW support 1 L12
+725 IVW support 5 L8
+723 IVW support 3 L12
+722 IVW support 15 L8
+721 IVW support 23 L5
+720 IVW support 100 L5
+719 IVW support 36 L5
+718 IVW mixed 63 L5
+717 IVW support 55 L5
+716 IVW support 38 L5
+715 IVW support 73 L5
+714 IVW support 13 L8
+713 IVW support 15 L8
+712 IVW support 18 L5
+711 IVW support 2 L12
+710 IVW support 4 L8
+707 IVW support 0 L20
+705 IVW support 2 L12
+701 IVW support 0 L20
+699 IVW support 0 L20
+697 IVW support 0 L20
+696 IVW support 0 L20
+695 IVW support 0 L20
+694 IVW support 0 L20
+690 IVW support 1 L12
+688 IVW support 0 L12
+687 IVW support 0 L20
 
-=== Fri Oct 16 · QQQ 725.75 · ATM IV 22.3%
-740 IVW resistance 0
-735 IVW resistance 1
-733 IVW resistance 1
-732 IVW resistance 6
-731 IVW resistance 7
-730 IVW mixed 87
-729 IVW resistance 40
-728 IVW resistance 96
-727 IVW resistance 46
-726 IVW mixed 27
-725 IVW mixed 100
-724 IVW support 25
-723 IVW support 23
-722 IVW support 4
-721 IVW support 2
-719 IVW support 0
-717 IVW support 0
-713 IVW support 0
-711 IVW support 0
-707 IVW support 0
+=== Fri Oct 16 · QQQ 725.48 · ATM IV 22.3%
+747 IVW resistance 0 L20
+746 IVW resistance 0 L20
+745 IVW resistance 0 L20
+744 IVW resistance 0 L20
+743 IVW resistance 0 L20
+742 IVW resistance 0 L20
+741 IVW resistance 0 L20
+740 IVW resistance 0 L12
+739 IVW resistance 0 L20
+738 IVW resistance 0 L12
+737 IVW resistance 0 L12
+735 IVW resistance 1 L12
+733 IVW resistance 1 L8
+732 IVW resistance 5 L8
+731 IVW resistance 6 L8
+730 IVW mixed 79 L5
+729 IVW resistance 37 L5
+728 IVW resistance 91 L5
+727 IVW mixed 44 L5
+726 IVW mixed 27 L5
+725 IVW mixed 100 L5
+724 IVW support 25 L5
+723 IVW support 24 L5
+722 IVW support 5 L5
+721 IVW support 2 L5
+719 IVW support 0 L8
+717 IVW support 0 L8
+713 IVW support 0 L12
+711 IVW support 0 L12
+709 IVW support 0 L12
+707 IVW support 0 L8
+706 IVW support 0 L20
+704 IVW support 0 L20
+703 IVW support 0 L20
+702 IVW support 0 L12
+701 IVW support 0 L20
+693 IVW support 0 L20
 
-=== Mon Oct 19 · QQQ 719.59 · ATM IV 19.9%
-741 IVW resistance 1
-739 IVW resistance 0
-737 IVW resistance 0
-734 IVW resistance 1
-732 IVW resistance 2
-730 IVW resistance 12
-728 IVW resistance 5
-725 IVW resistance 1
-721 IVW resistance 62
-715 IVW support 100
-714 IVW mixed 53
-713 IVW mixed 45
-712 IVW support 27
-711 IVW support 0
-710 IVW support 5
-708 IVW support 0
-703 IVW support 0
-701 IVW support 0
-700 IVW support 1
+=== Mon Oct 19 · QQQ 719.61 · ATM IV 19.9%
+750 IVW resistance 0 L12
+749 IVW resistance 0 L12
+748 IVW resistance 0 L20
+747 IVW resistance 0 L20
+746 IVW resistance 1 L8
+744 IVW resistance 0 L20
+743 IVW resistance 0 L12
+741 IVW resistance 1 L8
+739 IVW resistance 0 L20
+737 IVW resistance 0 L12
+734 IVW resistance 1 L8
+732 IVW resistance 2 L5
+730 IVW resistance 12 L5
+728 IVW resistance 5 L5
+725 IVW resistance 1 L5
+721 IVW mixed 63 L5
+715 IVW support 100 L5
+714 IVW mixed 53 L5
+713 IVW mixed 45 L5
+712 IVW support 26 L5
+711 IVW support 0 L8
+710 IVW support 5 L5
+708 IVW support 0 L8
+706 IVW support 0 L12
+705 IVW support 0 L20
+704 IVW support 0 L20
+703 IVW support 0 L12
+702 IVW support 0 L20
+701 IVW support 0 L12
+700 IVW support 1 L8
+695 IVW support 0 L12
 
-=== Tue Oct 20 · QQQ 715.44 · ATM IV 19.9%
-734 IVW resistance 0
-732 IVW resistance 0
-730 IVW resistance 4
-728 IVW resistance 0
-727 IVW resistance 1
-724 IVW resistance 4
-719 IVW support 3
-718 IVW mixed 2
-717 IVW support 35
-716 IVW mixed 11
-715 IVW support 100
-714 IVW mixed 19
-713 IVW mixed 14
-712 IVW support 6
-711 IVW support 0
-708 IVW support 0
-703 IVW support 0
-701 IVW support 0
-700 IVW support 0
-695 IVW support 0
+=== Tue Oct 20 · QQQ 715.19 · ATM IV 22.1%
+741 IVW resistance 0 L20
+739 IVW resistance 0 L20
+738 IVW resistance 0 L20
+737 IVW resistance 1 L20
+736 IVW resistance 1 L20
+735 IVW resistance 6 L12
+734 IVW resistance 2 L20
+733 IVW resistance 9 L12
+732 IVW resistance 15 L8
+731 IVW resistance 7 L12
+730 IVW resistance 58 L5
+729 IVW resistance 11 L12
+728 IVW resistance 16 L8
+727 IVW resistance 15 L8
+726 IVW resistance 24 L5
+725 IVW resistance 55 L5
+724 IVW resistance 19 L5
+723 IVW resistance 0 L20
+721 IVW resistance 19 L5
+716 IVW support 5 L20
+715 IVW support 4 L12
+713 IVW support 27 L5
+712 IVW support 29 L5
+711 IVW support 13 L12
+710 IVW support 100 L5
+709 IVW support 52 L5
+708 IVW support 20 L8
+707 IVW support 14 L8
+706 IVW support 21 L8
+705 IVW support 39 L5
+704 IVW support 5 L12
+703 IVW support 2 L20
+702 IVW support 1 L20
+701 IVW support 1 L20
+700 IVW support 7 L12
+699 IVW support 0 L20
+698 IVW support 0 L20
+697 IVW support 0 L20
+695 IVW support 2 L20
+692 IVW support 0 L20
 
-=== Wed Oct 21 · QQQ 722.26 · ATM IV 23.8%
-735 IVW resistance 40
-733 IVW resistance 23
-732 IVW resistance 17
-730 IVW resistance 100
-728 IVW resistance 26
-727 IVW resistance 19
-726 IVW resistance 26
-725 IVW resistance 54
-724 IVW resistance 39
-723 IVW resistance 32
-721 IVW mixed 5
-717 IVW support 5
-713 IVW support 2
-712 IVW support 2
-711 IVW support 11
-710 IVW support 15
-709 IVW support 1
-708 IVW support 5
-707 IVW support 1
-705 IVW support 2
+=== Wed Oct 21 · QQQ 722.22 · ATM IV 23.8%
+750 IVW resistance 0 L20
+745 IVW resistance 0 L20
+742 IVW resistance 0 L20
+740 IVW resistance 0 L20
+738 IVW resistance 1 L20
+737 IVW resistance 4 L20
+736 IVW resistance 3 L20
+735 IVW resistance 40 L5
+734 IVW resistance 8 L20
+733 IVW resistance 23 L8
+732 IVW resistance 17 L12
+731 IVW resistance 11 L12
+730 IVW resistance 100 L5
+729 IVW resistance 12 L12
+728 IVW resistance 26 L8
+727 IVW resistance 19 L12
+726 IVW resistance 26 L8
+725 IVW resistance 54 L5
+724 IVW resistance 39 L5
+723 IVW resistance 32 L5
+721 IVW mixed 5 L5
+717 IVW support 5 L5
+715 IVW support 1 L12
+714 IVW support 1 L20
+713 IVW support 2 L12
+712 IVW support 2 L8
+711 IVW support 11 L5
+710 IVW support 15 L5
+709 IVW support 2 L12
+708 IVW support 5 L5
+707 IVW support 1 L12
+706 IVW support 1 L20
+705 IVW support 2 L8
+704 IVW support 1 L20
+703 IVW support 1 L20
+702 IVW support 0 L20
+701 IVW support 0 L20
+700 IVW support 2 L8
+699 IVW support 0 L20
+690 IVW support 0 L20
 
-=== Thu Oct 22 · QQQ 713.2 · ATM IV 23.1%
-734 IVW resistance 1
-732 IVW resistance 1
-730 IVW resistance 2
-723 IVW resistance 1
-719 IVW mixed 1
-718 IVW mixed 7
-717 IVW mixed 11
-716 IVW support 14
-715 IVW support 59
-714 IVW support 46
-713 IVW mixed 17
-712 IVW support 26
-711 IVW support 100
-710 IVW support 89
-709 IVW support 9
-708 IVW support 10
-707 IVW support 3
-706 IVW support 2
-705 IVW support 3
-700 IVW support 1
+=== Thu Oct 22 · QQQ 713.68 · ATM IV 23.1%
+740 IVW resistance 0 L20
+737 IVW resistance 0 L20
+736 IVW resistance 0 L20
+735 IVW resistance 2 L8
+734 IVW resistance 1 L12
+733 IVW resistance 0 L20
+732 IVW resistance 1 L12
+731 IVW resistance 1 L20
+730 IVW resistance 2 L8
+728 IVW resistance 0 L20
+726 IVW resistance 0 L20
+723 IVW mixed 1 L8
+722 IVW mixed 0 L20
+721 IVW mixed 1 L12
+719 IVW mixed 1 L12
+718 IVW support 8 L5
+717 IVW support 12 L5
+716 IVW support 15 L5
+715 IVW support 62 L5
+714 IVW support 47 L5
+713 IVW support 17 L5
+712 IVW support 26 L5
+711 IVW support 100 L5
+710 IVW support 88 L5
+709 IVW support 9 L8
+708 IVW support 9 L5
+707 IVW support 3 L8
+706 IVW support 2 L12
+705 IVW support 3 L8
+704 IVW support 0 L20
+703 IVW support 0 L12
+702 IVW support 1 L12
+700 IVW support 1 L12
+697 IVW support 0 L20
+695 IVW support 0 L20
+692 IVW support 0 L20
+690 IVW support 0 L20
+687 IVW support 0 L20
+683 IVW support 0 L20
+682 IVW support 0 L20
 
-=== Fri Oct 23 · QQQ 702.84 · ATM IV 34.8%
-720 IVW resistance 0
-716 IVW resistance 0
-714 IVW resistance 3
-712 IVW resistance 5
-709 IVW resistance 7
-708 IVW resistance 35
-707 IVW resistance 42
-706 IVW resistance 50
-705 IVW mixed 100
-703 IVW mixed 5
-700 IVW support 16
-699 IVW support 12
-698 IVW support 24
-697 IVW support 24
-696 IVW support 11
-695 IVW support 53
-694 IVW support 14
-693 IVW support 6
-692 IVW support 9
-691 IVW support 5
+=== Fri Oct 23 · QQQ 702.1 · ATM IV 34.8%
+733 IVW resistance 0 L20
+731 IVW resistance 0 L20
+730 IVW resistance 0 L20
+729 IVW resistance 0 L20
+727 IVW resistance 0 L20
+725 IVW resistance 0 L12
+722 IVW resistance 0 L12
+720 IVW resistance 0 L12
+716 IVW resistance 0 L12
+714 IVW resistance 2 L8
+712 IVW resistance 4 L8
+709 IVW resistance 6 L5
+708 IVW resistance 33 L5
+707 IVW mixed 40 L5
+706 IVW resistance 50 L5
+705 IVW mixed 100 L5
+703 IVW mixed 5 L8
+701 IVW support 3 L12
+700 IVW support 18 L5
+699 IVW support 14 L8
+698 IVW support 27 L5
+697 IVW support 28 L5
+696 IVW support 13 L8
+695 IVW support 66 L5
+694 IVW support 17 L5
+693 IVW support 8 L12
+692 IVW support 11 L8
+691 IVW support 6 L12
+690 IVW support 5 L12
+689 IVW support 2 L20
+688 IVW support 1 L20
+687 IVW support 1 L20
+685 IVW support 0 L20
+684 IVW support 0 L20
+681 IVW support 0 L20
+679 IVW support 0 L20
+673 IVW support 0 L20
 
-=== Mon Oct 26 · QQQ 707.55 · ATM IV 19.4%
-721 IVW resistance 1
-720 IVW resistance 10
-718 IVW resistance 3
-717 IVW resistance 2
-716 IVW resistance 3
-715 IVW resistance 18
-711 IVW resistance 14
-710 IVW resistance 100
-709 IVW resistance 70
-708 IVW resistance 63
-707 IVW resistance 71
-706 IVW resistance 10
-704 IVW mixed 2
-703 IVW support 1
-701 IVW support 3
-699 IVW support 1
-698 IVW support 0
-697 IVW support 0
-695 IVW support 2
-690 IVW support 1
+=== Mon Oct 26 · QQQ 707.06 · ATM IV 19.4%
+732 IVW resistance 0 L20
+729 IVW resistance 0 L20
+728 IVW resistance 0 L20
+726 IVW resistance 0 L20
+725 IVW resistance 1 L20
+724 IVW resistance 0 L20
+723 IVW resistance 0 L20
+722 IVW mixed 1 L20
+721 IVW resistance 1 L12
+720 IVW resistance 10 L8
+718 IVW resistance 3 L8
+717 IVW resistance 3 L12
+716 IVW resistance 3 L8
+715 IVW resistance 19 L5
+714 IVW resistance 1 L12
+713 IVW resistance 2 L12
+711 IVW resistance 14 L5
+710 IVW resistance 100 L5
+709 IVW resistance 74 L5
+708 IVW resistance 69 L5
+707 IVW resistance 82 L5
+706 IVW resistance 13 L5
+704 IVW support 2 L5
+703 IVW support 1 L8
+701 IVW support 4 L5
+699 IVW support 2 L8
+698 IVW support 1 L12
+697 IVW support 0 L12
+696 IVW support 0 L20
+695 IVW support 3 L5
+694 IVW support 0 L12
+693 IVW support 0 L20
+692 IVW support 0 L20
+690 IVW support 1 L8
+689 IVW support 0 L20
+688 IVW support 0 L20
+686 IVW support 0 L20
+684 IVW support 0 L20
+682 IVW support 0 L20
+680 IVW support 1 L12
 
-=== Tue Oct 27 · QQQ 714.77 · ATM IV 20.9%
-727 IVW resistance 9
-725 IVW resistance 20
-724 IVW resistance 11
-722 IVW resistance 21
-721 IVW resistance 20
-720 IVW resistance 55
-719 IVW resistance 78
-718 IVW resistance 100
-717 IVW resistance 46
-716 IVW resistance 48
-714 IVW mixed 10
-710 IVW support 4
-709 IVW mixed 2
-708 IVW support 1
-706 IVW support 0
-705 IVW support 2
-704 IVW support 1
-703 IVW support 0
-702 IVW support 0
-695 IVW support 0
+=== Tue Oct 27 · QQQ 715.1 · ATM IV 20.9%
+738 IVW resistance 0 L20
+735 IVW resistance 0 L20
+733 IVW resistance 1 L20
+732 IVW resistance 1 L20
+731 IVW resistance 2 L20
+730 IVW resistance 8 L12
+729 IVW resistance 4 L20
+728 IVW resistance 6 L20
+727 IVW resistance 8 L12
+726 IVW resistance 6 L20
+725 IVW resistance 19 L8
+724 IVW resistance 11 L12
+723 IVW resistance 8 L12
+722 IVW resistance 21 L8
+721 IVW resistance 21 L8
+720 IVW resistance 56 L5
+719 IVW resistance 80 L5
+718 IVW resistance 100 L5
+717 IVW resistance 45 L5
+716 IVW resistance 45 L5
+714 IVW mixed 9 L5
+710 IVW support 4 L5
+709 IVW mixed 1 L5
+708 IVW support 1 L5
+706 IVW support 0 L12
+705 IVW support 1 L5
+704 IVW support 0 L8
+703 IVW support 0 L8
+702 IVW support 0 L8
+700 IVW support 0 L12
+698 IVW support 0 L20
+697 IVW support 0 L20
+695 IVW support 0 L12
+694 IVW support 0 L20
+693 IVW support 0 L20
+692 IVW support 0 L20
+691 IVW support 0 L20
+688 IVW support 0 L20
+687 IVW support 0 L20
+685 IVW support 0 L12
 
-=== Wed Oct 28 · QQQ 723.69 · ATM IV 24.5%
-740 IVW resistance 34
-735 IVW resistance 74
-732 IVW resistance 25
-731 IVW resistance 19
-730 IVW resistance 100
-729 IVW resistance 51
-728 IVW resistance 35
-727 IVW resistance 35
-726 IVW resistance 24
-725 IVW mixed 29
-722 IVW mixed 2
-719 IVW support 1
-718 IVW support 2
-716 IVW support 1
-715 IVW support 12
-713 IVW support 1
-712 IVW support 2
-711 IVW support 1
-708 IVW support 1
-705 IVW support 2
+=== Wed Oct 28 · QQQ 724.12 · ATM IV 24.5%
+750 IVW resistance 4 L20
+745 IVW resistance 1 L20
+743 IVW resistance 1 L20
+741 IVW resistance 1 L20
+740 IVW resistance 35 L8
+739 IVW resistance 3 L20
+738 IVW resistance 6 L20
+737 IVW resistance 19 L12
+736 IVW resistance 6 L20
+735 IVW resistance 74 L5
+734 IVW resistance 7 L20
+733 IVW resistance 14 L12
+732 IVW resistance 25 L8
+731 IVW resistance 19 L12
+730 IVW resistance 100 L5
+729 IVW resistance 51 L5
+728 IVW resistance 37 L5
+727 IVW resistance 35 L5
+726 IVW resistance 24 L12
+725 IVW resistance 29 L8
+724 IVW resistance 18 L5
+722 IVW mixed 2 L5
+719 IVW support 1 L12
+718 IVW support 2 L5
+716 IVW support 1 L8
+715 IVW support 11 L5
+713 IVW support 1 L8
+712 IVW support 2 L5
+711 IVW support 1 L12
+708 IVW support 1 L12
+705 IVW support 1 L8
+703 IVW support 0 L20
+701 IVW support 0 L20
+700 IVW support 0 L20
+699 IVW support 0 L20
+698 IVW support 0 L20
+696 IVW support 1 L12
+695 IVW support 0 L20
+694 IVW support 0 L20
+692 IVW support 0 L20
 
-=== Thu Oct 29 · QQQ 717.55 · ATM IV 27.0%
-737 IVW resistance 3
-735 IVW resistance 19
-733 IVW resistance 4
-732 IVW resistance 10
-730 IVW resistance 100
-729 IVW resistance 6
-726 IVW resistance 5
-721 IVW mixed 5
-719 IVW support 11
-718 IVW support 13
-717 IVW support 13
-716 IVW support 8
-715 IVW mixed 45
-714 IVW support 9
-713 IVW support 1
-712 IVW support 16
-711 IVW support 2
-710 IVW support 24
-708 IVW support 1
-705 IVW support 10
+=== Thu Oct 29 · QQQ 716.57 · ATM IV 27.0%
+742 IVW resistance 0 L20
+741 IVW resistance 0 L20
+740 IVW resistance 4 L12
+739 IVW resistance 0 L20
+738 IVW resistance 1 L20
+737 IVW resistance 2 L20
+736 IVW resistance 1 L20
+735 IVW resistance 17 L5
+734 IVW resistance 2 L20
+733 IVW resistance 4 L12
+732 IVW resistance 9 L8
+731 IVW resistance 2 L12
+730 IVW resistance 100 L5
+729 IVW resistance 6 L8
+727 IVW resistance 2 L20
+726 IVW resistance 4 L12
+721 IVW mixed 5 L8
+719 IVW support 12 L5
+718 IVW support 15 L5
+717 IVW support 15 L5
+716 IVW support 10 L8
+715 IVW mixed 53 L5
+714 IVW support 11 L5
+713 IVW support 1 L12
+712 IVW support 20 L5
+711 IVW support 2 L8
+710 IVW support 31 L5
+709 IVW mixed 0 L12
+708 IVW support 1 L8
+705 IVW support 12 L5
+703 IVW support 0 L20
+702 IVW support 0 L20
+700 IVW support 1 L12
+697 IVW support 0 L20
+695 IVW support 0 L20
+693 IVW support 0 L20
+690 IVW support 0 L12
+689 IVW support 0 L20
+685 IVW support 0 L20
 
-=== Fri Oct 30 · QQQ 697.03 · ATM IV 30.2%
-712 IVW resistance 0
-711 IVW resistance 0
-709 IVW resistance 1
-706 IVW resistance 15
-705 IVW resistance 100
-704 IVW resistance 9
-703 IVW support 3
-702 IVW resistance 2
-700 IVW support 13
-699 IVW support 2
-697 IVW support 2
-695 IVW support 9
-692 IVW support 1
-688 IVW support 0
-686 IVW support 0
-685 IVW support 3
-684 IVW support 1
-683 IVW support 0
-682 IVW support 1
-681 IVW mixed 0
+=== Fri Oct 30 · QQQ 697.13 · ATM IV 30.2%
+723 IVW resistance 0 L20
+722 IVW resistance 0 L20
+720 IVW resistance 0 L20
+719 IVW resistance 0 L20
+718 IVW resistance 0 L20
+717 IVW mixed 0 L20
+716 IVW resistance 0 L20
+715 IVW resistance 0 L12
+714 IVW resistance 0 L20
+713 IVW support 0 L12
+712 IVW mixed 0 L12
+711 IVW resistance 0 L12
+709 IVW resistance 1 L8
+706 IVW resistance 15 L5
+705 IVW support 100 L5
+704 IVW support 9 L5
+703 IVW support 3 L5
+702 IVW support 2 L8
+700 IVW support 13 L5
+699 IVW support 2 L8
+697 IVW support 2 L5
+695 IVW support 8 L5
+692 IVW support 1 L5
+691 IVW support 0 L20
+689 IVW support 0 L20
+688 IVW support 0 L8
+686 IVW support 0 L12
+685 IVW support 3 L5
+684 IVW support 1 L8
+683 IVW support 0 L8
+682 IVW support 1 L5
+681 IVW support 0 L12
+680 IVW support 0 L12
+679 IVW support 0 L12
+678 IVW support 0 L20
+677 IVW support 0 L20
+676 IVW support 0 L20
+675 IVW support 0 L20
+674 IVW support 0 L20
+671 IVW support 0 L20
 
-=== Mon Nov 02 · QQQ 694.78 · ATM IV 20.7%
-712 IVW resistance 1
-710 IVW resistance 3
-707 IVW resistance 1
-706 IVW resistance 1
-705 IVW resistance 3
-704 IVW resistance 1
-700 IVW resistance 27
-697 IVW resistance 11
-696 IVW resistance 3
-695 IVW mixed 100
-694 IVW resistance 52
-693 IVW support 27
-692 IVW resistance 60
-689 IVW resistance 3
-687 IVW resistance 6
-686 IVW mixed 4
-685 IVW support 7
-684 IVW support 2
-683 IVW support 1
-680 IVW support 6
+=== Mon Nov 02 · QQQ 695.32 · ATM IV 20.7%
+723 IVW resistance 0 L20
+719 IVW resistance 0 L20
+717 IVW support 0 L20
+716 IVW resistance 0 L20
+714 IVW resistance 0 L20
+713 IVW support 0 L12
+712 IVW resistance 1 L8
+710 IVW resistance 3 L5
+708 IVW support 0 L8
+707 IVW resistance 0 L12
+706 IVW resistance 1 L8
+705 IVW resistance 3 L5
+704 IVW resistance 0 L12
+702 IVW resistance 0 L12
+700 IVW resistance 32 L5
+697 IVW resistance 12 L5
+696 IVW resistance 3 L5
+695 IVW mixed 100 L5
+694 IVW resistance 49 L5
+693 IVW support 24 L5
+692 IVW resistance 51 L5
+689 IVW resistance 2 L12
+687 IVW resistance 5 L8
+686 IVW mixed 3 L8
+685 IVW support 5 L5
+684 IVW support 2 L12
+683 IVW support 1 L12
+682 IVW support 1 L20
+681 IVW support 1 L20
+680 IVW support 5 L8
+679 IVW support 1 L12
+678 IVW support 1 L20
+677 IVW support 0 L20
+676 IVW support 0 L20
+674 IVW support 0 L20
+673 IVW support 0 L20
+670 IVW support 0 L20
 
-=== Tue Nov 03 · QQQ 684.49 · ATM IV 36.5%
-700 IVW resistance 27
-696 IVW resistance 11
-695 IVW resistance 17
-693 IVW support 12
-691 IVW support 49
-690 IVW resistance 94
-689 IVW resistance 47
-688 IVW resistance 70
-687 IVW resistance 100
-686 IVW resistance 74
-684 IVW resistance 32
-682 IVW support 10
-681 IVW support 6
-679 IVW support 27
-678 IVW support 14
-677 IVW support 39
-676 IVW support 12
-675 IVW support 47
-674 IVW support 52
-670 IVW support 60
+=== Tue Nov 03 · QQQ 684.26 · ATM IV 36.5%
+711 IVW resistance 1 L20
+709 IVW resistance 1 L20
+706 IVW resistance 0 L20
+703 IVW resistance 0 L20
+702 IVW resistance 0 L20
+701 IVW resistance 4 L12
+700 IVW resistance 28 L8
+699 IVW resistance 0 L20
+697 IVW resistance 1 L20
+696 IVW resistance 11 L12
+695 IVW resistance 19 L8
+694 IVW resistance 2 L20
+693 IVW support 12 L12
+692 IVW resistance 3 L12
+691 IVW support 48 L5
+690 IVW resistance 92 L5
+689 IVW resistance 46 L8
+688 IVW resistance 70 L5
+687 IVW resistance 100 L5
+686 IVW resistance 74 L5
+684 IVW resistance 32 L5
+682 IVW support 10 L12
+681 IVW support 7 L12
+679 IVW support 28 L8
+678 IVW support 14 L8
+677 IVW support 41 L5
+676 IVW support 13 L8
+675 IVW support 49 L5
+674 IVW support 55 L5
+673 IVW support 3 L20
+672 IVW support 3 L20
+671 IVW support 2 L20
+670 IVW support 65 L5
+669 IVW support 1 L20
+668 IVW support 5 L12
+665 IVW support 2 L20
+660 IVW support 5 L12
 
-=== Wed Nov 04 · QQQ 689.05 · ATM IV 48.2%
-708 IVW resistance 0
-706 IVW resistance 1
-704 IVW resistance 9
-697 IVW resistance 50
-695 IVW resistance 56
-694 IVW resistance 8
-693 IVW support 7
-691 IVW support 1
-690 IVW resistance 87
-689 IVW resistance 1
-688 IVW resistance 42
-686 IVW mixed 32
-682 IVW support 100
-679 IVW support 24
-677 IVW support 1
-676 IVW support 37
-674 IVW support 0
-672 IVW support 4
-670 IVW support 7
+=== Wed Nov 04 · QQQ 688.44 · ATM IV 48.2%
+719 IVW resistance 0 L20
+718 IVW resistance 1 L8
+716 IVW resistance 1 L12
+712 IVW resistance 0 L20
+711 IVW resistance 4 L8
+708 IVW resistance 0 L20
+706 IVW resistance 1 L12
+704 IVW resistance 9 L5
+697 IVW resistance 45 L5
+695 IVW resistance 54 L5
+694 IVW resistance 7 L5
+693 IVW support 6 L8
+691 IVW support 1 L12
+690 IVW resistance 82 L5
+689 IVW resistance 1 L12
+688 IVW resistance 40 L5
+686 IVW mixed 31 L5
+682 IVW support 100 L5
+679 IVW support 24 L5
+677 IVW support 1 L12
+676 IVW support 36 L5
+674 IVW support 0 L12
+672 IVW support 4 L8
+670 IVW support 6 L8
+668 IVW support 1 L12
+665 IVW support 1 L12
+662 IVW support 0 L20
+660 IVW support 18 L8
+659 IVW support 0 L20
 
-=== Thu Nov 05 · QQQ 683.66 · ATM IV 26.0%
-701 IVW resistance 2
-700 IVW resistance 27
-699 IVW resistance 2
-691 IVW support 17
-690 IVW mixed 1
-688 IVW mixed 12
-687 IVW mixed 22
-686 IVW mixed 45
-685 IVW support 89
-684 IVW mixed 46
-683 IVW resistance 42
-682 IVW support 58
-681 IVW support 18
-680 IVW support 100
-679 IVW support 12
-678 IVW support 33
-677 IVW support 3
-676 IVW support 31
-675 IVW support 82
-672 IVW support 3
+=== Thu Nov 05 · QQQ 683.17 · ATM IV 26.0%
+710 IVW resistance 0 L20
+708 IVW resistance 0 L20
+707 IVW resistance 0 L20
+706 IVW resistance 0 L20
+705 IVW resistance 4 L8
+704 IVW resistance 1 L20
+703 IVW resistance 1 L20
+702 IVW resistance 1 L20
+701 IVW resistance 1 L12
+700 IVW resistance 24 L5
+699 IVW resistance 1 L12
+696 IVW resistance 1 L12
+691 IVW support 16 L8
+690 IVW support 2 L12
+689 IVW support 0 L20
+688 IVW support 10 L8
+687 IVW mixed 19 L5
+686 IVW support 41 L5
+685 IVW support 84 L5
+684 IVW support 44 L5
+683 IVW mixed 41 L5
+682 IVW support 57 L5
+681 IVW support 18 L8
+680 IVW support 100 L5
+679 IVW support 13 L8
+678 IVW support 34 L5
+677 IVW support 3 L12
+676 IVW support 30 L8
+675 IVW support 81 L5
+674 IVW support 1 L20
+672 IVW support 3 L12
+669 IVW support 0 L20
+668 IVW support 2 L12
+667 IVW support 0 L20
+664 IVW support 3 L12
+661 IVW support 0 L20
+657 IVW support 0 L20
+656 IVW support 0 L20
+655 IVW support 0 L20
+654 IVW support 0 L20
 
-=== Fri Nov 06 · QQQ 657.95 · ATM IV 57.9%
-676 IVW mixed 11
-675 IVW support 3
-671 IVW resistance 1
-670 IVW resistance 27
-669 IVW resistance 10
-668 IVW support 55
-666 IVW resistance 15
-664 IVW mixed 23
-660 IVW resistance 100
-658 IVW resistance 19
-656 IVW resistance 3
-655 IVW resistance 58
-653 IVW resistance 13
-652 IVW resistance 15
-651 IVW mixed 32
-650 IVW support 51
-645 IVW support 0
-640 IVW support 6
+=== Fri Nov 06 · QQQ 658.35 · ATM IV 57.9%
+685 IVW support 1 L20
+684 IVW resistance 0 L20
+683 IVW resistance 0 L20
+681 IVW resistance 0 L20
+680 IVW mixed 4 L8
+679 IVW resistance 0 L20
+678 IVW support 2 L12
+676 IVW mixed 12 L8
+675 IVW support 4 L12
+674 IVW resistance 0 L20
+673 IVW resistance 0 L20
+672 IVW resistance 1 L12
+671 IVW resistance 1 L12
+670 IVW resistance 29 L5
+669 IVW resistance 10 L8
+668 IVW support 58 L5
+666 IVW resistance 15 L5
+664 IVW mixed 24 L5
+663 IVW resistance 1 L20
+660 IVW resistance 100 L5
+658 IVW resistance 19 L5
+656 IVW resistance 3 L8
+655 IVW resistance 57 L5
+653 IVW resistance 12 L8
+652 IVW resistance 14 L5
+651 IVW mixed 30 L5
+650 IVW support 48 L5
+645 IVW support 0 L12
+640 IVW support 5 L8
+635 IVW support 1 L12
+630 IVW support 1 L12
 
-=== Mon Nov 09 · QQQ 662.0 · ATM IV 26.1%
-680 IVW resistance 0
-679 IVW resistance 0
-675 IVW resistance 6
-672 IVW resistance 1
-671 IVW resistance 1
-666 IVW resistance 9
-665 IVW resistance 46
-664 IVW resistance 20
-663 IVW resistance 100
-662 IVW resistance 66
-661 IVW resistance 24
-660 IVW mixed 94
-659 IVW resistance 21
-658 IVW mixed 4
-655 IVW support 6
-654 IVW support 0
-651 IVW support 0
-649 IVW support 0
-647 IVW support 0
-645 IVW support 1
+=== Mon Nov 09 · QQQ 662.68 · ATM IV 26.1%
+692 IVW resistance 0 L8
+691 IVW resistance 0 L12
+690 IVW resistance 0 L8
+687 IVW resistance 0 L8
+683 IVW resistance 0 L12
+680 IVW resistance 0 L12
+679 IVW resistance 0 L12
+675 IVW resistance 6 L5
+666 IVW resistance 10 L5
+665 IVW resistance 49 L5
+664 IVW resistance 21 L5
+663 IVW resistance 100 L5
+662 IVW resistance 64 L5
+661 IVW resistance 22 L5
+660 IVW resistance 83 L5
+659 IVW resistance 18 L5
+658 IVW mixed 2 L8
+655 IVW support 4 L5
+654 IVW support 0 L8
+653 IVW support 0 L20
+652 IVW support 0 L12
+651 IVW support 0 L12
+649 IVW support 0 L20
+648 IVW support 0 L20
+647 IVW support 0 L12
+645 IVW support 0 L8
+644 IVW support 0 L20
+643 IVW support 0 L20
+642 IVW support 0 L20
+640 IVW support 0 L12
+639 IVW support 0 L20
+634 IVW support 0 L20
 
-=== Tue Nov 10 · QQQ 671.67 · ATM IV 30.2%
-690 IVW resistance 25
-688 IVW resistance 12
-685 IVW mixed 19
-683 IVW resistance 25
-681 IVW resistance 23
-679 IVW resistance 27
-676 IVW support 11
-674 IVW support 81
-673 IVW mixed 23
-672 IVW resistance 82
-671 IVW mixed 23
-670 IVW support 100
-669 IVW support 19
-666 IVW support 3
-664 IVW mixed 3
-662 IVW mixed 2
-658 IVW support 0
-657 IVW support 1
-655 IVW support 1
-653 IVW support 0
+=== Tue Nov 10 · QQQ 671.36 · ATM IV 30.2%
+696 IVW resistance 2 L20
+695 IVW resistance 4 L20
+693 IVW resistance 6 L20
+692 IVW resistance 5 L20
+691 IVW resistance 4 L20
+690 IVW resistance 23 L5
+689 IVW resistance 4 L20
+688 IVW resistance 11 L12
+687 IVW resistance 8 L20
+686 IVW resistance 8 L12
+685 IVW mixed 18 L8
+684 IVW resistance 9 L12
+683 IVW resistance 23 L5
+681 IVW resistance 19 L8
+679 IVW resistance 22 L5
+677 IVW mixed 7 L20
+676 IVW support 10 L12
+674 IVW support 78 L5
+673 IVW mixed 22 L8
+672 IVW resistance 81 L5
+671 IVW mixed 23 L5
+670 IVW support 100 L5
+669 IVW support 19 L5
+666 IVW support 3 L5
+664 IVW mixed 4 L5
+662 IVW mixed 2 L8
+658 IVW support 0 L12
+657 IVW support 1 L8
+655 IVW support 1 L12
+653 IVW support 0 L12
+650 IVW support 2 L8
+648 IVW support 0 L20
+647 IVW support 0 L12
+644 IVW support 0 L20
 
-=== Wed Nov 11 · QQQ 687.68 · ATM IV 30.2%
-703 IVW resistance 4
-700 IVW resistance 9
-696 IVW resistance 13
-695 IVW mixed 17
-693 IVW resistance 13
-692 IVW resistance 12
-691 IVW mixed 12
-690 IVW mixed 100
-689 IVW resistance 18
-688 IVW resistance 27
-687 IVW resistance 23
-686 IVW resistance 19
-685 IVW support 66
-684 IVW resistance 11
-683 IVW resistance 11
-680 IVW mixed 2
-675 IVW support 1
-673 IVW support 0
-672 IVW support 0
-670 IVW support 3
+=== Wed Nov 11 · QQQ 687.28 · ATM IV 28.2%
+715 IVW resistance 2 L5
+714 IVW resistance 5 L5
+713 IVW resistance 0 L12
+712 IVW resistance 1 L8
+711 IVW resistance 0 L12
+709 IVW resistance 0 L12
+707 IVW resistance 1 L5
+701 IVW resistance 1 L8
+694 IVW resistance 1 L8
+693 IVW resistance 1 L12
+690 IVW mixed 23 L5
+689 IVW resistance 3 L5
+687 IVW resistance 6 L8
+685 IVW support 100 L5
+683 IVW resistance 7 L5
+681 IVW mixed 10 L5
+680 IVW resistance 36 L5
+679 IVW mixed 10 L5
+677 IVW mixed 1 L12
+673 IVW support 0 L20
+671 IVW support 0 L20
+669 IVW support 1 L8
+668 IVW support 0 L20
+667 IVW support 0 L20
+666 IVW support 0 L12
+665 IVW support 2 L8
+664 IVW support 0 L12
+663 IVW support 0 L20
+662 IVW support 0 L20
+661 IVW support 0 L12
+660 IVW support 0 L20
+657 IVW support 0 L20
 
-=== Thu Nov 12 · QQQ 680.22 · ATM IV 25.6%
-700 IVW resistance 3
-698 IVW resistance 2
-696 IVW resistance 4
-695 IVW resistance 5
-693 IVW resistance 1
-686 IVW support 15
-684 IVW mixed 32
-683 IVW resistance 26
-682 IVW support 16
-681 IVW support 32
-680 IVW support 100
-679 IVW mixed 21
-678 IVW support 28
-677 IVW support 35
-676 IVW support 9
-675 IVW support 39
-674 IVW mixed 8
-671 IVW mixed 1
-667 IVW support 0
-664 IVW mixed 0
+=== Thu Nov 12 · QQQ 680.21 · ATM IV 25.6%
+708 IVW resistance 0 L20
+707 IVW resistance 0 L20
+706 IVW resistance 0 L20
+705 IVW resistance 0 L20
+704 IVW resistance 0 L20
+702 IVW resistance 1 L20
+701 IVW resistance 0 L20
+700 IVW resistance 3 L8
+699 IVW resistance 1 L12
+698 IVW resistance 2 L12
+697 IVW resistance 0 L20
+696 IVW resistance 4 L8
+695 IVW resistance 5 L8
+693 IVW resistance 1 L12
+691 IVW support 1 L12
+686 IVW support 15 L5
+684 IVW mixed 32 L5
+683 IVW resistance 26 L5
+682 IVW support 16 L5
+681 IVW support 32 L5
+680 IVW support 100 L5
+679 IVW support 21 L5
+678 IVW support 28 L5
+677 IVW support 35 L5
+676 IVW support 9 L8
+675 IVW support 39 L5
+674 IVW mixed 8 L8
+673 IVW support 0 L12
+671 IVW mixed 1 L12
+667 IVW support 0 L12
+664 IVW mixed 0 L12
+661 IVW support 0 L20
+659 IVW support 0 L20
+657 IVW support 0 L20
+654 IVW support 0 L20
+653 IVW support 0 L20
+652 IVW support 0 L20
+651 IVW support 0 L20
+650 IVW support 4 L8
 
-=== Fri Nov 13 · QQQ 689.92 · ATM IV 57.9%
-685 IVW mixed 100
-684 IVW mixed 10
-681 IVW mixed 5
-680 IVW mixed 42
-677 IVW mixed 3
-675 IVW resistance 0
-674 IVW resistance 0
-672 IVW mixed 0
-671 IVW mixed 0
+=== Fri Nov 13 · QQQ 688.51 · ATM IV 30.3%
+712 IVW mixed 0 L20
+710 IVW resistance 0 L20
+709 IVW resistance 0 L20
+708 IVW resistance 0 L20
+707 IVW resistance 0 L20
+706 IVW resistance 0 L20
+705 IVW resistance 0 L20
+704 IVW resistance 0 L20
+703 IVW resistance 1 L12
+702 IVW resistance 1 L12
+701 IVW resistance 1 L12
+700 IVW resistance 9 L8
+699 IVW resistance 8 L8
+698 IVW resistance 5 L12
+697 IVW resistance 13 L5
+696 IVW resistance 14 L5
+695 IVW resistance 22 L5
+694 IVW resistance 23 L5
+693 IVW resistance 7 L8
+691 IVW support 38 L5
+687 IVW mixed 47 L5
+685 IVW support 100 L5
+684 IVW support 1 L12
+683 IVW resistance 17 L5
+682 IVW support 15 L5
+681 IVW support 3 L8
+680 IVW support 11 L5
+679 IVW support 2 L12
+678 IVW support 8 L8
+677 IVW support 3 L12
+676 IVW support 1 L20
+675 IVW support 6 L8
+674 IVW support 0 L20
+673 IVW support 0 L20
+672 IVW support 0 L20
+671 IVW support 1 L20
+670 IVW support 2 L12
+668 IVW support 0 L20
+664 IVW support 0 L20
+662 IVW support 0 L20
 
 === Mon Nov 16 · QQQ 671.05 · ATM IV 20.3%
-690 IVW resistance 4
-689 IVW resistance 5
-688 IVW resistance 3
-687 IVW resistance 3
-686 IVW resistance 4
-685 IVW mixed 6
-684 IVW resistance 2
-680 IVW mixed 24
-676 IVW resistance 16
-674 IVW resistance 100
-671 IVW support 71
-669 IVW support 14
-668 IVW support 28
-667 IVW support 5
-666 IVW support 4
-665 IVW support 5
-663 IVW support 2
-662 IVW support 2
-661 IVW support 1
-659 IVW support 6
+700 IVW resistance 2 L12
+698 IVW resistance 0 L20
+696 IVW resistance 0 L20
+695 IVW resistance 2 L12
+694 IVW resistance 1 L20
+693 IVW resistance 1 L20
+692 IVW resistance 2 L20
+691 IVW mixed 1 L20
+690 IVW resistance 4 L8
+689 IVW resistance 5 L5
+688 IVW resistance 3 L12
+687 IVW resistance 3 L8
+686 IVW resistance 4 L8
+685 IVW mixed 6 L5
+684 IVW resistance 2 L12
+683 IVW resistance 1 L20
+680 IVW mixed 24 L5
+676 IVW mixed 16 L5
+674 IVW mixed 100 L5
+671 IVW support 71 L5
+669 IVW support 14 L5
+668 IVW support 28 L5
+667 IVW support 5 L5
+666 IVW support 4 L8
+665 IVW support 5 L8
+664 IVW support 1 L20
+663 IVW support 2 L12
+662 IVW support 2 L8
+661 IVW support 1 L12
+659 IVW support 6 L5
+658 IVW support 0 L20
+655 IVW support 0 L20
+654 IVW support 0 L20
+652 IVW support 0 L20
+650 IVW support 1 L12
+648 IVW support 0 L20
+646 IVW support 1 L12
+645 IVW support 0 L20
+642 IVW support 0 L20
 
 === Tue Nov 17 · QQQ 663.05 · ATM IV 39.9%
-681 IVW resistance 5
-676 IVW resistance 7
-675 IVW mixed 19
-673 IVW resistance 23
-672 IVW resistance 19
-671 IVW resistance 12
-669 IVW resistance 70
-668 IVW resistance 76
-666 IVW resistance 100
-664 IVW support 49
-660 IVW support 25
-657 IVW support 13
-656 IVW support 17
-655 IVW support 28
-654 IVW support 11
-653 IVW support 21
-652 IVW support 12
-651 IVW support 17
-649 IVW support 6
-646 IVW support 9
+692 IVW resistance 1 L20
+691 IVW resistance 0 L20
+689 IVW resistance 2 L20
+687 IVW resistance 3 L20
+683 IVW resistance 4 L12
+681 IVW resistance 5 L12
+679 IVW resistance 3 L20
+678 IVW resistance 3 L12
+677 IVW resistance 0 L20
+676 IVW resistance 7 L12
+675 IVW mixed 19 L8
+673 IVW resistance 23 L5
+672 IVW resistance 19 L8
+671 IVW resistance 12 L8
+669 IVW resistance 70 L5
+668 IVW resistance 76 L5
+667 IVW resistance 1 L20
+666 IVW resistance 100 L5
+664 IVW support 49 L5
+660 IVW support 25 L5
+658 IVW support 4 L20
+657 IVW support 13 L8
+656 IVW support 17 L5
+655 IVW support 28 L5
+654 IVW support 11 L8
+653 IVW support 21 L5
+652 IVW support 12 L8
+651 IVW support 17 L5
+650 IVW support 5 L12
+649 IVW support 6 L12
+648 IVW support 5 L12
+647 IVW support 2 L20
+646 IVW support 9 L12
+645 IVW support 1 L20
+644 IVW support 1 L20
+643 IVW support 0 L20
+641 IVW support 1 L20
+638 IVW support 0 L20
+634 IVW support 0 L20
+
+=== Wed Nov 18 · QQQ 661.07 · ATM IV 45.4%
+687 IVW resistance 2 L20
+686 IVW resistance 4 L12
+684 IVW resistance 4 L12
+679 IVW resistance 3 L20
+678 IVW resistance 8 L12
+677 IVW resistance 26 L5
+676 IVW resistance 11 L8
+674 IVW resistance 24 L5
+673 IVW resistance 12 L8
+672 IVW resistance 3 L12
+671 IVW resistance 2 L20
+669 IVW resistance 14 L5
+666 IVW resistance 12 L8
+665 IVW resistance 42 L5
+663 IVW resistance 76 L5
+661 IVW mixed 23 L8
+659 IVW mixed 72 L5
+658 IVW support 100 L5
+656 IVW resistance 24 L8
+654 IVW mixed 10 L12
+652 IVW support 34 L5
+651 IVW support 21 L12
+648 IVW support 19 L12
+647 IVW support 3 L20
+646 IVW support 7 L20
+645 IVW support 54 L5
+644 IVW support 2 L20
+643 IVW support 1 L20
+642 IVW support 6 L20
+641 IVW support 9 L12
+640 IVW support 31 L8
+638 IVW support 1 L20
+637 IVW support 1 L20
+635 IVW support 36 L5
+632 IVW support 5 L20
+
+=== Thu Nov 19 · QQQ 671.05 · ATM IV 43.5%
+699 IVW resistance 3 L20
+698 IVW resistance 5 L12
+697 IVW resistance 5 L12
+695 IVW resistance 6 L8
+694 IVW resistance 2 L20
+692 IVW resistance 4 L12
+690 IVW support 12 L8
+688 IVW resistance 2 L20
+686 IVW resistance 0 L20
+684 IVW resistance 1 L20
+683 IVW resistance 2 L20
+682 IVW resistance 2 L20
+680 IVW support 13 L5
+678 IVW resistance 14 L5
+676 IVW resistance 5 L12
+675 IVW mixed 69 L5
+674 IVW resistance 17 L5
+673 IVW mixed 18 L5
+672 IVW resistance 9 L8
+671 IVW resistance 26 L5
+670 IVW mixed 100 L5
+669 IVW resistance 13 L5
+668 IVW resistance 9 L8
+667 IVW resistance 37 L5
+666 IVW resistance 7 L8
+665 IVW resistance 8 L8
+664 IVW mixed 11 L5
+662 IVW resistance 2 L12
+657 IVW support 2 L12
+655 IVW support 2 L12
+652 IVW support 0 L20
+650 IVW support 1 L12
+648 IVW support 0 L20
+646 IVW support 0 L20
+644 IVW support 0 L20
+641 IVW support 0 L20
+
+=== Fri Nov 20 · QQQ 638.81 · ATM IV 50.1%
+664 IVW resistance 0 L20
+663 IVW resistance 0 L20
+662 IVW resistance 0 L20
+661 IVW resistance 0 L20
+660 IVW resistance 2 L12
+659 IVW resistance 0 L20
+658 IVW resistance 0 L20
+657 IVW resistance 2 L12
+656 IVW resistance 5 L8
+655 IVW mixed 23 L5
+653 IVW resistance 0 L20
+652 IVW resistance 28 L5
+651 IVW mixed 3 L12
+650 IVW mixed 100 L5
+649 IVW resistance 7 L5
+647 IVW resistance 5 L8
+643 IVW resistance 5 L5
+641 IVW support 3 L8
+639 IVW support 1 L12
+638 IVW support 19 L5
+637 IVW support 19 L5
+636 IVW support 14 L8
+635 IVW support 39 L5
+634 IVW support 11 L8
+633 IVW support 13 L8
+632 IVW support 38 L5
+631 IVW support 3 L12
+630 IVW support 66 L5
+629 IVW support 2 L20
+628 IVW support 8 L12
+627 IVW support 2 L12
+626 IVW support 0 L20
+624 IVW support 1 L20
+623 IVW support 1 L20
+620 IVW support 9 L12
+618 IVW support 0 L20
+616 IVW support 0 L20
+615 IVW support 0 L20
+612 IVW support 0 L20
