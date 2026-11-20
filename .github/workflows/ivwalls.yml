@@ -20,7 +20,7 @@ jobs:
       - run: pip install -r requirements.txt
       - env: {THETADATA_API_KEY: "${{ secrets.THETADATA_API_KEY }}"}
         run: python ivwalls.py $(cat ivwalls.txt)
-      - run: grep -q -- "--today" ivwalls.txt || python ivtest.py
+      - run: grep -q -- "--today" ivwalls.txt || python ivtest.py || true
       - run: |
           git config user.name "nyl-bot"; git config user.email "nyl-bot@users.noreply.github.com"
           git add -A research/ivwalls; if [ -d docs/data/ivwalls ]; then git add docs/data/ivwalls; fi; git commit -m "IV walls $(cat ivwalls.txt)" || exit 0
