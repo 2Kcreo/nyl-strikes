@@ -1,14 +1,10 @@
 {
  "day": "2026-09-08",
- "built": "2026-09-08 09:25 ET",
+ "built": "2026-09-08 09:30 ET",
  "oi": "2026-09-08",
- "spot": 721.17,
- "spot_src": "pre-market 09:25 (backtest, nothing after 09:25 used)",
- "nq": {
-  "price": 29655.0,
-  "ratio": 41.1206,
-  "at": "09:20 bar"
- },
+ "spot": 720.97,
+ "spot_src": "9:30 open (locked, backtest)",
+ "nq": null,
  "em": 4.06,
  "flip": [
   718.4
@@ -38,7 +34,6 @@
   {
    "k": 731.0,
    "tags": [
-    "CHX",
     "NDX",
     "VEX"
    ],
@@ -248,6 +243,7 @@
   {
    "k": 715.0,
    "tags": [
+    "CHX",
     "GEX",
     "NEW",
     "VOL"

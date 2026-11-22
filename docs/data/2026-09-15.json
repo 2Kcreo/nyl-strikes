@@ -1,13 +1,13 @@
 {
  "day": "2026-09-15",
- "built": "2026-09-15 09:25 ET",
+ "built": "2026-09-15 09:30 ET",
  "oi": "2026-09-15",
- "spot": 708.71,
- "spot_src": "pre-market 09:25 (backtest, nothing after 09:25 used)",
+ "spot": 708.57,
+ "spot_src": "9:30 open (locked, backtest)",
  "nq": {
-  "price": 29417.25,
-  "ratio": 41.5082,
-  "at": "09:20 bar"
+  "price": 29421.0,
+  "ratio": 41.5217,
+  "at": "09:30 open"
  },
  "em": 7.38,
  "flip": [

@@ -1,13 +1,13 @@
 {
  "day": "2026-09-23",
- "built": "2026-09-23 09:25 ET",
+ "built": "2026-09-23 09:30 ET",
  "oi": "2026-09-23",
- "spot": 746.05,
- "spot_src": "pre-market 09:25 (backtest, nothing after 09:25 used)",
+ "spot": 746.99,
+ "spot_src": "9:30 open (locked, backtest)",
  "nq": {
-  "price": 30971.0,
-  "ratio": 41.5133,
-  "at": "09:20 bar"
+  "price": 31005.5,
+  "ratio": 41.5072,
+  "at": "09:30 open"
  },
  "em": 7.07,
  "flip": [
@@ -67,7 +67,7 @@
     "NDX",
     "VEX"
    ],
-   "dens": 20,
+   "dens": 12,
    "star": true
   },
   {
@@ -86,6 +86,8 @@
    "k": 754.0,
    "tags": [
     "CHX",
+    "EM",
+    "GEX",
     "NEW",
     "VEX"
    ],
@@ -93,14 +95,13 @@
    "star": true
   },
   {
-   "k": 753,
+   "k": 753.0,
    "tags": [
     "CHX",
-    "EM",
     "NDX",
     "VEX"
    ],
-   "dens": 5,
+   "dens": 12,
    "star": true
   },
   {
@@ -120,11 +121,12 @@
    "k": 751.0,
    "tags": [
     "CHX",
+    "GEX",
     "NDX",
     "VEX",
     "VOL"
    ],
-   "dens": 20,
+   "dens": 12,
    "star": true
   },
   {
@@ -135,7 +137,8 @@
     "NEW",
     "OI",
     "VEX",
-    "VOL"
+    "VOL",
+    "WALL"
    ],
    "dens": 5,
    "star": true
@@ -149,7 +152,7 @@
     "VEX",
     "VOL"
    ],
-   "dens": 8,
+   "dens": 5,
    "star": true
   },
   {
@@ -159,7 +162,6 @@
     "GEX",
     "NDX",
     "NEW",
-    "VEX",
     "VOL"
    ],
    "dens": 5,
@@ -179,6 +181,7 @@
   {
    "k": 746.0,
    "tags": [
+    "CHX",
     "GEX",
     "NDX",
     "NEW",
@@ -194,6 +197,7 @@
     "GEX",
     "NDX",
     "NEW",
+    "VEX",
     "VOL",
     "WALL"
    ],
@@ -237,26 +241,13 @@
   {
    "k": 741.0,
    "tags": [
-    "GEX",
     "VOL"
    ],
    "dens": 12,
-   "star": true
+   "star": false
   },
   {
    "k": 740.0,
-   "tags": [
-    "CHX",
-    "GEX",
-    "NDX",
-    "NEW",
-    "VOL"
-   ],
-   "dens": 5,
-   "star": true
-  },
-  {
-   "k": 739,
    "tags": [
     "CHX",
     "EM",
@@ -269,9 +260,19 @@
    "star": true
   },
   {
-   "k": 738.0,
+   "k": 739.0,
    "tags": [
     "CHX",
+    "NDX",
+    "NEW",
+    "VOL"
+   ],
+   "dens": 12,
+   "star": true
+  },
+  {
+   "k": 738.0,
+   "tags": [
     "NDX",
     "VOL"
    ],
