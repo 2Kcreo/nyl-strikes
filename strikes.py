@@ -53,6 +53,11 @@ def main():
         def last_before(sym):
             if at_open:
                 bs = [x for x in Y.bars(sym, "5m", "60d") if x[0].date() == day and x[0].time() == dt.time(9, 30)]
+                if bs: return bs[0]
+                # older than Yahoo's 60 days of 5m bars: the day's official open (the 9:30 opening print). Not for NQ,
+                # whose daily bar opens the evening before.
+                if sym.endswith("=F"): return None
+                bs = [x for x in Y.bars(sym, "1d", "1y") if x[0].date() == day]
                 return bs[0] if bs else None
             bs = [x for x in Y.bars(sym, "5m", "60d") if x[0].date() == day and dt.time(4, 0) <= x[0].time()
                   and x[0] + dt.timedelta(minutes=5) <= dt.datetime.combine(day, t)]
