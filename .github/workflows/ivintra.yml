@@ -1,0 +1,38 @@
+name: IV walls intraday (research)
+on:
+  push:
+    branches: [main]
+    paths: ["ivintra.txt"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      chunks: ${{ steps.p.outputs.chunks }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: p
+        run: echo "chunks=$(python3 -c 'import json;print(json.dumps([l.strip() for l in open("ivintra.txt") if l.strip()]))')" >> $GITHUB_OUTPUT
+  build:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        chunk: ${{ fromJson(needs.plan.outputs.chunks) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -r requirements.txt
+      - env: {THETADATA_API_KEY: "${{ secrets.THETADATA_API_KEY }}"}
+        run: python ivintra.py ${{ matrix.chunk }}
+      - if: always()
+        run: |
+          git config user.name "nyl-bot"; git config user.email "nyl-bot@users.noreply.github.com"
+          git add research/ivintra; git commit -qm "ivintra ${{ matrix.chunk }}" || exit 0
+          for i in 1 2 3 4 5 6; do git pull --rebase -X theirs -q && git push -q && break; sleep $((RANDOM % 20 + 5)); done
