@@ -1,0 +1,347 @@
+{
+ "days": 445,
+ "first": "2024-11-18",
+ "last": "2026-11-17",
+ "overall": {
+  "Stack 2+": {
+   "touches": 4476,
+   "hold": 36.4,
+   "win": 28.4,
+   "pts": 3.47,
+   "hold_vs_random": -1.8,
+   "chance_no_hold_edge": 0.998,
+   "pts_vs_random": -0.73,
+   "chance_no_pts_edge": 0.88
+  },
+  "Stack 3+": {
+   "touches": 1330,
+   "hold": 36.9,
+   "win": 28.8,
+   "pts": 3.5,
+   "hold_vs_random": -1.1,
+   "chance_no_hold_edge": 0.805,
+   "pts_vs_random": -0.61,
+   "chance_no_pts_edge": 0.715
+  },
+  "Stack 2+ (3 pts)": {
+   "touches": 4174,
+   "hold": 36.2,
+   "win": 28.3,
+   "pts": 3.44,
+   "hold_vs_random": -2.0,
+   "chance_no_hold_edge": 0.998,
+   "pts_vs_random": -0.74,
+   "chance_no_pts_edge": 0.865
+  },
+  "Stack 2+ (10 pts)": {
+   "touches": 4854,
+   "hold": 36.4,
+   "win": 29.4,
+   "pts": 3.95,
+   "hold_vs_random": -1.6,
+   "chance_no_hold_edge": 0.993,
+   "pts_vs_random": -0.21,
+   "chance_no_pts_edge": 0.66
+  },
+  "Strong stack (IVW 40+ and NYL L5/L8)": {
+   "touches": 1410,
+   "hold": 35.8,
+   "win": 25.7,
+   "pts": 2.12,
+   "hold_vs_random": -2.4,
+   "chance_no_hold_edge": 0.98,
+   "pts_vs_random": -2.14,
+   "chance_no_pts_edge": 0.97
+  },
+  "Stack with an IVW 40+": {
+   "touches": 1540,
+   "hold": 35.8,
+   "win": 26.7,
+   "pts": 2.62,
+   "hold_vs_random": -2.3,
+   "chance_no_hold_edge": 0.985,
+   "pts_vs_random": -1.6,
+   "chance_no_pts_edge": 0.935
+  },
+  "Stack, side agrees": {
+   "touches": 2729,
+   "hold": 36.9,
+   "win": 28.9,
+   "pts": 3.54,
+   "hold_vs_random": -1.2,
+   "chance_no_hold_edge": 0.932,
+   "pts_vs_random": -0.71,
+   "chance_no_pts_edge": 0.81
+  },
+  "Stack, side mixed/against": {
+   "touches": 1747,
+   "hold": 35.7,
+   "win": 27.6,
+   "pts": 3.33,
+   "hold_vs_random": -2.4,
+   "chance_no_hold_edge": 0.98,
+   "pts_vs_random": -0.75,
+   "chance_no_pts_edge": 0.755
+  },
+  "Stack NYL + IV wall": {
+   "touches": 4301,
+   "hold": 36.4,
+   "win": 28.4,
+   "pts": 3.44,
+   "hold_vs_random": -1.7,
+   "chance_no_hold_edge": 0.995,
+   "pts_vs_random": -0.7,
+   "chance_no_pts_edge": 0.882
+  },
+  "Stack QQQ IVW + NDX IVW": {
+   "touches": 1356,
+   "hold": 36.7,
+   "win": 28.6,
+   "pts": 3.27,
+   "hold_vs_random": -1.3,
+   "chance_no_hold_edge": 0.863,
+   "pts_vs_random": -0.89,
+   "chance_no_pts_edge": 0.792
+  },
+  "Single, all": {
+   "touches": 8292,
+   "hold": 36.5,
+   "win": 28.8,
+   "pts": 3.62,
+   "hold_vs_random": -1.7,
+   "chance_no_hold_edge": 1.0,
+   "pts_vs_random": -0.55,
+   "chance_no_pts_edge": 0.848
+  },
+  "Single, strong (NYL L5/L8 or IVW 40+)": {
+   "touches": 2556,
+   "hold": 36.8,
+   "win": 29.8,
+   "pts": 4.14,
+   "hold_vs_random": -1.3,
+   "chance_no_hold_edge": 0.897,
+   "pts_vs_random": -0.0,
+   "chance_no_pts_edge": 0.5
+  },
+  "Single, weak": {
+   "touches": 5736,
+   "hold": 36.3,
+   "win": 28.4,
+   "pts": 3.39,
+   "hold_vs_random": -1.7,
+   "chance_no_hold_edge": 0.993,
+   "pts_vs_random": -0.79,
+   "chance_no_pts_edge": 0.907
+  },
+  "Nearest 3 each side, all levels": {
+   "touches": 4186,
+   "hold": 34.7,
+   "win": 27.6,
+   "pts": 3.5,
+   "hold_vs_random": -3.4,
+   "chance_no_hold_edge": 1.0,
+   "pts_vs_random": -0.62,
+   "chance_no_pts_edge": 0.795
+  },
+  "Nearest 3 each side, singles": {
+   "touches": 3686,
+   "hold": 35.8,
+   "win": 28.7,
+   "pts": 3.82,
+   "hold_vs_random": -2.2,
+   "chance_no_hold_edge": 1.0,
+   "pts_vs_random": -0.31,
+   "chance_no_pts_edge": 0.67
+  },
+  "All levels": {
+   "touches": 14894,
+   "hold": 36.4,
+   "win": 28.9,
+   "pts": 3.71,
+   "hold_vs_random": -1.7,
+   "chance_no_hold_edge": 1.0,
+   "pts_vs_random": -0.47,
+   "chance_no_pts_edge": 0.91
+  },
+  "Random": {
+   "touches": 24778,
+   "hold": 38.1,
+   "win": 30.1,
+   "pts": 4.16
+  }
+ },
+ "first_touch": {
+  "Stack 2+": {
+   "touches": 2401,
+   "hold": 36.9,
+   "win": 27.4,
+   "pts": 3.08,
+   "hold_vs_random": -2.0,
+   "chance_no_hold_edge": 0.99,
+   "pts_vs_random": -1.23,
+   "chance_no_pts_edge": 0.943
+  },
+  "Strong stack (IVW 40+ and NYL L5/L8)": {
+   "touches": 758,
+   "hold": 34.2,
+   "win": 22.6,
+   "pts": 0.59,
+   "hold_vs_random": -4.7,
+   "chance_no_hold_edge": 0.993,
+   "pts_vs_random": -3.55,
+   "chance_no_pts_edge": 0.993
+  },
+  "Stack, side agrees": {
+   "touches": 1464,
+   "hold": 37.6,
+   "win": 27.6,
+   "pts": 3.03,
+   "hold_vs_random": -1.4,
+   "chance_no_hold_edge": 0.882,
+   "pts_vs_random": -1.27,
+   "chance_no_pts_edge": 0.897
+  },
+  "Single, all": {
+   "touches": 4433,
+   "hold": 36.5,
+   "win": 27.9,
+   "pts": 3.18,
+   "hold_vs_random": -2.4,
+   "chance_no_hold_edge": 1.0,
+   "pts_vs_random": -1.02,
+   "chance_no_pts_edge": 0.965
+  },
+  "Random": {
+   "touches": 13229,
+   "hold": 38.9,
+   "win": 30.0,
+   "pts": 4.19
+  }
+ },
+ "second_touch": {
+  "Stack 2+": {
+   "touches": 2075,
+   "hold": 35.9,
+   "win": 29.6,
+   "pts": 3.9,
+   "hold_vs_random": -1.3,
+   "chance_no_hold_edge": 0.902,
+   "pts_vs_random": -0.27,
+   "chance_no_pts_edge": 0.613
+  },
+  "Strong stack (IVW 40+ and NYL L5/L8)": {
+   "touches": 652,
+   "hold": 37.6,
+   "win": 29.3,
+   "pts": 3.87,
+   "hold_vs_random": 0.4,
+   "chance_no_hold_edge": 0.438,
+   "pts_vs_random": -0.18,
+   "chance_no_pts_edge": 0.54
+  },
+  "Stack, side agrees": {
+   "touches": 1265,
+   "hold": 36.0,
+   "win": 30.3,
+   "pts": 4.12,
+   "hold_vs_random": -1.1,
+   "chance_no_hold_edge": 0.795,
+   "pts_vs_random": -0.07,
+   "chance_no_pts_edge": 0.542
+  },
+  "Single, all": {
+   "touches": 3859,
+   "hold": 36.4,
+   "win": 30.0,
+   "pts": 4.16,
+   "hold_vs_random": -0.8,
+   "chance_no_hold_edge": 0.82,
+   "pts_vs_random": 0.03,
+   "chance_no_pts_edge": 0.477
+  },
+  "Random": {
+   "touches": 11549,
+   "hold": 37.1,
+   "win": 30.2,
+   "pts": 4.13
+  }
+ },
+ "regime": {
+  "long gamma": {
+   "Stack 2+": {
+    "touches": 2199,
+    "hold": 37.9,
+    "win": 27.4,
+    "pts": 2.74,
+    "hold_vs_random": -2.1,
+    "chance_no_hold_edge": 0.997,
+    "pts_vs_random": -1.0,
+    "chance_no_pts_edge": 0.923
+   },
+   "Strong stack (IVW 40+ and NYL L5/L8)": {
+    "touches": 728,
+    "hold": 36.1,
+    "win": 23.6,
+    "pts": 0.91,
+    "hold_vs_random": -3.8,
+    "chance_no_hold_edge": 0.997,
+    "pts_vs_random": -2.9,
+    "chance_no_pts_edge": 0.987
+   },
+   "Stack, side agrees": {
+    "touches": 1339,
+    "hold": 39.6,
+    "win": 28.5,
+    "pts": 2.97,
+    "hold_vs_random": -0.3,
+    "chance_no_hold_edge": 0.613,
+    "pts_vs_random": -0.74,
+    "chance_no_pts_edge": 0.797
+   },
+   "Random": {
+    "touches": 13153,
+    "hold": 39.9,
+    "win": 29.8,
+    "pts": 3.72
+   }
+  },
+  "short gamma": {
+   "Stack 2+": {
+    "touches": 1733,
+    "hold": 35.8,
+    "win": 29.1,
+    "pts": 3.99,
+    "hold_vs_random": -0.8,
+    "chance_no_hold_edge": 0.733,
+    "pts_vs_random": -0.58,
+    "chance_no_pts_edge": 0.697
+   },
+   "Strong stack (IVW 40+ and NYL L5/L8)": {
+    "touches": 548,
+    "hold": 35.5,
+    "win": 27.3,
+    "pts": 3.03,
+    "hold_vs_random": -1.0,
+    "chance_no_hold_edge": 0.717,
+    "pts_vs_random": -1.48,
+    "chance_no_pts_edge": 0.76
+   },
+   "Stack, side agrees": {
+    "touches": 1030,
+    "hold": 36.0,
+    "win": 29.6,
+    "pts": 4.33,
+    "hold_vs_random": -0.6,
+    "chance_no_hold_edge": 0.68,
+    "pts_vs_random": -0.31,
+    "chance_no_pts_edge": 0.573
+   },
+   "Random": {
+    "touches": 9006,
+    "hold": 36.5,
+    "win": 30.2,
+    "pts": 4.52
+   }
+  }
+ }
+}
