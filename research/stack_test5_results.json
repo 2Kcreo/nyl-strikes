@@ -1,0 +1,141 @@
+{
+ "days": 501,
+ "first": "2024-11-18",
+ "last": "2026-11-17",
+ "10:30": {
+  "Morning walls (after 10:30)": {
+   "touches": 3825,
+   "hold": 37.1,
+   "fade_pts": 2.13,
+   "break_pts": 1.52,
+   "hold_vs_random": -2.91,
+   "p_hold": 1.0,
+   "fade_pts_vs_random": -1.31,
+   "p_fade": 0.985,
+   "break_pts_vs_random": 0.13,
+   "p_break": 0.403
+  },
+  "Morning strong 40+ (after 10:30)": {
+   "touches": 1063,
+   "hold": 38.0,
+   "fade_pts": 1.38,
+   "break_pts": 3.04,
+   "hold_vs_random": -2.16,
+   "p_hold": 0.953,
+   "fade_pts_vs_random": -2.11,
+   "p_fade": 0.97,
+   "break_pts_vs_random": 1.58,
+   "p_break": 0.058
+  },
+  "10:30 walls": {
+   "touches": 3423,
+   "hold": 37.3,
+   "fade_pts": 2.47,
+   "break_pts": 1.81,
+   "hold_vs_random": -2.77,
+   "p_hold": 1.0,
+   "fade_pts_vs_random": -0.87,
+   "p_fade": 0.917,
+   "break_pts_vs_random": 0.4,
+   "p_break": 0.228
+  },
+  "10:30 strong 40+": {
+   "touches": 1056,
+   "hold": 38.5,
+   "fade_pts": 2.01,
+   "break_pts": 2.48,
+   "hold_vs_random": -1.57,
+   "p_hold": 0.838,
+   "fade_pts_vs_random": -1.36,
+   "p_fade": 0.907,
+   "break_pts_vs_random": 1.04,
+   "p_break": 0.133
+  },
+  "10:30 walls that are new (not in morning list)": {
+   "touches": 1199,
+   "hold": 37.5,
+   "fade_pts": 3.46,
+   "break_pts": 2.19,
+   "hold_vs_random": -2.32,
+   "p_hold": 0.958,
+   "fade_pts_vs_random": 0.02,
+   "p_fade": 0.485,
+   "break_pts_vs_random": 0.87,
+   "p_break": 0.207
+  },
+  "Random (after 10:30)": {
+   "touches": 16526,
+   "hold": 40.0,
+   "fade_pts": 3.42,
+   "break_pts": 1.4
+  }
+ },
+ "11:30": {
+  "Morning walls (after 11:30)": {
+   "touches": 3110,
+   "hold": 38.5,
+   "fade_pts": 2.3,
+   "break_pts": 0.93,
+   "hold_vs_random": -2.63,
+   "p_hold": 0.998,
+   "fade_pts_vs_random": -0.69,
+   "p_fade": 0.858,
+   "break_pts_vs_random": 0.05,
+   "p_break": 0.468
+  },
+  "Morning strong 40+ (after 11:30)": {
+   "touches": 831,
+   "hold": 40.3,
+   "fade_pts": 2.88,
+   "break_pts": 0.89,
+   "hold_vs_random": -0.97,
+   "p_hold": 0.718,
+   "fade_pts_vs_random": -0.29,
+   "p_fade": 0.618,
+   "break_pts_vs_random": 0.08,
+   "p_break": 0.47
+  },
+  "11:30 walls": {
+   "touches": 2877,
+   "hold": 39.5,
+   "fade_pts": 2.11,
+   "break_pts": 0.89,
+   "hold_vs_random": -1.69,
+   "p_hold": 0.96,
+   "fade_pts_vs_random": -0.9,
+   "p_fade": 0.905,
+   "break_pts_vs_random": 0.03,
+   "p_break": 0.48
+  },
+  "11:30 strong 40+": {
+   "touches": 1096,
+   "hold": 40.8,
+   "fade_pts": 1.47,
+   "break_pts": 1.01,
+   "hold_vs_random": -0.55,
+   "p_hold": 0.652,
+   "fade_pts_vs_random": -1.59,
+   "p_fade": 0.95,
+   "break_pts_vs_random": 0.18,
+   "p_break": 0.42
+  },
+  "11:30 walls that are new (not in morning list)": {
+   "touches": 1040,
+   "hold": 39.6,
+   "fade_pts": 2.29,
+   "break_pts": 1.09,
+   "hold_vs_random": -1.66,
+   "p_hold": 0.86,
+   "fade_pts_vs_random": -0.57,
+   "p_fade": 0.723,
+   "break_pts_vs_random": 0.16,
+   "p_break": 0.435
+  },
+  "Random (after 11:30)": {
+   "touches": 13784,
+   "hold": 41.2,
+   "fade_pts": 3.01,
+   "break_pts": 0.83
+  }
+ }
+}
