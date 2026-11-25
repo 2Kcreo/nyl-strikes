@@ -1,28 +1,17 @@
 {
  "day": "2026-11-25",
- "built": "2026-11-25 09:26 ET",
+ "built": "2026-11-25 09:32 ET",
  "oi": "2026-11-25",
- "spot": 617.96,
- "spot_src": "pre-market 09:26 (updates at the open)",
+ "spot": 617.1,
+ "spot_src": "9:30 open (locked)",
  "nq": {
-  "price": 25429.0,
-  "ratio": 41.1499,
-  "at": "09:16"
+  "price": 25412.75,
+  "ratio": 41.1809,
+  "at": "09:22"
  },
- "em": 16.33,
+ "em": 16.31,
  "flip": [],
  "strikes": [
-  {
-   "k": 645.0,
-   "tags": [
-    "GEX",
-    "NEW",
-    "OI",
-    "VOL"
-   ],
-   "dens": 20,
-   "star": true
-  },
   {
    "k": 644.0,
    "tags": [
@@ -69,6 +58,7 @@
     "GEX",
     "NDX",
     "NEW",
+    "OI",
     "VEX",
     "VOL"
    ],
@@ -100,7 +90,6 @@
    "tags": [
     "NDX",
     "NEW",
-    "VEX",
     "VOL"
    ],
    "dens": 20,
@@ -113,7 +102,7 @@
     "NEW",
     "VOL"
    ],
-   "dens": 8,
+   "dens": 20,
    "star": true
   },
   {
@@ -128,25 +117,25 @@
    "star": true
   },
   {
-   "k": 634,
+   "k": 634.0,
    "tags": [
-    "EM",
     "NDX",
     "NEW",
     "VOL"
    ],
-   "dens": 5,
+   "dens": 8,
    "star": true
   },
   {
-   "k": 633.0,
+   "k": 633,
    "tags": [
+    "EM",
     "NDX",
     "NEW",
     "VEX",
     "VOL"
    ],
-   "dens": 8,
+   "dens": 5,
    "star": true
   },
   {
@@ -178,7 +167,7 @@
     "VOL",
     "WALL"
    ],
-   "dens": 5,
+   "dens": 8,
    "star": true
   },
   {
@@ -193,8 +182,6 @@
    "k": 628.0,
    "tags": [
     "CHX",
-    "GEX",
-    "VEX",
     "VOL"
    ],
    "dens": 5,
@@ -209,16 +196,17 @@
     "VEX",
     "VOL"
    ],
-   "dens": 8,
+   "dens": 5,
    "star": true
   },
   {
    "k": 626.0,
    "tags": [
     "CHX",
-    "VEX"
+    "VEX",
+    "VOL"
    ],
-   "dens": 20,
+   "dens": 12,
    "star": true
   },
   {
@@ -227,8 +215,10 @@
     "CHX",
     "GEX",
     "NEW",
+    "OI",
     "VEX",
-    "VOL"
+    "VOL",
+    "WALL"
    ],
    "dens": 5,
    "star": true
@@ -280,9 +270,10 @@
    "tags": [
     "CHX",
     "GEX",
-    "NDX"
+    "NDX",
+    "VEX"
    ],
-   "dens": 5,
+   "dens": 8,
    "star": true
   },
   {
@@ -307,7 +298,6 @@
    "tags": [
     "GEX",
     "NEW",
-    "OI",
     "VEX"
    ],
    "dens": 5,
@@ -316,15 +306,16 @@
   {
    "k": 612.0,
    "tags": [
-    "CHX"
+    "CHX",
+    "GEX"
    ],
-   "dens": 12,
-   "star": false
+   "dens": 20,
+   "star": true
   },
   {
    "k": 611.0,
    "tags": [
-    "CHX"
+    "GEX"
    ],
    "dens": 20,
    "star": false
@@ -365,21 +356,29 @@
     "CHX",
     "GEX",
     "NEW",
-    "VEX"
-   ],
-   "dens": 8,
-   "star": true
-  },
-  {
-   "k": 602,
-   "tags": [
-    "CHX",
-    "EM",
-    "NEW",
+    "OI",
     "VEX"
    ],
    "dens": 5,
    "star": true
+  },
+  {
+   "k": 602.0,
+   "tags": [
+    "CHX",
+    "NEW",
+    "VEX"
+   ],
+   "dens": 12,
+   "star": true
+  },
+  {
+   "k": 601,
+   "tags": [
+    "EM"
+   ],
+   "dens": 5,
+   "star": false
   },
   {
    "k": 600.0,
@@ -398,6 +397,16 @@
    "tags": [
     "CHX",
     "GEX",
+    "VEX"
+   ],
+   "dens": 20,
+   "star": true
+  },
+  {
+   "k": 590.0,
+   "tags": [
+    "CHX",
+    "NEW",
     "VEX"
    ],
    "dens": 20,
