@@ -29,7 +29,7 @@ def boxes(d, iv):
     return nyl, ndx, b2, iv
 
 
-def chunks(lines, limit=1990):
+def chunks(lines, limit=1980):
     out, cur = [], ""
     for ln in lines:
         if cur and len(cur) + 1 + len(ln) > limit:
@@ -40,8 +40,14 @@ def chunks(lines, limit=1990):
     return out
 
 
-def send(url, text):
-    body = json.dumps({"content": text, "allowed_mentions": {"parse": []}}).encode()
+PURPLE = 0xA78BFA
+
+
+def send(url, text=None, embed=None):
+    msg = {"allowed_mentions": {"parse": []}}
+    if text: msg["content"] = text
+    if embed: msg["embeds"] = [embed]
+    body = json.dumps(msg).encode()
     for attempt in range(4):
         req = urllib.request.Request(url, data=body, headers={
             "Content-Type": "application/json", "User-Agent": "nyl-bot (github actions, 1.0)"})
@@ -85,22 +91,32 @@ def main():
     nyl, ndx, b2, iv = boxes(d, iv)
     date = dt.date.fromisoformat(day).strftime("%a %b %-d")
     locked = "locked" in (d.get("spot_src") or "").lower()
-    head = (f"**NYL STACKED · {date} · {'9:30 locked' if locked else 'PRE-MARKET (not final)'}**\n"
-            f"QQQ {'open' if locked else 'prior close'} {d.get('spot', 0):.2f} · Box 1: {len(nyl)} QQQ + {len(ndx)} NDX strikes · "
-            f"Box 2: {len(b2)} IV walls\n"
-            f"Long-press the message under each label → Copy Text → paste into Stacked → NQ.\n"
-            f"Page: <{PAGE}>\n\n**Box 1 · NYL strikes** ↓")
-    send(url, head)
-    p1 = chunks(nyl + ndx)
-    for i, c in enumerate(p1):
-        if len(p1) > 1: send(url, f"Box 1 part {i + 1}/{len(p1)} ↓")
-        send(url, c)
+    status = "🟢 9:30 locked (final)" if locked else "🟡 Pre-market (not final, wait for 9:30)"
+    qqq = f"{d.get('spot', 0):.2f} ({'9:30 open' if locked else 'prior close'})"
+    desc = (
+        f"**Status**\n{status}\n\n"
+        f"**QQQ**\n{qqq}\n\n"
+        f"**Levels**\n📘 Box 1 · NYL strikes: **{len(nyl)} QQQ + {len(ndx)} NDX**\n"
+        f"📙 Box 2 · IV walls: **{len(b2)}**" + ("" if b2 else " (not built today)") + "\n\n"
+        "**How to use**\n"
+        "1. Long-press the grey box under each label → **Copy Text**\n"
+        "2. Open **Stacked → NQ** settings (TradingView or MotiveWave)\n"
+        "3. Paste Box 1 into *NYL strikes*, Box 2 into *IV walls* → OK\n\n"
+        f"🌐 [Open the NYL Stacked page]({PAGE})")
+    send(url, embed={"title": f"📊  NYL Stacked · {date}", "description": desc, "color": PURPLE,
+                     "footer": {"text": f"NYL · built {(d.get('built') or '').split(' ')[-1]} ET"}})
+
+    def box(title, sub, lines, color):
+        parts = chunks(lines)
+        note = sub + (f"\nSent in {len(parts)} parts: copy and paste each one, in order." if len(parts) > 1 else "")
+        send(url, embed={"title": title, "description": note, "color": color})
+        for c in parts: send(url, "```\n" + c + "\n```")
+
+    box("📘  Box 1 · NYL strikes", f"{len(nyl)} QQQ + {len(ndx)} NDX · paste into **NYL strikes (QQQ + NDX)**", nyl + ndx, 0x7C3AED)
     if b2:
-        p2 = chunks(b2)
-        send(url, "**Box 2 · IV walls** ↓" + (f"  (in {len(p2)} parts: paste them one after another)" if len(p2) > 1 else ""))
-        for c in p2: send(url, c)
+        box("📙  Box 2 · IV walls", f"{len(b2)} walls · paste into **IV walls (QQQ + NDX)**", b2, 0xF59E0B)
     else:
-        send(url, "Box 2 · IV walls: not built today (leave Box 2 as it is)")
+        send(url, embed={"title": "📙  Box 2 · IV walls", "description": "Not built today. Leave Box 2 as it is.", "color": 0xF59E0B})
     json.dump({"day": day, "posted": now.strftime("%Y-%m-%d %H:%M ET")}, open(SENT, "w"))
     print(f"{day}: posted to Discord")
 
