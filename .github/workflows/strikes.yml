@@ -6,7 +6,7 @@ on:
     - cron: "*/15 11-16 * * 1-5"
   push:
     branches: [main]
-    paths: ["strikes.py", "engine.py", "feeds.py", ".github/workflows/strikes.yml", "trigger.txt"]
+    paths: ["discord_post.py", "strikes.py", "engine.py", "feeds.py", ".github/workflows/strikes.yml", "trigger.txt"]
   workflow_dispatch:
     inputs:
       day:
@@ -36,6 +36,11 @@ jobs:
         env:
           THETADATA_API_KEY: ${{ secrets.THETADATA_API_KEY }}
         run: python ivwalls.py --today ${{ github.event.inputs.day || '' }}
+      - name: Post Stacked levels to Discord (once a day, after the 9:30 lock)
+        continue-on-error: true
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: python discord_post.py
       - name: Save to the website
         run: |
           git config user.name "nyl-bot"
