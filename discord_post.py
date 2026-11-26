@@ -40,7 +40,7 @@ def chunks(lines, limit=1980):
     return out
 
 
-PURPLE = 0xA78BFA
+PURPLE = 0xEC4899  # pink
 
 
 def send(url, text=None, embed=None):
@@ -112,11 +112,11 @@ def main():
         send(url, embed={"title": title, "description": note, "color": color})
         for c in parts: send(url, "```\n" + c + "\n```")
 
-    box("📘  Box 1 · NYL strikes", f"{len(nyl)} QQQ + {len(ndx)} NDX · paste into **NYL strikes (QQQ + NDX)**", nyl + ndx, 0x7C3AED)
+    box("📘  Box 1 · NYL strikes", f"{len(nyl)} QQQ + {len(ndx)} NDX · paste into **NYL strikes (QQQ + NDX)**", nyl + ndx, 0xF472B6)
     if b2:
-        box("📙  Box 2 · IV walls", f"{len(b2)} walls · paste into **IV walls (QQQ + NDX)**", b2, 0xF59E0B)
+        box("📙  Box 2 · IV walls", f"{len(b2)} walls · paste into **IV walls (QQQ + NDX)**", b2, 0xF9A8D4)
     else:
-        send(url, embed={"title": "📙  Box 2 · IV walls", "description": "Not built today. Leave Box 2 as it is.", "color": 0xF59E0B})
+        send(url, embed={"title": "📙  Box 2 · IV walls", "description": "Not built today. Leave Box 2 as it is.", "color": 0xF9A8D4})
     json.dump({"day": day, "posted": now.strftime("%Y-%m-%d %H:%M ET")}, open(SENT, "w"))
     print(f"{day}: posted to Discord")
 
