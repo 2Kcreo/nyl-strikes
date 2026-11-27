@@ -6,11 +6,11 @@
  "iv_from_close_of": "2026-11-25",
  "pc_all": 0.92,
  "oi": "2026-11-27",
- "nq_ratio": null,
+ "nq_ratio": 41.1632,
  "levels": [
   {
    "k": 669.0,
-   "nq": null,
+   "nq": 27538.25,
    "score": 0,
    "layer": 12,
    "side": "resistance",
@@ -21,7 +21,7 @@
   },
   {
    "k": 668.0,
-   "nq": null,
+   "nq": 27497.0,
    "score": 0,
    "layer": 12,
    "side": "resistance",
@@ -32,7 +32,7 @@
   },
   {
    "k": 667.0,
-   "nq": null,
+   "nq": 27455.75,
    "score": 0,
    "layer": 12,
    "side": "resistance",
@@ -43,7 +43,7 @@
   },
   {
    "k": 666.0,
-   "nq": null,
+   "nq": 27414.75,
    "score": 0,
    "layer": 20,
    "side": "resistance",
@@ -54,7 +54,7 @@
   },
   {
    "k": 665.0,
-   "nq": null,
+   "nq": 27373.5,
    "score": 0,
    "layer": 8,
    "side": "resistance",
@@ -65,7 +65,7 @@
   },
   {
    "k": 662.0,
-   "nq": null,
+   "nq": 27250.0,
    "score": 0,
    "layer": 12,
    "side": "resistance",
@@ -76,7 +76,7 @@
   },
   {
    "k": 661.0,
-   "nq": null,
+   "nq": 27209.0,
    "score": 0,
    "layer": 8,
    "side": "resistance",
@@ -87,7 +87,7 @@
   },
   {
    "k": 660.0,
-   "nq": null,
+   "nq": 27167.75,
    "score": 0,
    "layer": 8,
    "side": "resistance",
@@ -98,7 +98,7 @@
   },
   {
    "k": 658.0,
-   "nq": null,
+   "nq": 27085.5,
    "score": 1,
    "layer": 5,
    "side": "mixed",
@@ -109,7 +109,7 @@
   },
   {
    "k": 654.0,
-   "nq": null,
+   "nq": 26920.75,
    "score": 29,
    "layer": 5,
    "side": "mixed",
@@ -120,7 +120,7 @@
   },
   {
    "k": 650.0,
-   "nq": null,
+   "nq": 26756.0,
    "score": 29,
    "layer": 5,
    "side": "mixed",
@@ -131,7 +131,7 @@
   },
   {
    "k": 648.0,
-   "nq": null,
+   "nq": 26673.75,
    "score": 1,
    "layer": 5,
    "side": "resistance",
@@ -142,7 +142,7 @@
   },
   {
    "k": 647.0,
-   "nq": null,
+   "nq": 26632.5,
    "score": 68,
    "layer": 5,
    "side": "mixed",
@@ -153,7 +153,7 @@
   },
   {
    "k": 645.0,
-   "nq": null,
+   "nq": 26550.25,
    "score": 100,
    "layer": 5,
    "side": "resistance",
@@ -164,7 +164,7 @@
   },
   {
    "k": 643.0,
-   "nq": null,
+   "nq": 26468.0,
    "score": 23,
    "layer": 5,
    "side": "resistance",
@@ -175,7 +175,7 @@
   },
   {
    "k": 638.0,
-   "nq": null,
+   "nq": 26262.0,
    "score": 2,
    "layer": 5,
    "side": "mixed",
@@ -186,7 +186,7 @@
   },
   {
    "k": 636.0,
-   "nq": null,
+   "nq": 26179.75,
    "score": 6,
    "layer": 5,
    "side": "mixed",
@@ -197,7 +197,7 @@
   },
   {
    "k": 634.0,
-   "nq": null,
+   "nq": 26097.5,
    "score": 0,
    "layer": 8,
    "side": "resistance",
@@ -208,7 +208,7 @@
   },
   {
    "k": 630.0,
-   "nq": null,
+   "nq": 25932.75,
    "score": 0,
    "layer": 5,
    "side": "support",
@@ -219,7 +219,7 @@
   },
   {
    "k": 628.0,
-   "nq": null,
+   "nq": 25850.5,
    "score": 0,
    "layer": 8,
    "side": "support",
@@ -230,7 +230,7 @@
   },
   {
    "k": 626.0,
-   "nq": null,
+   "nq": 25768.25,
    "score": 0,
    "layer": 12,
    "side": "support",
@@ -241,7 +241,7 @@
   },
   {
    "k": 625.0,
-   "nq": null,
+   "nq": 25727.0,
    "score": 0,
    "layer": 8,
    "side": "support",
@@ -252,7 +252,7 @@
   },
   {
    "k": 624.0,
-   "nq": null,
+   "nq": 25685.75,
    "score": 0,
    "layer": 12,
    "side": "support",
@@ -263,7 +263,7 @@
   },
   {
    "k": 623.0,
-   "nq": null,
+   "nq": 25644.75,
    "score": 0,
    "layer": 12,
    "side": "support",
@@ -274,7 +274,7 @@
   },
   {
    "k": 622.0,
-   "nq": null,
+   "nq": 25603.5,
    "score": 0,
    "layer": 20,
    "side": "support",
@@ -285,7 +285,7 @@
   },
   {
    "k": 620.0,
-   "nq": null,
+   "nq": 25521.25,
    "score": 0,
    "layer": 12,
    "side": "support",
@@ -296,7 +296,7 @@
   },
   {
    "k": 617.0,
-   "nq": null,
+   "nq": 25397.75,
    "score": 0,
    "layer": 20,
    "side": "support",
